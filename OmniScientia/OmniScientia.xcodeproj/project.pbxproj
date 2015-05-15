@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3491B06132200CCEFA5 /* AppDelegate.swift */; };
+		053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */; };
+		053CB34F1B06132200CCEFA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB34E1B06132200CCEFA5 /* ViewController.swift */; };
+		053CB3521B06132200CCEFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3501B06132200CCEFA5 /* Main.storyboard */; };
+		053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3531B06132200CCEFA5 /* Images.xcassets */; };
+		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
+		053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		053CB35D1B06132200CCEFA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 053CB33C1B06132200CCEFA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 053CB3431B06132200CCEFA5;
+			remoteInfo = OmniScientia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		053CB3441B06132200CCEFA5 /* OmniScientia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmniScientia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		053CB3481B06132200CCEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		053CB3491B06132200CCEFA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		053CB34C1B06132200CCEFA5 /* OmniScientia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OmniScientia.xcdatamodel; sourceTree = "<group>"; };
+		053CB34E1B06132200CCEFA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		053CB3511B06132200CCEFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		053CB3531B06132200CCEFA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		053CB3561B06132200CCEFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		053CB35C1B06132200CCEFA5 /* OmniScientiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmniScientiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		053CB3611B06132200CCEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniScientiaTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		053CB3411B06132200CCEFA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		053CB3591B06132200CCEFA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		053CB33B1B06132200CCEFA5 = {
+			isa = PBXGroup;
+			children = (
+				053CB3461B06132200CCEFA5 /* OmniScientia */,
+				053CB35F1B06132200CCEFA5 /* OmniScientiaTests */,
+				053CB3451B06132200CCEFA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		053CB3451B06132200CCEFA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				053CB3441B06132200CCEFA5 /* OmniScientia.app */,
+				053CB35C1B06132200CCEFA5 /* OmniScientiaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		053CB3461B06132200CCEFA5 /* OmniScientia */ = {
+			isa = PBXGroup;
+			children = (
+				053CB3491B06132200CCEFA5 /* AppDelegate.swift */,
+				053CB34E1B06132200CCEFA5 /* ViewController.swift */,
+				053CB3501B06132200CCEFA5 /* Main.storyboard */,
+				053CB3531B06132200CCEFA5 /* Images.xcassets */,
+				053CB3551B06132200CCEFA5 /* LaunchScreen.xib */,
+				053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */,
+				053CB3471B06132200CCEFA5 /* Supporting Files */,
+			);
+			path = OmniScientia;
+			sourceTree = "<group>";
+		};
+		053CB3471B06132200CCEFA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				053CB3481B06132200CCEFA5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		053CB35F1B06132200CCEFA5 /* OmniScientiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */,
+				053CB3601B06132200CCEFA5 /* Supporting Files */,
+			);
+			path = OmniScientiaTests;
+			sourceTree = "<group>";
+		};
+		053CB3601B06132200CCEFA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				053CB3611B06132200CCEFA5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		053CB3431B06132200CCEFA5 /* OmniScientia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 053CB3661B06132200CCEFA5 /* Build configuration list for PBXNativeTarget "OmniScientia" */;
+			buildPhases = (
+				053CB3401B06132200CCEFA5 /* Sources */,
+				053CB3411B06132200CCEFA5 /* Frameworks */,
+				053CB3421B06132200CCEFA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OmniScientia;
+			productName = OmniScientia;
+			productReference = 053CB3441B06132200CCEFA5 /* OmniScientia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		053CB35B1B06132200CCEFA5 /* OmniScientiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 053CB3691B06132200CCEFA5 /* Build configuration list for PBXNativeTarget "OmniScientiaTests" */;
+			buildPhases = (
+				053CB3581B06132200CCEFA5 /* Sources */,
+				053CB3591B06132200CCEFA5 /* Frameworks */,
+				053CB35A1B06132200CCEFA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				053CB35E1B06132200CCEFA5 /* PBXTargetDependency */,
+			);
+			name = OmniScientiaTests;
+			productName = OmniScientiaTests;
+			productReference = 053CB35C1B06132200CCEFA5 /* OmniScientiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		053CB33C1B06132200CCEFA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Mariana Alvarez";
+				TargetAttributes = {
+					053CB3431B06132200CCEFA5 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					053CB35B1B06132200CCEFA5 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 053CB3431B06132200CCEFA5;
+					};
+				};
+			};
+			buildConfigurationList = 053CB33F1B06132200CCEFA5 /* Build configuration list for PBXProject "OmniScientia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 053CB33B1B06132200CCEFA5;
+			productRefGroup = 053CB3451B06132200CCEFA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				053CB3431B06132200CCEFA5 /* OmniScientia */,
+				053CB35B1B06132200CCEFA5 /* OmniScientiaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		053CB3421B06132200CCEFA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				053CB3521B06132200CCEFA5 /* Main.storyboard in Resources */,
+				053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */,
+				053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		053CB35A1B06132200CCEFA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		053CB3401B06132200CCEFA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				053CB34F1B06132200CCEFA5 /* ViewController.swift in Sources */,
+				053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */,
+				053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		053CB3581B06132200CCEFA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		053CB35E1B06132200CCEFA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 053CB3431B06132200CCEFA5 /* OmniScientia */;
+			targetProxy = 053CB35D1B06132200CCEFA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		053CB3501B06132200CCEFA5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				053CB3511B06132200CCEFA5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		053CB3551B06132200CCEFA5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				053CB3561B06132200CCEFA5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		053CB3641B06132200CCEFA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		053CB3651B06132200CCEFA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		053CB3671B06132200CCEFA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OmniScientia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		053CB3681B06132200CCEFA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OmniScientia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		053CB36A1B06132200CCEFA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OmniScientiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OmniScientia.app/OmniScientia";
+			};
+			name = Debug;
+		};
+		053CB36B1B06132200CCEFA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OmniScientiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OmniScientia.app/OmniScientia";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		053CB33F1B06132200CCEFA5 /* Build configuration list for PBXProject "OmniScientia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				053CB3641B06132200CCEFA5 /* Debug */,
+				053CB3651B06132200CCEFA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		053CB3661B06132200CCEFA5 /* Build configuration list for PBXNativeTarget "OmniScientia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				053CB3671B06132200CCEFA5 /* Debug */,
+				053CB3681B06132200CCEFA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		053CB3691B06132200CCEFA5 /* Build configuration list for PBXNativeTarget "OmniScientiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				053CB36A1B06132200CCEFA5 /* Debug */,
+				053CB36B1B06132200CCEFA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				053CB34C1B06132200CCEFA5 /* OmniScientia.xcdatamodel */,
+			);
+			currentVersion = 053CB34C1B06132200CCEFA5 /* OmniScientia.xcdatamodel */;
+			path = OmniScientia.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 053CB33C1B06132200CCEFA5 /* Project object */;
+}
