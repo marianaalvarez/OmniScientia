@@ -14,6 +14,7 @@
 		053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3531B06132200CCEFA5 /* Images.xcassets */; };
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
 		053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */; };
+		05F0EFD11B0A135200784150 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F0EFD01B0A135200784150 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		053CB35C1B06132200CCEFA5 /* OmniScientiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmniScientiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		053CB3611B06132200CCEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniScientiaTests.swift; sourceTree = "<group>"; };
+		05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OmniScientia.entitlements; sourceTree = "<group>"; };
+		05F0EFD01B0A135200784150 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05F0EFD11B0A135200784150 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +65,7 @@
 		053CB33B1B06132200CCEFA5 = {
 			isa = PBXGroup;
 			children = (
+				05F0EFD01B0A135200784150 /* CloudKit.framework */,
 				053CB3461B06132200CCEFA5 /* OmniScientia */,
 				053CB35F1B06132200CCEFA5 /* OmniScientiaTests */,
 				053CB3451B06132200CCEFA5 /* Products */,
@@ -79,6 +84,7 @@
 		053CB3461B06132200CCEFA5 /* OmniScientia */ = {
 			isa = PBXGroup;
 			children = (
+				05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */,
 				053CB3491B06132200CCEFA5 /* AppDelegate.swift */,
 				053CB34E1B06132200CCEFA5 /* ViewController.swift */,
 				053CB3501B06132200CCEFA5 /* Main.storyboard */,
@@ -164,6 +170,12 @@
 				TargetAttributes = {
 					053CB3431B06132200CCEFA5 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = T6LWGN6HAV;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					053CB35B1B06132200CCEFA5 = {
 						CreatedOnToolsVersion = 6.3;
@@ -346,9 +358,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OmniScientia/OmniScientia.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = OmniScientia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -356,9 +372,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OmniScientia/OmniScientia.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = OmniScientia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -415,6 +435,7 @@
 				053CB3681B06132200CCEFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		053CB3691B06132200CCEFA5 /* Build configuration list for PBXNativeTarget "OmniScientiaTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +444,7 @@
 				053CB36B1B06132200CCEFA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
