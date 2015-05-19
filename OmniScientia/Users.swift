@@ -28,7 +28,7 @@ class Users: NSObject {
         self.nome = record.objectForKey("nome") as! String!
         self.email = record.objectForKey("email") as! String!
         self.sexo = record.objectForKey("sexo") as! String!
-        self.dataNascimento = record.objectForKey("dataNascimento") as! NSDate!
+        //self.dataNascimento = record.objectForKey("dataNascimento") as! NSDate!
     }
    
 }

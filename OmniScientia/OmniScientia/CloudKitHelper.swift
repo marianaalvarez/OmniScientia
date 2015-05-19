@@ -34,17 +34,23 @@ class CloudKitHelper {
         return cloudKitHelper
     }
     
-    func salvaUsuario(usuario: String, senha: String, nome: String, email: String, sexo: String, dataNascimento: NSDate) {
+    func salvaUsuario(usuario: String, senha: String, nome: String, email: String, sexo: String) {
         let userRecord = CKRecord(recordType: "Users")
         userRecord.setValue(usuario, forKey: "usuario")
         userRecord.setValue(nome, forKey: "nome")
         userRecord.setValue(senha, forKey: "senha")
         userRecord.setValue(email, forKey: "email")
         userRecord.setValue(sexo, forKey: "sexo")
-        userRecord.setValue(dataNascimento, forKey: "dataNascimento")
+        //userRecord.setValue(dataNascimento, forKey: "dataNascimento")
         
         privateDB.saveRecord(userRecord, completionHandler: { (record, error) -> Void in
-            NSLog("Dados salvos no cloud kit.")
+            if (error != nil) {
+                println("Deu Ruim + \(error)")
+            }
+            else {
+                println("Salvou")
+            }
+            
         } )
     }
     
@@ -108,35 +114,35 @@ class CloudKitHelper {
         } )
     }
     
-//    func fetchUsers(insertedRecord: CKRecord) {
-//        let predicate = NSPredicate(value: true)
-//        let sort = NSSortDescriptor(key: "creationDate", ascending: false)
-//        let query = CKQuery(recordType: "Users", predicate: predicate)
-//        query.sortDescriptors = [sort]
-//        privateDB.performQuery(query, inZoneWithID: nil) {
-//            results, error in
-//            if error != nil {
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    self.delegate?.errorUpdating(error)
-//                    return
-//                }
-//            } else {
-//                self.users.removeAll()
-//                for record in results{
-//                    let user = Users(record: record as! CKRecord, database: self.privateDB)
-//                    self.users.append(user)
-//                }
-//                if let tmp = insertedRecord {
-//                    let todo = Todos(record: insertedRecord! as CKRecord, database: self.privateDB)
-//                    self.todos.insert(todo, atIndex: 0)
-//                }
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    self.delegate?.modelUpdated()
-//                    return
-//                }
-//            }
-//        }
-//
-//   
-//    }
+    func fetchUsers(insertedRecord: CKRecord) {
+        let predicate = NSPredicate(value: true)
+        let sort = NSSortDescriptor(key: "creationDate", ascending: false)
+        let query = CKQuery(recordType: "Users", predicate: predicate)
+        query.sortDescriptors = [sort]
+        privateDB.performQuery(query, inZoneWithID: nil) {
+            results, error in
+            if error != nil {
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.delegate?.errorUpdating(error)
+                    return
+                }
+            } else {
+                self.users.removeAll()
+                for record in results{
+                    let user = Users(record: record as! CKRecord, database: self.privateDB)
+                    self.users.append(user)
+                }
+                if let tmp = insertedRecord as? CKRecord {
+                    let user = Users(record: insertedRecord as CKRecord, database: self.privateDB)
+                    self.users.insert(user, atIndex: 0)
+                }
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.delegate?.modelUpdated()
+                    return
+                }
+            }
+        }
+
+   
+    }
 }
