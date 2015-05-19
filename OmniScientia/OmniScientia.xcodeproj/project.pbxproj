@@ -14,7 +14,6 @@
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
 		053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */; };
 		05F0EFD11B0A135200784150 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F0EFD01B0A135200784150 /* CloudKit.framework */; };
-		05F0EFD31B0B55EE00784150 /* ConteudoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD21B0B55EE00784150 /* ConteudoTableViewController.swift */; };
 		05F0EFD51B0B587C00784150 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD41B0B587C00784150 /* Audio.swift */; };
 		05F0EFD71B0B589600784150 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD61B0B589600784150 /* Video.swift */; };
 		05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD81B0B58A800784150 /* Imagem.swift */; };
@@ -28,6 +27,7 @@
 		05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE81B0B5EB100784150 /* Objetos.swift */; };
 		251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */; };
 		251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */; };
+		251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,6 @@
 		053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniScientiaTests.swift; sourceTree = "<group>"; };
 		05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OmniScientia.entitlements; sourceTree = "<group>"; };
 		05F0EFD01B0A135200784150 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		05F0EFD21B0B55EE00784150 /* ConteudoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConteudoTableViewController.swift; path = ../ConteudoTableViewController.swift; sourceTree = "<group>"; };
 		05F0EFD41B0B587C00784150 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Audio.swift; path = ../Audio.swift; sourceTree = "<group>"; };
 		05F0EFD61B0B589600784150 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Video.swift; path = ../Video.swift; sourceTree = "<group>"; };
 		05F0EFD81B0B58A800784150 /* Imagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Imagem.swift; path = ../Imagem.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		05F0EFE81B0B5EB100784150 /* Objetos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Objetos.swift; path = ../Objetos.swift; sourceTree = "<group>"; };
 		251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTableViewController.swift; sourceTree = "<group>"; };
 		251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
+		251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +169,9 @@
 		251DBC601B0B7FE2009EC7EB /* Interface de Usuário */ = {
 			isa = PBXGroup;
 			children = (
+				251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */,
 				251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */,
 				251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */,
-				05F0EFD21B0B55EE00784150 /* ConteudoTableViewController.swift */,
 			);
 			name = "Interface de Usuário";
 			sourceTree = "<group>";
@@ -284,7 +284,6 @@
 			files = (
 				05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */,
 				05F0EFE11B0B593A00784150 /* Historico.swift in Sources */,
-				05F0EFD31B0B55EE00784150 /* ConteudoTableViewController.swift in Sources */,
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
@@ -298,6 +297,7 @@
 				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,
 				05F0EFD51B0B587C00784150 /* Audio.swift in Sources */,
 				05F0EFDF1B0B592B00784150 /* Pergunta.swift in Sources */,
+				251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

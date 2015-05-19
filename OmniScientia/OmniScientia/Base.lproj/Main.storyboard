@@ -8,7 +8,7 @@
         <!--Conteúdos-->
         <scene sceneID="MYq-iv-BgV">
             <objects>
-                <tableViewController id="AOl-gE-6dU" customClass="ConteudoTableViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="AOl-gE-6dU" customClass="ConteudosViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="e6t-DX-aUr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +95,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="scrollFavoritados" destination="erA-D0-tRw" id="F1k-jp-kUI"/>
+                        <outlet property="scrollHistorico" destination="eCf-l9-0Bh" id="eqJ-1p-3mz"/>
+                        <outlet property="scrollSeusConteudos" destination="c9j-47-Mlx" id="jqc-7Y-axr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96g-AK-rBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
