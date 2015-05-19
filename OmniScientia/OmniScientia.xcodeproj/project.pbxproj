@@ -15,6 +15,18 @@
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
 		053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */; };
 		05F0EFD11B0A135200784150 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F0EFD01B0A135200784150 /* CloudKit.framework */; };
+		05F0EFD31B0B55EE00784150 /* ConteudoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD21B0B55EE00784150 /* ConteudoTableViewController.swift */; };
+		05F0EFD51B0B587C00784150 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD41B0B587C00784150 /* Audio.swift */; };
+		05F0EFD71B0B589600784150 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD61B0B589600784150 /* Video.swift */; };
+		05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD81B0B58A800784150 /* Imagem.swift */; };
+		05F0EFDB1B0B591000784150 /* Texto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFDA1B0B591000784150 /* Texto.swift */; };
+		05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFDC1B0B591F00784150 /* Conteudo.swift */; };
+		05F0EFDF1B0B592B00784150 /* Pergunta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFDE1B0B592B00784150 /* Pergunta.swift */; };
+		05F0EFE11B0B593A00784150 /* Historico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE01B0B593A00784150 /* Historico.swift */; };
+		05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE21B0B594700784150 /* GrupoEstudo.swift */; };
+		05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE41B0B595A00784150 /* Categoria.swift */; };
+		05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE61B0B5A2A00784150 /* Users.swift */; };
+		05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE81B0B5EB100784150 /* Objetos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +53,18 @@
 		053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniScientiaTests.swift; sourceTree = "<group>"; };
 		05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OmniScientia.entitlements; sourceTree = "<group>"; };
 		05F0EFD01B0A135200784150 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		05F0EFD21B0B55EE00784150 /* ConteudoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConteudoTableViewController.swift; path = ../ConteudoTableViewController.swift; sourceTree = "<group>"; };
+		05F0EFD41B0B587C00784150 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Audio.swift; path = ../Audio.swift; sourceTree = "<group>"; };
+		05F0EFD61B0B589600784150 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Video.swift; path = ../Video.swift; sourceTree = "<group>"; };
+		05F0EFD81B0B58A800784150 /* Imagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Imagem.swift; path = ../Imagem.swift; sourceTree = "<group>"; };
+		05F0EFDA1B0B591000784150 /* Texto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Texto.swift; path = ../Texto.swift; sourceTree = "<group>"; };
+		05F0EFDC1B0B591F00784150 /* Conteudo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Conteudo.swift; path = ../Conteudo.swift; sourceTree = "<group>"; };
+		05F0EFDE1B0B592B00784150 /* Pergunta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pergunta.swift; path = ../Pergunta.swift; sourceTree = "<group>"; };
+		05F0EFE01B0B593A00784150 /* Historico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Historico.swift; path = ../Historico.swift; sourceTree = "<group>"; };
+		05F0EFE21B0B594700784150 /* GrupoEstudo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GrupoEstudo.swift; path = ../GrupoEstudo.swift; sourceTree = "<group>"; };
+		05F0EFE41B0B595A00784150 /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categoria.swift; path = ../Categoria.swift; sourceTree = "<group>"; };
+		05F0EFE61B0B5A2A00784150 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Users.swift; path = ../Users.swift; sourceTree = "<group>"; };
+		05F0EFE81B0B5EB100784150 /* Objetos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Objetos.swift; path = ../Objetos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +109,18 @@
 			isa = PBXGroup;
 			children = (
 				05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */,
+				05F0EFE81B0B5EB100784150 /* Objetos.swift */,
+				05F0EFE61B0B5A2A00784150 /* Users.swift */,
+				05F0EFE41B0B595A00784150 /* Categoria.swift */,
+				05F0EFE21B0B594700784150 /* GrupoEstudo.swift */,
+				05F0EFE01B0B593A00784150 /* Historico.swift */,
+				05F0EFDE1B0B592B00784150 /* Pergunta.swift */,
+				05F0EFDC1B0B591F00784150 /* Conteudo.swift */,
+				05F0EFDA1B0B591000784150 /* Texto.swift */,
+				05F0EFD81B0B58A800784150 /* Imagem.swift */,
+				05F0EFD61B0B589600784150 /* Video.swift */,
+				05F0EFD41B0B587C00784150 /* Audio.swift */,
+				05F0EFD21B0B55EE00784150 /* ConteudoTableViewController.swift */,
 				053CB3491B06132200CCEFA5 /* AppDelegate.swift */,
 				053CB34E1B06132200CCEFA5 /* ViewController.swift */,
 				053CB3501B06132200CCEFA5 /* Main.storyboard */,
@@ -92,7 +128,6 @@
 				053CB3551B06132200CCEFA5 /* LaunchScreen.xib */,
 				053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */,
 				053CB3471B06132200CCEFA5 /* Supporting Files */,
-				25900C351B0A0A0300525ADF /* NoticiasTableViewController.swift */,
 			);
 			path = OmniScientia;
 			sourceTree = "<group>";
@@ -228,10 +263,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */,
+				05F0EFE11B0B593A00784150 /* Historico.swift in Sources */,
+				05F0EFD31B0B55EE00784150 /* ConteudoTableViewController.swift in Sources */,
+				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
+				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
+				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
 				053CB34F1B06132200CCEFA5 /* ViewController.swift in Sources */,
+				05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */,
+				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
+				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */,
 				053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */,
-				25900C361B0A0A0300525ADF /* NoticiasTableViewController.swift in Sources */,
+				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,
+				05F0EFD51B0B587C00784150 /* Audio.swift in Sources */,
+				05F0EFDF1B0B592B00784150 /* Pergunta.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
