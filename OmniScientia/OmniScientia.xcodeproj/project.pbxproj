@@ -15,6 +15,7 @@
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
 		053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */; };
 		25900C361B0A0A0300525ADF /* NoticiasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25900C351B0A0A0300525ADF /* NoticiasTableViewController.swift */; };
+		25900C391B0B5BD000525ADF /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25900C381B0B5BD000525ADF /* NovoConteudoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		053CB3611B06132200CCEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniScientiaTests.swift; sourceTree = "<group>"; };
 		25900C351B0A0A0300525ADF /* NoticiasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTableViewController.swift; sourceTree = "<group>"; };
+		25900C381B0B5BD000525ADF /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		053CB3461B06132200CCEFA5 /* OmniScientia */ = {
 			isa = PBXGroup;
 			children = (
+				25900C371B0B5B9B00525ADF /* Interface de Usuário */,
 				053CB3491B06132200CCEFA5 /* AppDelegate.swift */,
 				053CB34E1B06132200CCEFA5 /* ViewController.swift */,
 				053CB3501B06132200CCEFA5 /* Main.storyboard */,
@@ -116,6 +119,14 @@
 				053CB3611B06132200CCEFA5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25900C371B0B5B9B00525ADF /* Interface de Usuário */ = {
+			isa = PBXGroup;
+			children = (
+				25900C381B0B5BD000525ADF /* NovoConteudoViewController.swift */,
+			);
+			name = "Interface de Usuário";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				053CB34F1B06132200CCEFA5 /* ViewController.swift in Sources */,
+				25900C391B0B5BD000525ADF /* NovoConteudoViewController.swift in Sources */,
 				053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */,
 				053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */,
 				25900C361B0A0A0300525ADF /* NoticiasTableViewController.swift in Sources */,

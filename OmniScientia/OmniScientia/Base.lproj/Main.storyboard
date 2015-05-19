@@ -5,16 +5,17 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Conteúdos-->
         <scene sceneID="MYq-iv-BgV">
             <objects>
                 <tableViewController id="AOl-gE-6dU" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="e6t-DX-aUr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="e6t-DX-aUr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="☆ Lidos" id="v0t-bg-G7j">
+                            <tableViewSection headerTitle="★ Favoritados" id="v0t-bg-G7j">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="215" id="MOS-fp-fUP">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -29,7 +30,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="☻ Seus conteúdos" footerTitle=" " id="FuL-UF-Et5">
+                            <tableViewSection headerTitle="Seus Conteúdos" id="FuL-UF-Et5">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="215" id="iXz-nv-8K5">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -44,13 +45,28 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Histórico de Leitura" id="vmg-fN-soM">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="215" id="uh2-X0-m6Y">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uh2-X0-m6Y" id="o5o-xY-e7G">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCf-l9-0Bh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="214"/>
+                                                </scrollView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="AOl-gE-6dU" id="WQF-zk-zfl"/>
                             <outlet property="delegate" destination="AOl-gE-6dU" id="VrW-ku-uaE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dxN-DU-dWc">
+                    <navigationItem key="navigationItem" title="Conteúdos" id="dxN-DU-dWc">
                         <barButtonItem key="leftBarButtonItem" title="Novo Conteúdo" id="AXg-wI-Bbs">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -87,16 +103,17 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fbF-YU-mAx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="Odg-em-8VE">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="OCN-j4-TCC">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="OCN-j4-TCC">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OCN-j4-TCC" id="00X-yK-91w">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Título" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tke-25-zRc">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Título" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tke-25-zRc">
                                                     <rect key="frame" x="16" y="8" width="568" height="83"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,12 +129,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="hj3-cS-e84">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="hj3-cS-e84">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hj3-cS-e84" id="hjj-id-QwF">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição" translatesAutoresizingMaskIntoConstraints="NO" id="UGd-1x-yLn">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Descrição" translatesAutoresizingMaskIntoConstraints="NO" id="UGd-1x-yLn">
                                                     <rect key="frame" x="16" y="8" width="584" height="103"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,7 +150,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="g01-6R-9by">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="170" id="g01-6R-9by">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g01-6R-9by" id="d3q-rU-YXP">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -325,7 +342,7 @@
             </objects>
             <point key="canvasLocation" x="-464" y="132"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Início-->
         <scene sceneID="RcU-0p-dzn">
             <objects>
                 <tableViewController id="sW5-rJ-SYP" sceneMemberID="viewController">
@@ -402,7 +419,7 @@
                             <outlet property="delegate" destination="sW5-rJ-SYP" id="M9m-di-f6S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Grk-rL-inl">
+                    <navigationItem key="navigationItem" title="Início" id="Grk-rL-inl">
                         <barButtonItem key="leftBarButtonItem" title="Categorias" id="LZX-14-A8t">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -419,10 +436,10 @@
         <scene sceneID="HCp-3g-RDf">
             <objects>
                 <tableViewController id="Q14-8X-JTP" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NFc-I3-lOb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NFc-I3-lOb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nG1-bo-UDb">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -443,18 +460,17 @@
             </objects>
             <point key="canvasLocation" x="1053" y="952"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Usuário-->
         <scene sceneID="IHS-II-tpM">
             <objects>
                 <tableViewController id="bNW-Rk-7cp" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GQw-tx-IxL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="GQw-tx-IxL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexTrackingBackgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="Dados Pessoais" footerTitle="    " id="3yU-xh-ASd">
+                            <tableViewSection headerTitle="Dados Pessoais" id="3yU-xh-ASd">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="230" id="fFS-4e-8rf">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -600,7 +616,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="     " footerTitle="  " id="J5Q-xP-4lv">
+                            <tableViewSection id="J5Q-xP-4lv">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ucd-PK-GmK">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -652,7 +668,7 @@
                             <outlet property="delegate" destination="bNW-Rk-7cp" id="f9g-PP-dHA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="f3K-rQ-NEn"/>
+                    <navigationItem key="navigationItem" title="Usuário" id="f3K-rQ-NEn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k87-Lh-qKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
