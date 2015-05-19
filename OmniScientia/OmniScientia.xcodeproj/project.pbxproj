@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3491B06132200CCEFA5 /* AppDelegate.swift */; };
 		053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */; };
-		053CB34F1B06132200CCEFA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB34E1B06132200CCEFA5 /* ViewController.swift */; };
 		053CB3521B06132200CCEFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3501B06132200CCEFA5 /* Main.storyboard */; };
 		053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3531B06132200CCEFA5 /* Images.xcassets */; };
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
@@ -27,6 +26,8 @@
 		05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE41B0B595A00784150 /* Categoria.swift */; };
 		05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE61B0B5A2A00784150 /* Users.swift */; };
 		05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE81B0B5EB100784150 /* Objetos.swift */; };
+		251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */; };
+		251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		053CB3481B06132200CCEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053CB3491B06132200CCEFA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		053CB34C1B06132200CCEFA5 /* OmniScientia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OmniScientia.xcdatamodel; sourceTree = "<group>"; };
-		053CB34E1B06132200CCEFA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		053CB3511B06132200CCEFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		053CB3531B06132200CCEFA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		053CB3561B06132200CCEFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -65,6 +65,8 @@
 		05F0EFE41B0B595A00784150 /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categoria.swift; path = ../Categoria.swift; sourceTree = "<group>"; };
 		05F0EFE61B0B5A2A00784150 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Users.swift; path = ../Users.swift; sourceTree = "<group>"; };
 		05F0EFE81B0B5EB100784150 /* Objetos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Objetos.swift; path = ../Objetos.swift; sourceTree = "<group>"; };
+		251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTableViewController.swift; sourceTree = "<group>"; };
+		251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,25 +110,14 @@
 		053CB3461B06132200CCEFA5 /* OmniScientia */ = {
 			isa = PBXGroup;
 			children = (
-				05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */,
-				05F0EFE81B0B5EB100784150 /* Objetos.swift */,
-				05F0EFE61B0B5A2A00784150 /* Users.swift */,
-				05F0EFE41B0B595A00784150 /* Categoria.swift */,
-				05F0EFE21B0B594700784150 /* GrupoEstudo.swift */,
-				05F0EFE01B0B593A00784150 /* Historico.swift */,
-				05F0EFDE1B0B592B00784150 /* Pergunta.swift */,
-				05F0EFDC1B0B591F00784150 /* Conteudo.swift */,
-				05F0EFDA1B0B591000784150 /* Texto.swift */,
-				05F0EFD81B0B58A800784150 /* Imagem.swift */,
-				05F0EFD61B0B589600784150 /* Video.swift */,
-				05F0EFD41B0B587C00784150 /* Audio.swift */,
-				05F0EFD21B0B55EE00784150 /* ConteudoTableViewController.swift */,
 				053CB3491B06132200CCEFA5 /* AppDelegate.swift */,
-				053CB34E1B06132200CCEFA5 /* ViewController.swift */,
-				053CB3501B06132200CCEFA5 /* Main.storyboard */,
-				053CB3531B06132200CCEFA5 /* Images.xcassets */,
 				053CB3551B06132200CCEFA5 /* LaunchScreen.xib */,
+				053CB3501B06132200CCEFA5 /* Main.storyboard */,
+				251DBC601B0B7FE2009EC7EB /* Interface de Usuário */,
+				05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */,
 				053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */,
+				251DBC5B1B0B7F79009EC7EB /* Modelos */,
+				053CB3531B06132200CCEFA5 /* Images.xcassets */,
 				053CB3471B06132200CCEFA5 /* Supporting Files */,
 			);
 			path = OmniScientia;
@@ -157,10 +148,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		25900C371B0B5B9B00525ADF /* Interface de Usuário */ = {
+		251DBC5B1B0B7F79009EC7EB /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
-				25900C381B0B5BD000525ADF /* NovoConteudoViewController.swift */,
+				05F0EFE81B0B5EB100784150 /* Objetos.swift */,
+				05F0EFE61B0B5A2A00784150 /* Users.swift */,
+				05F0EFE41B0B595A00784150 /* Categoria.swift */,
+				05F0EFE21B0B594700784150 /* GrupoEstudo.swift */,
+				05F0EFE01B0B593A00784150 /* Historico.swift */,
+				05F0EFDE1B0B592B00784150 /* Pergunta.swift */,
+				05F0EFDC1B0B591F00784150 /* Conteudo.swift */,
+				05F0EFDA1B0B591000784150 /* Texto.swift */,
+				05F0EFD81B0B58A800784150 /* Imagem.swift */,
+				05F0EFD61B0B589600784150 /* Video.swift */,
+				05F0EFD41B0B587C00784150 /* Audio.swift */,
+			);
+			name = Modelos;
+			sourceTree = "<group>";
+		};
+		251DBC601B0B7FE2009EC7EB /* Interface de Usuário */ = {
+			isa = PBXGroup;
+			children = (
+				251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */,
+				251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */,
+				05F0EFD21B0B55EE00784150 /* ConteudoTableViewController.swift */,
 			);
 			name = "Interface de Usuário";
 			sourceTree = "<group>";
@@ -277,10 +288,11 @@
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
-				053CB34F1B06132200CCEFA5 /* ViewController.swift in Sources */,
+				251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */,
 				05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */,
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
+				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
 				053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */,
 				053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */,
 				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,

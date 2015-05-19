@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cKw-AH-DZ1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cKw-AH-DZ1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Conteúdos-->
         <scene sceneID="MYq-iv-BgV">
             <objects>
-                <tableViewController id="AOl-gE-6dU" sceneMemberID="viewController">
+                <tableViewController id="AOl-gE-6dU" customClass="ConteudoTableViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="e6t-DX-aUr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,10 +22,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MOS-fp-fUP" id="5Dd-kI-nit">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="erA-D0-tRw">
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="erA-D0-tRw">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="214"/>
+                                                    <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </scrollView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="erA-D0-tRw" firstAttribute="leading" secondItem="5Dd-kI-nit" secondAttribute="leadingMargin" constant="-32" id="gjT-wP-RvS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="erA-D0-tRw" secondAttribute="bottom" constant="-8" id="kS7-En-un9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="erA-D0-tRw" secondAttribute="trailing" constant="-32" id="nDV-NO-cec"/>
+                                                <constraint firstItem="erA-D0-tRw" firstAttribute="top" secondItem="5Dd-kI-nit" secondAttribute="topMargin" constant="-8" id="xEV-Wd-Eln"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -37,10 +44,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iXz-nv-8K5" id="Hji-C2-bAR">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9j-47-Mlx">
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c9j-47-Mlx">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="214"/>
+                                                    <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </scrollView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="c9j-47-Mlx" secondAttribute="trailing" constant="-32" id="77r-2n-Cxx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="c9j-47-Mlx" secondAttribute="bottom" constant="-8" id="Cqc-7m-V6V"/>
+                                                <constraint firstItem="c9j-47-Mlx" firstAttribute="leading" secondItem="Hji-C2-bAR" secondAttribute="leadingMargin" constant="-32" id="WcF-dT-a2H"/>
+                                                <constraint firstItem="c9j-47-Mlx" firstAttribute="top" secondItem="Hji-C2-bAR" secondAttribute="topMargin" constant="-8" id="gv9-Gf-vLL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -52,10 +66,17 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uh2-X0-m6Y" id="o5o-xY-e7G">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCf-l9-0Bh">
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCf-l9-0Bh">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="214"/>
+                                                    <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </scrollView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eCf-l9-0Bh" secondAttribute="bottom" constant="-8" id="TC1-VF-FP8"/>
+                                                <constraint firstItem="eCf-l9-0Bh" firstAttribute="leading" secondItem="o5o-xY-e7G" secondAttribute="leadingMargin" constant="-32" id="TuD-hO-Hhw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eCf-l9-0Bh" secondAttribute="trailing" constant="-32" id="VIS-LZ-c6i"/>
+                                                <constraint firstItem="eCf-l9-0Bh" firstAttribute="top" secondItem="o5o-xY-e7G" secondAttribute="topMargin" constant="-8" id="oai-Jl-nIw"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -70,7 +91,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Novo Conteúdo" id="AXg-wI-Bbs">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="wUR-Yv-z0P" kind="presentation" id="0P4-wi-qA2"/>
+                                <segue destination="MnL-Dp-WqM" kind="presentation" id="SmC-TO-I8h"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -79,10 +100,27 @@
             </objects>
             <point key="canvasLocation" x="348" y="-588"/>
         </scene>
-        <!--Conteudo Table View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="DAb-6T-TaA">
+            <objects>
+                <navigationController id="MnL-Dp-WqM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UAu-sP-7Jd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hf0-ZT-OEQ" kind="relationship" relationship="rootViewController" id="fPb-Gb-EVv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k45-7a-Flm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086" y="-588"/>
+        </scene>
+        <!--Novo Conteúdo-->
         <scene sceneID="nmk-N3-SCf">
             <objects>
-                <tableViewController id="hf0-ZT-OEQ" customClass="ConteudoTableViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hf0-ZT-OEQ" customClass="NovoConteudoViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fbF-YU-mAx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
