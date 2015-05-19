@@ -157,6 +157,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		25900C371B0B5B9B00525ADF /* Interface de Usuário */ = {
+			isa = PBXGroup;
+			children = (
+				25900C381B0B5BD000525ADF /* NovoConteudoViewController.swift */,
+			);
+			name = "Interface de Usuário";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
