@@ -23,7 +23,7 @@ class CadastroTableViewController: UITableViewController {
     @IBOutlet weak var sexo: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        cloudKitHelper.fetchUsers("mari")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
