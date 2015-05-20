@@ -33,6 +33,7 @@
 		572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */; };
 		572DE1BF1B0CA6F9008DB6F2 /* CDConteudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1BE1B0CA6F9008DB6F2 /* CDConteudo.swift */; };
 		572DE1C11B0CA6F9008DB6F2 /* CDUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1C01B0CA6F9008DB6F2 /* CDUsuario.swift */; };
+		572DE1C41B0CA809008DB6F2 /* CDUsuarioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1C31B0CA809008DB6F2 /* CDUsuarioDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		572DE1BE1B0CA6F9008DB6F2 /* CDConteudo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDConteudo.swift; path = ../CDConteudo.swift; sourceTree = "<group>"; };
 		572DE1C01B0CA6F9008DB6F2 /* CDUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDUsuario.swift; path = ../CDUsuario.swift; sourceTree = "<group>"; };
+		572DE1C31B0CA809008DB6F2 /* CDUsuarioDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDUsuarioDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				572DE1B21B0CA639008DB6F2 /* CDConteudoDAO.swift */,
 				572DE1C01B0CA6F9008DB6F2 /* CDUsuario.swift */,
 				572DE1BE1B0CA6F9008DB6F2 /* CDConteudo.swift */,
+				572DE1C31B0CA809008DB6F2 /* CDUsuarioDAO.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
 				251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */,
 				05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */,
+				572DE1C41B0CA809008DB6F2 /* CDUsuarioDAO.swift in Sources */,
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
 				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
 				572DE1B41B0CA639008DB6F2 /* CDConteudoDAO.swift in Sources */,

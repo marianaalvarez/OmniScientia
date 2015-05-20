@@ -9,5 +9,29 @@
 import CoreData
 
 class CDConteudoDao {
+    static let entityName:String = "Conteudo"
+    static let sharedInstance = CDConteudoDao()
+    
+    func novo() -> CDConteudo {
+        return NSEntityDescription.insertNewObjectForEntityForName(CDConteudoDao.entityName, inManagedObjectContext: CoreDataStack.sharedInstance.context) as! CDConteudo
+    }
+    
+    func buscar() -> [CDConteudo]? {
+        let fetchRequest = NSFetchRequest(entityName: CDConteudoDao.entityName)
+        var error:NSError?
+        
+        let fetchedResults = CoreDataStack.sharedInstance.context.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
+        
+        if let results = fetchedResults as? [CDConteudo] {
+            return results
+        } else {
+            println("Não foi possivel buscar conteudos: \(error), \(error!.userInfo)")
+        }
+        
+        return nil
+        
+    }
+    
+    
     
 }

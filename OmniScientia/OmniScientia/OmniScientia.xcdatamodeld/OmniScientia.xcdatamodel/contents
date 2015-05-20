@@ -6,6 +6,9 @@
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Image" syncable="YES"/>
+    <entity name="LearningObject" isAbstract="YES" syncable="YES"/>
+    <entity name="Quiz" syncable="YES"/>
     <entity name="Usuario" representedClassName="OmniScientia.CDUsuario" syncable="YES">
         <attribute name="dataNasc" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,8 +17,13 @@
         <attribute name="sexo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Video" syncable="YES"/>
     <elements>
         <element name="Conteudo" positionX="-21933" positionY="-8910" width="128" height="105"/>
         <element name="Usuario" positionX="-21609" positionY="-8892" width="128" height="135"/>
+        <element name="LearningObject" positionX="-21771" positionY="-8856" width="128" height="45"/>
+        <element name="Quiz" positionX="-21762" positionY="-8847" width="128" height="45"/>
+        <element name="Image" positionX="-21753" positionY="-8838" width="128" height="45"/>
+        <element name="Video" positionX="-21744" positionY="-8829" width="128" height="45"/>
     </elements>
 </model>
