@@ -22,7 +22,7 @@ class CloudKitHelper {
     var publicDB : CKDatabase
     let privateDB : CKDatabase
     var delegate : CloudKitDelegate?
-    var users = [Users]()
+    var usuarios = [Usuario]()
     
     init() {
         container = CKContainer.defaultContainer()
@@ -35,7 +35,7 @@ class CloudKitHelper {
     }
     
     func salvaUsuario(usuario: String, senha: String, nome: String, email: String, sexo: String) {
-        let userRecord = CKRecord(recordType: "Users")
+        let userRecord = CKRecord(recordType: "Usuario")
         userRecord.setValue(usuario, forKey: "usuario")
         userRecord.setValue(nome, forKey: "nome")
         userRecord.setValue(senha, forKey: "senha")
@@ -43,7 +43,7 @@ class CloudKitHelper {
         userRecord.setValue(sexo, forKey: "sexo")
         //userRecord.setValue(dataNascimento, forKey: "dataNascimento")
         
-        privateDB.saveRecord(userRecord, completionHandler: { (record, error) -> Void in
+        publicDB.saveRecord(userRecord, completionHandler: { (record, error) -> Void in
             if (error != nil) {
                 println("Deu Ruim + \(error)")
             }
@@ -54,7 +54,7 @@ class CloudKitHelper {
         } )
     }
     
-    func salvaConteudo(autor: Users, titulo: String, descricao: String, cor: String, objetos: NSArray, data: NSDate) {
+    func salvaConteudo(autor: Usuario, titulo: String, descricao: String, cor: String, objetos: NSArray, data: NSDate) {
         let conteudoRecord = CKRecord(recordType: "Conteudo")
         conteudoRecord.setValue(autor, forKey: "autor")
         conteudoRecord.setValue(titulo, forKey: "titulo")
@@ -117,9 +117,9 @@ class CloudKitHelper {
     func fetchUsers(insertedRecord: CKRecord) {
         let predicate = NSPredicate(value: true)
         let sort = NSSortDescriptor(key: "creationDate", ascending: false)
-        let query = CKQuery(recordType: "Users", predicate: predicate)
+        let query = CKQuery(recordType: "Usuario", predicate: predicate)
         query.sortDescriptors = [sort]
-        privateDB.performQuery(query, inZoneWithID: nil) {
+        publicDB.performQuery(query, inZoneWithID: nil) {
             results, error in
             if error != nil {
                 dispatch_async(dispatch_get_main_queue()) {
@@ -127,14 +127,14 @@ class CloudKitHelper {
                     return
                 }
             } else {
-                self.users.removeAll()
+                self.usuarios.removeAll()
                 for record in results{
-                    let user = Users(record: record as! CKRecord, database: self.privateDB)
-                    self.users.append(user)
+                    let user = Usuario(record: record as! CKRecord, database: self.publicDB)
+                    self.usuarios.append(user)
                 }
                 if let tmp = insertedRecord as? CKRecord {
-                    let user = Users(record: insertedRecord as CKRecord, database: self.privateDB)
-                    self.users.insert(user, atIndex: 0)
+                    let usuario = Usuario(record: insertedRecord as CKRecord, database: self.publicDB)
+                    self.usuarios.insert(usuario, atIndex: 0)
                 }
                 dispatch_async(dispatch_get_main_queue()) {
                     self.delegate?.modelUpdated()

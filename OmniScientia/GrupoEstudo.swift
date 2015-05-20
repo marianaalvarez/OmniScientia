@@ -14,14 +14,14 @@ class GrupoEstudo: NSObject {
     var record : CKRecord!
     weak var database : CKDatabase!
     var conteudo : Conteudo
-    var usuarios : Array<Users>!
+    var usuarios : Array<Usuario>!
 
     
     init(record : CKRecord, database: CKDatabase) {
         self.record = record
         self.database = database
         self.conteudo = record.objectForKey("conteudo") as! Conteudo!
-        self.usuarios = record.objectForKey("usuarios") as! Array<Users>!
+        self.usuarios = record.objectForKey("usuarios") as! Array<Usuario>!
 
     }
    

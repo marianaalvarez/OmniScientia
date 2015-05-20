@@ -1,5 +1,5 @@
 //
-//  Users.swift
+//  Usuario.swift
 //  OmniScientia
 //
 //  Created by Mariana Alvarez on 19/05/15.
@@ -9,7 +9,7 @@
 import CloudKit
 import UIKit
 
-class Users: NSObject {
+class Usuario: NSObject {
     
     var record : CKRecord!
     weak var database : CKDatabase!
