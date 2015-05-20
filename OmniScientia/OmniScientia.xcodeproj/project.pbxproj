@@ -13,6 +13,8 @@
 		053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3531B06132200CCEFA5 /* Images.xcassets */; };
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
 		053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */; };
+		0595B6131B0B83F2009760BF /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0595B6121B0B83F2009760BF /* CloudKitHelper.swift */; };
+		05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D049961B0BC321003F2127 /* CadastroTableViewController.swift */; };
 		05F0EFD11B0A135200784150 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F0EFD01B0A135200784150 /* CloudKit.framework */; };
 		05F0EFD51B0B587C00784150 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD41B0B587C00784150 /* Audio.swift */; };
 		05F0EFD71B0B589600784150 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD61B0B589600784150 /* Video.swift */; };
@@ -51,6 +53,8 @@
 		053CB35C1B06132200CCEFA5 /* OmniScientiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmniScientiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		053CB3611B06132200CCEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniScientiaTests.swift; sourceTree = "<group>"; };
+		0595B6121B0B83F2009760BF /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
+		05D049961B0BC321003F2127 /* CadastroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroTableViewController.swift; sourceTree = "<group>"; };
 		05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OmniScientia.entitlements; sourceTree = "<group>"; };
 		05F0EFD01B0A135200784150 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		05F0EFD41B0B587C00784150 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Audio.swift; path = ../Audio.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 				05F0EFD81B0B58A800784150 /* Imagem.swift */,
 				05F0EFD61B0B589600784150 /* Video.swift */,
 				05F0EFD41B0B587C00784150 /* Audio.swift */,
+				0595B6121B0B83F2009760BF /* CloudKitHelper.swift */,
 			);
 			name = Modelos;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */,
 				251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */,
 				251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */,
+				05D049961B0BC321003F2127 /* CadastroTableViewController.swift */,
 			);
 			name = "Interface de Usuário";
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
+				05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */,
+				0595B6131B0B83F2009760BF /* CloudKitHelper.swift in Sources */,
 				053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */,
 				053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */,
 				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,
