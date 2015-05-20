@@ -29,6 +29,10 @@
 		251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */; };
 		251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */; };
 		251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */; };
+		572DE1B41B0CA639008DB6F2 /* CDConteudoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1B21B0CA639008DB6F2 /* CDConteudoDAO.swift */; };
+		572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */; };
+		572DE1BF1B0CA6F9008DB6F2 /* CDConteudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1BE1B0CA6F9008DB6F2 /* CDConteudo.swift */; };
+		572DE1C11B0CA6F9008DB6F2 /* CDUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1C01B0CA6F9008DB6F2 /* CDUsuario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTableViewController.swift; sourceTree = "<group>"; };
 		251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
 		251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudosViewController.swift; sourceTree = "<group>"; };
+		572DE1B21B0CA639008DB6F2 /* CDConteudoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDConteudoDAO.swift; sourceTree = "<group>"; };
+		572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		572DE1BE1B0CA6F9008DB6F2 /* CDConteudo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDConteudo.swift; path = ../CDConteudo.swift; sourceTree = "<group>"; };
+		572DE1C01B0CA6F9008DB6F2 /* CDUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CDUsuario.swift; path = ../CDUsuario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,7 @@
 		053CB3461B06132200CCEFA5 /* OmniScientia */ = {
 			isa = PBXGroup;
 			children = (
+				572DE1C21B0CA706008DB6F2 /* CoreData */,
 				053CB3491B06132200CCEFA5 /* AppDelegate.swift */,
 				053CB3551B06132200CCEFA5 /* LaunchScreen.xib */,
 				053CB3501B06132200CCEFA5 /* Main.storyboard */,
@@ -179,6 +188,17 @@
 			name = "Interface de Usuário";
 			sourceTree = "<group>";
 		};
+		572DE1C21B0CA706008DB6F2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */,
+				572DE1B21B0CA639008DB6F2 /* CDConteudoDAO.swift */,
+				572DE1C01B0CA6F9008DB6F2 /* CDUsuario.swift */,
+				572DE1BE1B0CA6F9008DB6F2 /* CDConteudo.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,7 +248,7 @@
 				TargetAttributes = {
 					053CB3431B06132200CCEFA5 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = T6LWGN6HAV;
+						DevelopmentTeam = Y8HHM49ZTR;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 1;
@@ -288,11 +308,14 @@
 				05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */,
 				05F0EFE11B0B593A00784150 /* Historico.swift in Sources */,
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
+				572DE1BF1B0CA6F9008DB6F2 /* CDConteudo.swift in Sources */,
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
 				251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */,
 				05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */,
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
+				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
+				572DE1B41B0CA639008DB6F2 /* CDConteudoDAO.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
 				0595B6131B0B83F2009760BF /* CloudKitHelper.swift in Sources */,
@@ -301,6 +324,7 @@
 				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,
 				05F0EFD51B0B587C00784150 /* Audio.swift in Sources */,
 				05F0EFDF1B0B592B00784150 /* Pergunta.swift in Sources */,
+				572DE1C11B0CA6F9008DB6F2 /* CDUsuario.swift in Sources */,
 				251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

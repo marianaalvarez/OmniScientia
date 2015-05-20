@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Conteudo" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Conteudo" representedClassName="OmniScientia.CDConteudo" syncable="YES">
         <attribute name="backgroundImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Usuario" syncable="YES">
+    <entity name="Usuario" representedClassName="OmniScientia.CDUsuario" syncable="YES">
         <attribute name="dataNasc" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,7 +15,7 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Conteudo" positionX="-21933" positionY="-8910" width="128" height="103"/>
-        <element name="Usuario" positionX="-21609" positionY="-8892" width="128" height="133"/>
+        <element name="Conteudo" positionX="-21933" positionY="-8910" width="128" height="105"/>
+        <element name="Usuario" positionX="-21609" positionY="-8892" width="128" height="135"/>
     </elements>
 </model>
