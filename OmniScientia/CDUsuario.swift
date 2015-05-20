@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class CDUsuario: NSManagedObject {
+public class CDUsuario: NSManagedObject {
 
     @NSManaged var dataNasc: NSDate
     @NSManaged var email: String

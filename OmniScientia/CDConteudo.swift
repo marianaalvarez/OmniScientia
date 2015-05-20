@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class CDConteudo: NSManagedObject {
+public class CDConteudo: NSManagedObject {
 
     @NSManaged var backgroundImage: NSData
     @NSManaged var cor: String

@@ -5,10 +5,13 @@
         <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="learningObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LearningObject" inverseName="conteudo" inverseEntity="LearningObject" syncable="YES"/>
     </entity>
-    <entity name="Image" syncable="YES"/>
-    <entity name="LearningObject" isAbstract="YES" syncable="YES"/>
-    <entity name="Quiz" syncable="YES"/>
+    <entity name="Image" representedClassName="OmniScientia.CDImage" parentEntity="LearningObject" syncable="YES"/>
+    <entity name="LearningObject" isAbstract="YES" syncable="YES">
+        <relationship name="conteudo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Conteudo" inverseName="learningObjects" inverseEntity="Conteudo" syncable="YES"/>
+    </entity>
+    <entity name="Quiz" representedClassName="OmniScientia.CDQuiz" parentEntity="LearningObject" syncable="YES"/>
     <entity name="Usuario" representedClassName="OmniScientia.CDUsuario" syncable="YES">
         <attribute name="dataNasc" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,13 +20,13 @@
         <attribute name="sexo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Video" syncable="YES"/>
+    <entity name="Video" representedClassName="OmniScientia.CDVideo" parentEntity="LearningObject" syncable="YES"/>
     <elements>
-        <element name="Conteudo" positionX="-21933" positionY="-8910" width="128" height="105"/>
-        <element name="Usuario" positionX="-21609" positionY="-8892" width="128" height="135"/>
-        <element name="LearningObject" positionX="-21771" positionY="-8856" width="128" height="45"/>
-        <element name="Quiz" positionX="-21762" positionY="-8847" width="128" height="45"/>
-        <element name="Image" positionX="-21753" positionY="-8838" width="128" height="45"/>
-        <element name="Video" positionX="-21744" positionY="-8829" width="128" height="45"/>
+        <element name="Conteudo" positionX="-21755" positionY="-8992" width="128" height="118"/>
+        <element name="Usuario" positionX="-21512" positionY="-8991" width="128" height="135"/>
+        <element name="LearningObject" positionX="-21755" positionY="-8802" width="128" height="58"/>
+        <element name="Quiz" positionX="-21629" positionY="-8694" width="128" height="43"/>
+        <element name="Image" positionX="-21879" positionY="-8712" width="128" height="43"/>
+        <element name="Video" positionX="-21762" positionY="-8640" width="128" height="43"/>
     </elements>
 </model>

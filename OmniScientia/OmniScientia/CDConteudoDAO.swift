@@ -8,19 +8,19 @@
 
 import CoreData
 
-class CDConteudoDao {
+public class CDConteudoDao {
     static let entityName:String = "Conteudo"
     static let sharedInstance = CDConteudoDao()
     
     func novo() -> CDConteudo {
-        return NSEntityDescription.insertNewObjectForEntityForName(CDConteudoDao.entityName, inManagedObjectContext: CoreDataStack.sharedInstance.context) as! CDConteudo
+        return NSEntityDescription.insertNewObjectForEntityForName(CDConteudoDao.entityName, inManagedObjectContext: CDManager.sharedInstance.context!) as! CDConteudo
     }
     
     func buscar() -> [CDConteudo]? {
         let fetchRequest = NSFetchRequest(entityName: CDConteudoDao.entityName)
         var error:NSError?
         
-        let fetchedResults = CoreDataStack.sharedInstance.context.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
+        let fetchedResults = CDManager.sharedInstance.context!.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
         
         if let results = fetchedResults as? [CDConteudo] {
             return results
