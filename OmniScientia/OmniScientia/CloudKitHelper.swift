@@ -144,61 +144,6 @@ class CloudKitHelper {
                     }
                 }
             }))
-//        let predicate = NSPredicate(value: true)
-//        let sort = NSSortDescriptor(key: "creationDate", ascending: false)
-//        let query = CKQuery(recordType: "Usuario", predicate: predicate)
-//        query.sortDescriptors = [sort]
-//        publicDB.performQuery(query, inZoneWithID: nil) {
-//            results, error in
-//            if error != nil {
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    self.delegate?.errorUpdating(error)
-//                    return
-//                }
-//            } else {
-//                self.usuarios.removeAll()
-//                for record in results{
-//                    let user = Usuario(record: record as! CKRecord, database: self.publicDB)
-//                    if (user.nome == "\(nome)") {
-//                        self.usuarios.append(user)
-//                        println("\(user.nome)")
-//                    }
-//                }
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    self.delegate?.modelUpdated()
-//                    return
-//                }
-//            }
-//        }
     }
-    
-//    func fetchUsers(nome: String) {
-//        
-//        let predicate = NSPredicate(format: "nome == %@", nome)
-//        let query = CKQuery(recordType: "Usuario", predicate: predicate)
-//        publicDB.performQuery(query, inZoneWithID: nil) {
-//            results, error in
-//            if error != nil {
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    self.delegate?.errorUpdating(error)
-//                    return
-//                }
-//            } else {
-//                self.usuarios.removeAll()
-//                for record in results{
-//                    
-//                    let user = Usuario(record: record as! CKRecord, database: self.publicDB)
-//                    self.usuarios.append(user)
-//                    println("\(user.nome)")
-//                }
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    self.delegate?.modelUpdated()
-//                    return
-//                }
-//            }
-//        }
-//
-//   
-//    }
     
 }
