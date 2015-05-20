@@ -1,5 +1,5 @@
 //
-//  CDUsuario.swift
+//  UsuarioMO
 //  OmniScientia
 //
 //  Created by Victor Travassos Ferreira on 5/20/15.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-public class CDUsuario: NSManagedObject {
+public class UsuarioMO: NSManagedObject {
 
     @NSManaged var dataNasc: NSDate
     @NSManaged var email: String

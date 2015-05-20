@@ -1,5 +1,5 @@
 //
-//  CDConteudo.swift
+//  ConteudoMO
 //  OmniScientia
 //
 //  Created by Victor Travassos Ferreira on 5/20/15.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-public class CDConteudo: NSManagedObject {
+public class ConteudoMO: NSManagedObject {
 
     @NSManaged var backgroundImage: NSData
     @NSManaged var cor: String

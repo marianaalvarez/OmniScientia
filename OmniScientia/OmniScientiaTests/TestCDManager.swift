@@ -10,7 +10,7 @@ import OmniScientia
 import CoreData
 import Foundation
 
-class TestCDManager:CDManager {
-
+class TestCDManager:CoreDataManager {
+    
 }
 

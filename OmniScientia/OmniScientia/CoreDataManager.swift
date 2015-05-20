@@ -1,13 +1,13 @@
 import CoreData
 
-public class CDManager {
+public class CoreDataManager {
     
-    public static let sharedInstance = CDManager()
+    public static let sharedInstance = CoreDataManager()
     
-    static let nameApp:String = "OmniScientia"
+    static let applicationName:String = "OmniScientia"
     
     public var managedObjectModel: NSManagedObjectModel = {
-        var modelPath = NSBundle.mainBundle().pathForResource(CDManager.nameApp, ofType: "momd")
+        var modelPath = NSBundle.mainBundle().pathForResource(CoreDataManager.applicationName, ofType: "momd")
         var modelURL = NSURL.fileURLWithPath(modelPath!)
         
         var model = NSManagedObjectModel(contentsOfURL: modelURL!)!
@@ -23,7 +23,7 @@ public class CDManager {
     public lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
             println("Providenciando Persistent Store Coordinator")
             
-            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent(CDManager.nameApp)
+            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent(CoreDataManager.applicationName)
             var options = [NSInferMappingModelAutomaticallyOption: true,NSMigratePersistentStoresAutomaticallyOption: true]
             var error: NSError? = nil
             
