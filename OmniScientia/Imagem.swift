@@ -13,10 +13,8 @@ class Imagem: Objetos {
     
     var imagem : CKAsset!
     
-    init(record : CKRecord, database: CKDatabase) {
-        super.init()
-        super.record = record
-        super.database = database
+    override init(record : CKRecord, database: CKDatabase) {
+        super.init(record: record, database: database)
         self.imagem = record.objectForKey("imagem") as! CKAsset!
     }
    

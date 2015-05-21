@@ -15,10 +15,8 @@ class Pergunta: Objetos {
     var arrayRespostas : NSArray!
     var resposta : Int = 0
     
-    init(record : CKRecord, database: CKDatabase) {
-        super.init()
-        super.record = record
-        super.database = database
+    override init(record : CKRecord, database: CKDatabase) {
+        super.init(record: record, database: database)
         self.pergunta = record.objectForKey("pergunta") as! String!
         self.arrayRespostas = record.objectForKey("arrayRespostas") as! NSArray!
         self.resposta = record.objectForKey("resposta") as! Int!

@@ -22,7 +22,8 @@ class CloudKitHelper {
     var publicDB : CKDatabase
     let privateDB : CKDatabase
     var delegate : CloudKitDelegate?
-    var users = [Users]()
+    var usuarios = [Usuario]()
+    var objetos = [Objetos]()
     
     init() {
         container = CKContainer.defaultContainer()
@@ -35,7 +36,7 @@ class CloudKitHelper {
     }
     
     func salvaUsuario(usuario: String, senha: String, nome: String, email: String, sexo: String) {
-        let userRecord = CKRecord(recordType: "Users")
+        let userRecord = CKRecord(recordType: "Usuario")
         userRecord.setValue(usuario, forKey: "usuario")
         userRecord.setValue(nome, forKey: "nome")
         userRecord.setValue(senha, forKey: "senha")
@@ -43,7 +44,7 @@ class CloudKitHelper {
         userRecord.setValue(sexo, forKey: "sexo")
         //userRecord.setValue(dataNascimento, forKey: "dataNascimento")
         
-        privateDB.saveRecord(userRecord, completionHandler: { (record, error) -> Void in
+        publicDB.saveRecord(userRecord, completionHandler: { (record, error) -> Void in
             if (error != nil) {
                 println("Deu Ruim + \(error)")
             }
@@ -54,7 +55,7 @@ class CloudKitHelper {
         } )
     }
     
-    func salvaConteudo(autor: Users, titulo: String, descricao: String, cor: String, objetos: NSArray, data: NSDate) {
+    func salvaConteudo(autor: Usuario, titulo: String, descricao: String, cor: String, objetos: NSArray, data: NSDate) {
         let conteudoRecord = CKRecord(recordType: "Conteudo")
         conteudoRecord.setValue(autor, forKey: "autor")
         conteudoRecord.setValue(titulo, forKey: "titulo")
@@ -73,15 +74,6 @@ class CloudKitHelper {
         imagemRecord.setValue(imagem, forKey: "imagem")
         
         publicDB.saveRecord(imagemRecord, completionHandler: { (record, error) -> Void in
-            NSLog("Dados salvos no cloud kit.")
-        } )
-    }
-    
-    func salvaVideo(video: CKAsset) {
-        let videoRecord = CKRecord(recordType: "Video")
-        videoRecord.setValue(video, forKey: "video")
-        
-        publicDB.saveRecord(videoRecord, completionHandler: { (record, error) -> Void in
             NSLog("Dados salvos no cloud kit.")
         } )
     }
@@ -114,35 +106,71 @@ class CloudKitHelper {
         } )
     }
     
-    func fetchUsers(insertedRecord: CKRecord) {
-        let predicate = NSPredicate(value: true)
-        let sort = NSSortDescriptor(key: "creationDate", ascending: false)
-        let query = CKQuery(recordType: "Users", predicate: predicate)
-        query.sortDescriptors = [sort]
-        privateDB.performQuery(query, inZoneWithID: nil) {
-            results, error in
-            if error != nil {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.delegate?.errorUpdating(error)
-                    return
-                }
-            } else {
-                self.users.removeAll()
-                for record in results{
-                    let user = Users(record: record as! CKRecord, database: self.privateDB)
-                    self.users.append(user)
-                }
-                if let tmp = insertedRecord as? CKRecord {
-                    let user = Users(record: insertedRecord as CKRecord, database: self.privateDB)
-                    self.users.insert(user, atIndex: 0)
-                }
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.delegate?.modelUpdated()
-                    return
-                }
-            }
-        }
+    func fetchUusarios(nome: String, senha: String) {
+        let predicate = NSPredicate(format: "nome = %@ && senha == %@", nome, nome)
+        
+        let query = CKQuery(recordType: "Usuario", predicate: predicate)
+        
+        publicDB.performQuery(query, inZoneWithID: nil,
+            completionHandler: ({results, error in
+                if (error != nil) {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        NSLog("Erro")
+                    }
+                } else {
+                    if results.count > 0 {
+                        
+                        var record = results[0] as! CKRecord
 
-   
+                        dispatch_async(dispatch_get_main_queue()) {
+                            
+                            let user = Usuario(record: record as CKRecord, database: self.publicDB)
+                            println("\(user.nome)")
+                            
+                        }
+                    } else {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            NSLog("Usuário não encontrado.")
+                        }
+                    }
+                }
+            }))
     }
+    
+    func usuarioExistente(usuario: String) -> Bool {
+        let predicate = NSPredicate(format: "usuario = %@", usuario)
+        
+        let query = CKQuery(recordType: "Usuario", predicate: predicate)
+        
+        var user = false
+        
+        publicDB.performQuery(query, inZoneWithID: nil,
+            completionHandler: ({results, error in
+                if (error != nil) {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        NSLog("Erro")
+                    }
+                } else {
+                    if results.count > 0 {
+                        
+                        var record = results[0] as! CKRecord
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            
+                             user = true
+                            
+                        }
+                    } else {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            NSLog("Usuário não encontrado.")
+                        }
+                    }
+                }
+            }))
+        return user
+    }
+    
+    
+    
+    
 }

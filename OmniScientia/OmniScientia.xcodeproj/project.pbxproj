@@ -13,7 +13,6 @@
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
 		0595B6131B0B83F2009760BF /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0595B6121B0B83F2009760BF /* CloudKitHelper.swift */; };
 		05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D049961B0BC321003F2127 /* CadastroTableViewController.swift */; };
-		05F0EFD11B0A135200784150 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F0EFD01B0A135200784150 /* CloudKit.framework */; };
 		05F0EFD51B0B587C00784150 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD41B0B587C00784150 /* Audio.swift */; };
 		05F0EFD71B0B589600784150 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD61B0B589600784150 /* Video.swift */; };
 		05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD81B0B58A800784150 /* Imagem.swift */; };
@@ -23,7 +22,7 @@
 		05F0EFE11B0B593A00784150 /* Historico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE01B0B593A00784150 /* Historico.swift */; };
 		05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE21B0B594700784150 /* GrupoEstudo.swift */; };
 		05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE41B0B595A00784150 /* Categoria.swift */; };
-		05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE61B0B5A2A00784150 /* Users.swift */; };
+		05F0EFE71B0B5A2A00784150 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE61B0B5A2A00784150 /* Usuario.swift */; };
 		05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE81B0B5EB100784150 /* Objetos.swift */; };
 		251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */; };
 		251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */; };
@@ -66,7 +65,6 @@
 		0595B6121B0B83F2009760BF /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		05D049961B0BC321003F2127 /* CadastroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroTableViewController.swift; sourceTree = "<group>"; };
 		05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OmniScientia.entitlements; sourceTree = "<group>"; };
-		05F0EFD01B0A135200784150 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		05F0EFD41B0B587C00784150 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Audio.swift; path = ../Audio.swift; sourceTree = "<group>"; };
 		05F0EFD61B0B589600784150 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Video.swift; path = ../Video.swift; sourceTree = "<group>"; };
 		05F0EFD81B0B58A800784150 /* Imagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Imagem.swift; path = ../Imagem.swift; sourceTree = "<group>"; };
@@ -76,7 +74,7 @@
 		05F0EFE01B0B593A00784150 /* Historico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Historico.swift; path = ../Historico.swift; sourceTree = "<group>"; };
 		05F0EFE21B0B594700784150 /* GrupoEstudo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GrupoEstudo.swift; path = ../GrupoEstudo.swift; sourceTree = "<group>"; };
 		05F0EFE41B0B595A00784150 /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categoria.swift; path = ../Categoria.swift; sourceTree = "<group>"; };
-		05F0EFE61B0B5A2A00784150 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Users.swift; path = ../Users.swift; sourceTree = "<group>"; };
+		05F0EFE61B0B5A2A00784150 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = ../Usuario.swift; sourceTree = "<group>"; };
 		05F0EFE81B0B5EB100784150 /* Objetos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Objetos.swift; path = ../Objetos.swift; sourceTree = "<group>"; };
 		251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTableViewController.swift; sourceTree = "<group>"; };
 		251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F0EFD11B0A135200784150 /* CloudKit.framework in Frameworks */,
+				055504701B0CA7260051CFAB /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +115,7 @@
 		053CB33B1B06132200CCEFA5 = {
 			isa = PBXGroup;
 			children = (
-				05F0EFD01B0A135200784150 /* CloudKit.framework */,
+				0555046F1B0CA7260051CFAB /* CloudKit.framework */,
 				053CB3461B06132200CCEFA5 /* OmniScientia */,
 				053CB35F1B06132200CCEFA5 /* OmniScientiaTests */,
 				053CB3451B06132200CCEFA5 /* Products */,
@@ -179,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				05F0EFE81B0B5EB100784150 /* Objetos.swift */,
-				05F0EFE61B0B5A2A00784150 /* Users.swift */,
+				05F0EFE61B0B5A2A00784150 /* Usuario.swift */,
 				05F0EFE41B0B595A00784150 /* Categoria.swift */,
 				05F0EFE21B0B594700784150 /* GrupoEstudo.swift */,
 				05F0EFE01B0B593A00784150 /* Historico.swift */,
@@ -306,6 +304,9 @@
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = Y8HHM49ZTR;
 						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};

@@ -13,10 +13,8 @@ class Audio: Objetos {
     
     var audio : CKAsset!
     
-    init(record : CKRecord, database: CKDatabase) {
-        super.init()
-        super.record = record
-        super.database = database
+    override init(record : CKRecord, database: CKDatabase) {
+        super.init(record: record, database: database)
         self.audio = record.objectForKey("audio") as! CKAsset!
     }
 }

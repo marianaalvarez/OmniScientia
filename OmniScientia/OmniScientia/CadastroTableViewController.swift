@@ -10,11 +10,6 @@ import UIKit
 
 class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBAction func salvarDados(sender: AnyObject) {
-        
-        cloudKitHelper.salvaUsuario(self.txtNome.text, senha: self.txtSenha.text, nome: self.txtNome.text, email: self.txtEmail.text, sexo: self.txtSexo.text)
-        NSLog("Passou")
-    }
     
     let opcoesPickerSexo = ["Feminino", "Masculino", "Outros (Ex: Matraca)"]
     var sexoSelecionado: String = "Não selecionado" {
@@ -26,12 +21,35 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var txtNome: UITextField!
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var txtSenha: UITextField!
+    @IBOutlet weak var txtSenhaConfirm: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtSexo: UITextField!
+    @IBOutlet weak var dtNascimento: UITextField!
+    
+    @IBAction func salvarDados(sender: AnyObject) {
+        
+        if (txtNome.text == "" || txtUsuario.text == "" || txtSenha.text == "" || txtEmail.text == "" || txtSenha.text == "" || dtNascimento.text == "" || txtSenhaConfirm.text == "" ) {
+            let alerta = UIAlertController(title: "Atenção", message: "Todos os dados devem ser preenchidos!", preferredStyle:
+                UIAlertControllerStyle.Alert)
+            let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
+            alerta.addAction(acao)
+            self.presentViewController(alerta, animated: true, completion: nil)
+        }
+        
+        if (cloudKitHelper.usuarioExistente(txtUsuario.text)) {
+            let alerta = UIAlertController(title: "Atenção", message: "Nome de usuário já existe!", preferredStyle:
+                UIAlertControllerStyle.Alert)
+            let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
+            alerta.addAction(acao)
+            self.presentViewController(alerta, animated: true, completion: nil)
+        }
+        
+        //cloudKitHelper.salvaUsuario(self.txtNome.text, senha: self.txtSenha.text, nome: self.txtNome.text, email: self.txtEmail.text, sexo: self.txtSexo.text)
+        NSLog("Salvou")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
