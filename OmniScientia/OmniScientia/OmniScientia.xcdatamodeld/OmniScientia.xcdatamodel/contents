@@ -30,17 +30,12 @@
         <attribute name="sexo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Video" parentEntity="LearningObject" syncable="YES">
-        <attribute name="extension" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <elements>
         <element name="Conteudo" positionX="-21755" positionY="-8965" width="128" height="118"/>
         <element name="Image" positionX="-21879" positionY="-8712" width="128" height="73"/>
         <element name="LearningObject" positionX="-21755" positionY="-8802" width="128" height="58"/>
         <element name="Quiz" positionX="-21629" positionY="-8694" width="128" height="88"/>
         <element name="Usuario" positionX="-21512" positionY="-8991" width="128" height="133"/>
-        <element name="Video" positionX="-21762" positionY="-8640" width="128" height="73"/>
         <element name="Texto" positionX="-21420" positionY="-8721" width="128" height="58"/>
     </elements>
 </model>
