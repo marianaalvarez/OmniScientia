@@ -11,9 +11,9 @@ import CoreData
 
 public class ConteudoMO: NSManagedObject {
 
-    @NSManaged var backgroundImage: NSData
-    @NSManaged var cor: String
-    @NSManaged var descricao: String
-    @NSManaged var titulo: String
+    @NSManaged public var backgroundImage: NSData
+    @NSManaged public var cor: String
+    @NSManaged public var descricao: String
+    @NSManaged public var titulo: String
 
 }

@@ -8,25 +8,33 @@
 
 import CoreData
 
-public class UsuarioService {
-    static let sharedInstance = UsuarioService()
+public class UsuarioMOService {
+    public static let sharedInstance = UsuarioMOService()
+    
+    private init(){}
     
     static let entityName = "Usuario"
+    var coreDataStack:CoreDataStack = CoreDataStack.sharedInstance
     
-    func salvar()
-    {
-        CoreDataManager.sharedInstance.saveContext()
+    public func novo(#username:String,email:String,senha:String) -> UsuarioMO? {
+        println(3.1)
+        var usuario = NSEntityDescription.insertNewObjectForEntityForName(UsuarioMOService.entityName, inManagedObjectContext: coreDataStack.managedObjectContext!) as! UsuarioMO
+        println(3.2)
+        usuario.username = username
+        usuario.email = email
+        usuario.senha = senha
+        println(3.3)
+        coreDataStack.saveContext()
+        println(3.4)
+        
+        return usuario
     }
     
-    func novo() -> UsuarioMO {
-        return NSEntityDescription.insertNewObjectForEntityForName(UsuarioService.entityName, inManagedObjectContext: CoreDataManager.sharedInstance.context!) as! UsuarioMO
-    }
-    
-    func buscar() -> [UsuarioMO]? {
-        let fetchRequest = NSFetchRequest(entityName: UsuarioService.entityName)
+    public func buscar() -> [UsuarioMO]? {
+        let fetchRequest = NSFetchRequest(entityName: UsuarioMOService.entityName)
         var error:NSError?
         
-        let fetchedResults = CoreDataManager.sharedInstance.context!.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
+        let fetchedResults = coreDataStack.managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
         
         if let results = fetchedResults as? [UsuarioMO] {
             return results

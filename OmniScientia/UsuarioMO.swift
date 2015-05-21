@@ -11,11 +11,11 @@ import CoreData
 
 public class UsuarioMO: NSManagedObject {
 
-    @NSManaged var dataNasc: NSDate
-    @NSManaged var email: String
-    @NSManaged var nome: String
-    @NSManaged var senha: String
-    @NSManaged var sexo: String
-    @NSManaged var username: String
+    @NSManaged public var dataNasc: NSDate
+    @NSManaged public var email: String
+    @NSManaged public var nome: String
+    @NSManaged public var senha: String
+    @NSManaged public var sexo: String
+    @NSManaged public var username: String
 
 }

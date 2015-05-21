@@ -12,7 +12,6 @@
 		053CB3521B06132200CCEFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3501B06132200CCEFA5 /* Main.storyboard */; };
 		053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3531B06132200CCEFA5 /* Images.xcassets */; };
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
-		053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */; };
 		0595B6131B0B83F2009760BF /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0595B6121B0B83F2009760BF /* CloudKitHelper.swift */; };
 		05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D049961B0BC321003F2127 /* CadastroTableViewController.swift */; };
 		05F0EFD11B0A135200784150 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F0EFD01B0A135200784150 /* CloudKit.framework */; };
@@ -30,17 +29,17 @@
 		251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */; };
 		251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */; };
 		251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */; };
+		5705A7111B0DFDBD009368AD /* ConteudoMOServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */; };
 		572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1B21B0CA639008DB6F2 /* ConteudoMOService.swift */; };
-		572DE1B51B0CA639008DB6F2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1B31B0CA639008DB6F2 /* CoreDataManager.swift */; };
+		572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */; };
 		572DE1BF1B0CA6F9008DB6F2 /* ConteudoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1BE1B0CA6F9008DB6F2 /* ConteudoMO.swift */; };
 		572DE1C11B0CA6F9008DB6F2 /* UsuarioMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1C01B0CA6F9008DB6F2 /* UsuarioMO.swift */; };
 		572DE1C41B0CA809008DB6F2 /* UsuarioMOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1C31B0CA809008DB6F2 /* UsuarioMOService.swift */; };
-		572DE1D11B0CC918008DB6F2 /* TestCDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1D01B0CC918008DB6F2 /* TestCDManager.swift */; };
-		572DE1D31B0CD478008DB6F2 /* ConteudoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1D21B0CD478008DB6F2 /* ConteudoServiceTests.swift */; };
+		572DE2141B0D23AC008DB6F2 /* UsuarioMOServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1D21B0CD478008DB6F2 /* UsuarioMOServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		053CB35D1B06132200CCEFA5 /* PBXContainerItemProxy */ = {
+		572DE2111B0D204E008DB6F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 053CB33C1B06132200CCEFA5 /* Project object */;
 			proxyType = 1;
@@ -59,7 +58,6 @@
 		053CB3561B06132200CCEFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		053CB35C1B06132200CCEFA5 /* OmniScientiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmniScientiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		053CB3611B06132200CCEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniScientiaTests.swift; sourceTree = "<group>"; };
 		0595B6121B0B83F2009760BF /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		05D049961B0BC321003F2127 /* CadastroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroTableViewController.swift; sourceTree = "<group>"; };
 		05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OmniScientia.entitlements; sourceTree = "<group>"; };
@@ -78,13 +76,13 @@
 		251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTableViewController.swift; sourceTree = "<group>"; };
 		251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
 		251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudosViewController.swift; sourceTree = "<group>"; };
+		5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoMOServiceTests.swift; sourceTree = "<group>"; };
 		572DE1B21B0CA639008DB6F2 /* ConteudoMOService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoMOService.swift; sourceTree = "<group>"; };
-		572DE1B31B0CA639008DB6F2 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		572DE1BE1B0CA6F9008DB6F2 /* ConteudoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConteudoMO.swift; path = ../ConteudoMO.swift; sourceTree = "<group>"; };
 		572DE1C01B0CA6F9008DB6F2 /* UsuarioMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsuarioMO.swift; path = ../UsuarioMO.swift; sourceTree = "<group>"; };
 		572DE1C31B0CA809008DB6F2 /* UsuarioMOService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioMOService.swift; sourceTree = "<group>"; };
-		572DE1D01B0CC918008DB6F2 /* TestCDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCDManager.swift; sourceTree = "<group>"; };
-		572DE1D21B0CD478008DB6F2 /* ConteudoServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoServiceTests.swift; sourceTree = "<group>"; };
+		572DE1D21B0CD478008DB6F2 /* UsuarioMOServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioMOServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,10 +151,9 @@
 		053CB35F1B06132200CCEFA5 /* OmniScientiaTests */ = {
 			isa = PBXGroup;
 			children = (
-				053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */,
 				053CB3601B06132200CCEFA5 /* Supporting Files */,
-				572DE1D01B0CC918008DB6F2 /* TestCDManager.swift */,
-				572DE1D21B0CD478008DB6F2 /* ConteudoServiceTests.swift */,
+				572DE1D21B0CD478008DB6F2 /* UsuarioMOServiceTests.swift */,
+				5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */,
 			);
 			path = OmniScientiaTests;
 			sourceTree = "<group>";
@@ -202,7 +199,7 @@
 		572DE1C21B0CA706008DB6F2 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				572DE1B31B0CA639008DB6F2 /* CoreDataManager.swift */,
+				572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */,
 				572DE1BE1B0CA6F9008DB6F2 /* ConteudoMO.swift */,
 				572DE1B21B0CA639008DB6F2 /* ConteudoMOService.swift */,
 				572DE1C01B0CA6F9008DB6F2 /* UsuarioMO.swift */,
@@ -242,7 +239,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				053CB35E1B06132200CCEFA5 /* PBXTargetDependency */,
+				572DE2121B0D204E008DB6F2 /* PBXTargetDependency */,
 			);
 			name = OmniScientiaTests;
 			productName = OmniScientiaTests;
@@ -327,7 +324,7 @@
 				05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */,
 				572DE1C41B0CA809008DB6F2 /* UsuarioMOService.swift in Sources */,
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
-				572DE1B51B0CA639008DB6F2 /* CoreDataManager.swift in Sources */,
+				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
 				572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
@@ -347,19 +344,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				572DE1D11B0CC918008DB6F2 /* TestCDManager.swift in Sources */,
-				053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */,
-				572DE1D31B0CD478008DB6F2 /* ConteudoServiceTests.swift in Sources */,
+				5705A7111B0DFDBD009368AD /* ConteudoMOServiceTests.swift in Sources */,
+				572DE2141B0D23AC008DB6F2 /* UsuarioMOServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		053CB35E1B06132200CCEFA5 /* PBXTargetDependency */ = {
+		572DE2121B0D204E008DB6F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 053CB3431B06132200CCEFA5 /* OmniScientia */;
-			targetProxy = 053CB35D1B06132200CCEFA5 /* PBXContainerItemProxy */;
+			targetProxy = 572DE2111B0D204E008DB6F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -8,19 +8,20 @@
 
 import CoreData
 
-public class ConteudoService {
+public class ConteudoMOService {
     static let entityName:String = "Conteudo"
-    static let sharedInstance = ConteudoService()
+    public static let sharedInstance = ConteudoMOService()
+    var coreDataStack = CoreDataStack.sharedInstance
     
-    func novo() -> ConteudoMO {
-        return NSEntityDescription.insertNewObjectForEntityForName(ConteudoService.entityName, inManagedObjectContext: CoreDataManager.sharedInstance.context!) as! ConteudoMO
+    public func novo() -> ConteudoMO {
+        return NSEntityDescription.insertNewObjectForEntityForName(ConteudoMOService.entityName, inManagedObjectContext: coreDataStack.managedObjectContext!) as! ConteudoMO
     }
     
-    func buscar() -> [ConteudoMO]? {
-        let fetchRequest = NSFetchRequest(entityName: ConteudoService.entityName)
+    public func buscar() -> [ConteudoMO]? {
+        let fetchRequest = NSFetchRequest(entityName: ConteudoMOService.entityName)
         var error:NSError?
         
-        let fetchedResults = CoreDataManager.sharedInstance.context!.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
+        let fetchedResults = coreDataStack.managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
         
         if let results = fetchedResults as? [ConteudoMO] {
             return results
