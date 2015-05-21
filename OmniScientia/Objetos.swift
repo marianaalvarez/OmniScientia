@@ -13,5 +13,10 @@ class Objetos: NSObject {
     
     var record : CKRecord!
     weak var database : CKDatabase!
+    
+    init(record : CKRecord, database: CKDatabase) {
+        self.record = record
+        self.database = database
+    }
    
 }

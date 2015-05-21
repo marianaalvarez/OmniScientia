@@ -23,6 +23,7 @@ class CloudKitHelper {
     let privateDB : CKDatabase
     var delegate : CloudKitDelegate?
     var usuarios = [Usuario]()
+    var objetos = [Objetos]()
     
     init() {
         container = CKContainer.defaultContainer()
@@ -77,15 +78,6 @@ class CloudKitHelper {
         } )
     }
     
-    func salvaVideo(video: CKAsset) {
-        let videoRecord = CKRecord(recordType: "Video")
-        videoRecord.setValue(video, forKey: "video")
-        
-        publicDB.saveRecord(videoRecord, completionHandler: { (record, error) -> Void in
-            NSLog("Dados salvos no cloud kit.")
-        } )
-    }
-    
     func salvaAudio(audio: CKAsset) {
         let audioRecord = CKRecord(recordType: "Audio")
         audioRecord.setValue(audio, forKey: "audio")
@@ -114,7 +106,7 @@ class CloudKitHelper {
         } )
     }
     
-    func fetchUsers(nome: String) {
+    func fetchUsers(nome: String, senha: String) {
         let predicate = NSPredicate(format: "nome = %@ && senha == %@", nome, nome)
         
         let query = CKQuery(recordType: "Usuario", predicate: predicate)
@@ -134,16 +126,14 @@ class CloudKitHelper {
                             
                             let user = Usuario(record: record as CKRecord, database: self.publicDB)
                             println("\(user.nome)")
-
                             
                         }
                     } else {
                         dispatch_async(dispatch_get_main_queue()) {
-                            NSLog("oi")
+                            NSLog("Usuário não encontrado.")
                         }
                     }
                 }
             }))
     }
-    
 }

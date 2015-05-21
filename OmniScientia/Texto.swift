@@ -13,8 +13,8 @@ class Texto: Objetos {
     
     var texto : String!
     
-    init(record : CKRecord, database: CKDatabase) {
-        super.init()
+    override init(record : CKRecord, database: CKDatabase) {
+        super.init(record: record, database: database)
         super.record = record
         super.database = database
         self.texto = record.objectForKey("texto") as! String!
