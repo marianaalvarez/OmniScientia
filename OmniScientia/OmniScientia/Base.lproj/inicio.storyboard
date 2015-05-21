@@ -7,7 +7,7 @@
         <!--Início-->
         <scene sceneID="Iv8-1z-6jj">
             <objects>
-                <tableViewController id="Ssa-I5-iAt" sceneMemberID="viewController">
+                <tableViewController id="Ssa-I5-iAt" customClass="NoticiasTableViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" id="JbS-rx-QrU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
