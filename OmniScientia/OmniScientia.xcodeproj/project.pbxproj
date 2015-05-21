@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3491B06132200CCEFA5 /* AppDelegate.swift */; };
 		053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */; };
-		053CB3521B06132200CCEFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3501B06132200CCEFA5 /* Main.storyboard */; };
 		053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3531B06132200CCEFA5 /* Images.xcassets */; };
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
 		053CB3631B06132200CCEFA5 /* OmniScientiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CB3621B06132200CCEFA5 /* OmniScientiaTests.swift */; };
@@ -30,6 +29,8 @@
 		251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */; };
 		251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */; };
 		251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */; };
+		2591E9381B0DFCC100DC99B1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E9371B0DFCC100DC99B1 /* LoginViewController.swift */; };
+		25A768E61B0CB2C800D506C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3501B06132200CCEFA5 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTableViewController.swift; sourceTree = "<group>"; };
 		251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
 		251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudosViewController.swift; sourceTree = "<group>"; };
+		2591E9371B0DFCC100DC99B1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */,
 				251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */,
 				05D049961B0BC321003F2127 /* CadastroTableViewController.swift */,
+				2591E9371B0DFCC100DC99B1 /* LoginViewController.swift */,
 			);
 			name = "Interface de Usuário";
 			sourceTree = "<group>";
@@ -268,7 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				053CB3521B06132200CCEFA5 /* Main.storyboard in Resources */,
+				25A768E61B0CB2C800D506C0 /* Main.storyboard in Resources */,
 				053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */,
 				053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */,
 			);
@@ -292,6 +295,7 @@
 				05F0EFE11B0B593A00784150 /* Historico.swift in Sources */,
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
+				2591E9381B0DFCC100DC99B1 /* LoginViewController.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
 				251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */,
 				05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */,
