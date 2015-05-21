@@ -106,7 +106,7 @@ class CloudKitHelper {
         } )
     }
     
-    func fetchUsers(nome: String, senha: String) {
+    func fetchUusarios(nome: String, senha: String) {
         let predicate = NSPredicate(format: "nome = %@ && senha == %@", nome, nome)
         
         let query = CKQuery(recordType: "Usuario", predicate: predicate)
@@ -136,4 +136,41 @@ class CloudKitHelper {
                 }
             }))
     }
+    
+    func usuarioExistente(usuario: String) -> Bool {
+        let predicate = NSPredicate(format: "usuario = %@", usuario)
+        
+        let query = CKQuery(recordType: "Usuario", predicate: predicate)
+        
+        var user = false
+        
+        publicDB.performQuery(query, inZoneWithID: nil,
+            completionHandler: ({results, error in
+                if (error != nil) {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        NSLog("Erro")
+                    }
+                } else {
+                    if results.count > 0 {
+                        
+                        var record = results[0] as! CKRecord
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+                            
+                             user = true
+                            
+                        }
+                    } else {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            NSLog("Usuário não encontrado.")
+                        }
+                    }
+                }
+            }))
+        return user
+    }
+    
+    
+    
+    
 }

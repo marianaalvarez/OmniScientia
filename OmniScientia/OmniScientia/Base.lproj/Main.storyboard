@@ -894,6 +894,38 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ykb-cQ-9AH">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ykb-cQ-9AH" id="WD0-PZ-bjv">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nascimento" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrc-9e-0mT">
+                                                    <rect key="frame" x="16" y="12" width="92" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JsP-4l-vAS">
+                                                    <rect key="frame" x="121" y="7" width="463" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="cZx-74-GX5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="selecionarSexo" destination="yNP-tf-Cj4" eventType="touchUpInside" id="8c4-ag-NdA"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="mrc-9e-0mT" secondAttribute="centerY" id="1Nr-gh-NOw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JsP-4l-vAS" secondAttribute="trailing" constant="8" id="7C4-mu-Mzb"/>
+                                                <constraint firstItem="mrc-9e-0mT" firstAttribute="leading" secondItem="WD0-PZ-bjv" secondAttribute="leadingMargin" constant="8" id="8eN-qr-E5w"/>
+                                                <constraint firstItem="JsP-4l-vAS" firstAttribute="leading" secondItem="mrc-9e-0mT" secondAttribute="trailing" constant="13" id="IbC-OX-NFY"/>
+                                                <constraint firstAttribute="centerY" secondItem="JsP-4l-vAS" secondAttribute="centerY" id="jna-0X-weJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="A1S-8P-jSB">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A1S-8P-jSB" id="FA8-iA-05v">
@@ -1038,25 +1070,43 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="vOX-yl-hyy">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qcY-aw-bN9">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qcY-aw-bN9" id="pve-2u-LC7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-A1-AhK" userLabel="Salvar">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                                    <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Save">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="salvarDados:" destination="yNP-tf-Cj4" eventType="touchUpInside" id="sr4-cc-Ouo"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="yNP-tf-Cj4" id="8LZ-XE-CeL"/>
                             <outlet property="delegate" destination="yNP-tf-Cj4" id="fqD-2I-lM7"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Cadastrar" id="1UW-iI-8jP">
-                            <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="salvarDados:" destination="yNP-tf-Cj4" id="9V4-Rc-O3H"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="dtNascimento" destination="JsP-4l-vAS" id="IbI-pc-lAC"/>
                         <outlet property="txtEmail" destination="Sk8-6N-er0" id="erQ-oo-jPZ"/>
                         <outlet property="txtNome" destination="1dT-pR-KWn" id="X0i-4n-LjF"/>
                         <outlet property="txtSenha" destination="EbL-Ai-Zo6" id="PUT-rH-TpB"/>
+                        <outlet property="txtSenhaConfirm" destination="wUE-B0-Fmi" id="BJf-3H-She"/>
                         <outlet property="txtSexo" destination="EHI-RC-yL2" id="Vbv-yv-rnW"/>
                         <outlet property="txtUsuario" destination="aOj-qg-B38" id="F11-a8-b8f"/>
                     </connections>
