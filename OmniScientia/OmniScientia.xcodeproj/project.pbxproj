@@ -316,6 +316,7 @@
 					};
 					053CB35B1B06132200CCEFA5 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = T6LWGN6HAV;
 						TestTargetID = 053CB3431B06132200CCEFA5;
 					};
 				};
@@ -543,7 +544,7 @@
 				INFOPLIST_FILE = OmniScientia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "68c09e2e-6ca2-4a12-861f-9fb05fe020b7";
 			};
 			name = Debug;
 		};
@@ -557,7 +558,7 @@
 				INFOPLIST_FILE = OmniScientia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "68c09e2e-6ca2-4a12-861f-9fb05fe020b7";
 			};
 			name = Release;
 		};
@@ -565,6 +566,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -576,6 +579,7 @@
 				INFOPLIST_FILE = OmniScientiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OmniScientia.app/OmniScientia";
 			};
 			name = Debug;
@@ -584,6 +588,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -591,6 +597,7 @@
 				INFOPLIST_FILE = OmniScientiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OmniScientia.app/OmniScientia";
 			};
 			name = Release;

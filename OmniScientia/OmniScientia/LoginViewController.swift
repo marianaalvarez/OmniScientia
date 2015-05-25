@@ -13,11 +13,26 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usuario: UITextField!
     @IBOutlet weak var senha: UITextField!
     @IBAction func entrar(sender: AnyObject) {
-        cloudKitHelper.fetchUsuario(usuario.text, senha: senha.text)
+        if (usuario.text == "" || senha.text == "" ) {
+            
+            let alerta = UIAlertController(title: "Atenção", message: "Todos os dados devem ser preenchidos!", preferredStyle:
+                UIAlertControllerStyle.Alert)
+            let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
+            alerta.addAction(acao)
+            
+            self.presentViewController(alerta, animated: true, completion: nil)
+            
+        } else {
+            
+            cloudKitHelper.fetchUsuario(usuario.text, senha: senha.text)
+            
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "usuarioLogado:", name: "usuarioLogado", object: nil)
+        
 
         // Do any additional setup after loading the view.
     }
@@ -25,6 +40,12 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func usuarioLogado(notification: NSNotification) {
+        let info : Dictionary<String,Usuario!> = notification.userInfo as! Dictionary<String,Usuario!>
+        let usuario = info["Usuario"]
+        println("\(usuario!.email)")
     }
     
 

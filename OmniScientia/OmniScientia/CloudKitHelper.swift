@@ -125,7 +125,9 @@ class CloudKitHelper {
                         dispatch_async(dispatch_get_main_queue()) {
                             
                             let user = Usuario(record: record as CKRecord, database: self.publicDB)
-                            println("\(user.nome)")
+                            var usuario: NSDictionary = NSDictionary(object: user, forKey: "Usuario")
+                            NSNotificationCenter.defaultCenter().postNotificationName("usuarioLogado", object: self, userInfo: usuario as [NSObject : AnyObject])
+                            println("Achou")
                             
                         }
                     } else {
@@ -156,7 +158,9 @@ class CloudKitHelper {
                         dispatch_async(dispatch_get_main_queue()) {
                             
                             let user = Usuario(record: record as CKRecord, database: self.publicDB)
-                            println("\(user.nome)")
+                            var usuario: NSDictionary = NSDictionary(object: user, forKey: "Usuario")
+                            NSNotificationCenter.defaultCenter().postNotificationName("usuarioEncontrado", object: self, userInfo: usuario as [NSObject : AnyObject])
+                            println("Achou")
                             
                         }
                     } else {
@@ -176,7 +180,7 @@ class CloudKitHelper {
         publicDB.performQuery(query, inZoneWithID: nil,
             completionHandler: ({results, error in
                 if (error != nil) {
-                    dispatch_async(dispatch_get_main_queue()) {
+                    dispatch_sync(dispatch_get_main_queue()) {
                         NSLog("Erro \(error.description)")
                     }
                 } else {
@@ -184,13 +188,13 @@ class CloudKitHelper {
                         
                         var record = results[0] as! CKRecord
                         
-                        dispatch_async(dispatch_get_main_queue()) {
+                        dispatch_sync(dispatch_get_main_queue()) {
                             NSLog("Achou")
                         NSNotificationCenter.defaultCenter().postNotificationName("usuarioEncontrado", object: self, userInfo: nil)
                             
                         }
                     } else {
-                        dispatch_async(dispatch_get_main_queue()) {
+                        dispatch_sync(dispatch_get_main_queue()) {
                             NSLog("Usuário não encontrado.")
                         }
                     }

@@ -44,18 +44,14 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
         
         } else {
             self.loading.startAnimating()
+            
             let novaQueue = dispatch_queue_create("validarUsuarioQueue", DISPATCH_QUEUE_SERIAL)
             dispatch_sync(novaQueue) {
                 cloudKitHelper.usuarioExistente(self.txtUsuario.text)
                 self.loading.stopAnimating()
                 
-            }
-//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                cloudKitHelper.usuarioExistente(self.txtUsuario.text)
-//                self.loading.stopAnimating()
-//                
-//            })
-            if (usuarioExistente == true) {
+            
+            if (self.usuarioExistente == true) {
                 let alerta = UIAlertController(title: "Atenção", message: "Nome de usuário já existe!", preferredStyle:
                 UIAlertControllerStyle.Alert)
                 let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
@@ -63,7 +59,7 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
             
                 self.presentViewController(alerta, animated: true, completion: nil)
         
-            } else if (txtSenha.text != txtSenhaConfirm.text) {
+            } else if (self.txtSenha.text != self.txtSenhaConfirm.text) {
                 
                 let alerta = UIAlertController(title: "Atenção", message: "Confirmação de senha incorreta!", preferredStyle:
                 UIAlertControllerStyle.Alert)
@@ -73,6 +69,9 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
                 self.presentViewController(alerta, animated: true, completion: nil)
                 
             }
+            
+            }
+                
         }
         
         //cloudKitHelper.salvaUsuario(self.txtNome.text, senha: self.txtSenha.text, nome: self.txtNome.text, email: self.txtEmail.text, sexo: self.txtSexo.text)
