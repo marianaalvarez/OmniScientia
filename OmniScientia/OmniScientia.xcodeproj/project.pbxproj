@@ -108,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05AABCD81B0E2BA400F26F45 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +125,7 @@
 		053CB33B1B06132200CCEFA5 = {
 			isa = PBXGroup;
 			children = (
+				05AABCD71B0E2BA400F26F45 /* CloudKit.framework */,
 				053CB3461B06132200CCEFA5 /* OmniScientia */,
 				053CB35F1B06132200CCEFA5 /* OmniScientiaTests */,
 				053CB3451B06132200CCEFA5 /* Products */,
@@ -384,6 +386,8 @@
 				05F0EFE11B0B593A00784150 /* Historico.swift in Sources */,
 				57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */,
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
+				05AABCD61B0E241300F26F45 /* CloudKitHelper.swift in Sources */,
+				572DE1BF1B0CA6F9008DB6F2 /* ConteudoMO.swift in Sources */,
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
 				2591E9381B0DFCC100DC99B1 /* LoginViewController.swift in Sources */,
 				57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */,
@@ -394,7 +398,7 @@
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
 				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
 				5705A7241B0E1408009368AD /* MainTabBar.swift in Sources */,
-				57B0880C1B0F521E005E0FD7 /* ConteudoMO.swift in Sources */,
+
 				572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
