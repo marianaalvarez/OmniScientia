@@ -13,7 +13,6 @@
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
 		05AABCD61B0E241300F26F45 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD51B0E241300F26F45 /* CloudKitHelper.swift */; };
 		05AABCD81B0E2BA400F26F45 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AABCD71B0E2BA400F26F45 /* CloudKit.framework */; };
-		05AABCDA1B12BF1C00F26F45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */; };
 		05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D049961B0BC321003F2127 /* CadastroTableViewController.swift */; };
 		05F0EFD51B0B587C00784150 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD41B0B587C00784150 /* Audio.swift */; };
 		05F0EFD71B0B589600784150 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD61B0B589600784150 /* Video.swift */; };
@@ -45,7 +44,7 @@
 		57B088061B0F51AB005E0FD7 /* TextoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088051B0F51AB005E0FD7 /* TextoMO.swift */; };
 		57B088081B0F51AB005E0FD7 /* LearningObjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */; };
 		57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088091B0F51AB005E0FD7 /* ImageMO.swift */; };
-		57B0880C1B0F521E005E0FD7 /* ConteudoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */; };
+		57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -390,9 +389,7 @@
 				57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */,
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
 				05AABCD61B0E241300F26F45 /* CloudKitHelper.swift in Sources */,
-				572DE1BF1B0CA6F9008DB6F2 /* ConteudoMO.swift in Sources */,
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
-				2591E9381B0DFCC100DC99B1 /* LoginViewController.swift in Sources */,
 				57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
 				251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */,
@@ -401,7 +398,7 @@
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
 				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
 				5705A7241B0E1408009368AD /* MainTabBar.swift in Sources */,
-
+				57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */,
 				572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
