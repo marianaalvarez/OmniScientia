@@ -49,7 +49,7 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
             dispatch_sync(novaQueue) {
                 cloudKitHelper.usuarioExistente(self.txtUsuario.text)
                 self.loading.stopAnimating()
-                
+            }
             
             if (self.usuarioExistente == true) {
                 let alerta = UIAlertController(title: "Atenção", message: "Nome de usuário já existe!", preferredStyle:
@@ -68,8 +68,6 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
                 
                 self.presentViewController(alerta, animated: true, completion: nil)
                 
-            }
-            
             }
                 
         }
