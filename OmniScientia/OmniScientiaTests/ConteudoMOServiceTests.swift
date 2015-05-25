@@ -69,9 +69,6 @@ class ConteudoMOServiceTests: XCTestCase {
         quiz?.respostas = ["Porque Sim", "Porque quis", "Para encontrar o gato de schrodinger"]
         quiz?.respostas = NSNumber(integer: 1)
         
-        XCTAssertEqual(, <#expression2: [T : U]#>, <#message: String#>)
-        
-        
         CoreDataStack.sharedInstance.saveContext()
     }
     
