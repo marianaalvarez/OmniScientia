@@ -14,18 +14,18 @@ public class UsuarioMOService {
     private init(){}
     
     static let entityName = "Usuario"
-    var coreDataStack:CoreDataStack = CoreDataStack.sharedInstance
+    public var coreDataStack:CoreDataStack = CoreDataStack.sharedInstance
     
     public func novo(#username:String,email:String,senha:String) -> UsuarioMO? {
-        println(3.1)
+
         var usuario = NSEntityDescription.insertNewObjectForEntityForName(UsuarioMOService.entityName, inManagedObjectContext: coreDataStack.managedObjectContext!) as! UsuarioMO
-        println(3.2)
+
         usuario.username = username
         usuario.email = email
         usuario.senha = senha
-        println(3.3)
+
         coreDataStack.saveContext()
-        println(3.4)
+
         
         return usuario
     }
