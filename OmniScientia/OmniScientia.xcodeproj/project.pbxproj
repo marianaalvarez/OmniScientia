@@ -13,6 +13,8 @@
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
 		05AABCD61B0E241300F26F45 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD51B0E241300F26F45 /* CloudKitHelper.swift */; };
 		05AABCD81B0E2BA400F26F45 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AABCD71B0E2BA400F26F45 /* CloudKit.framework */; };
+		05AABCDC1B13670300F26F45 /* usuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A71B1B0E049D009368AD /* usuario.storyboard */; };
+		05AABCDD1B1368B800F26F45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */; };
 		05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D049961B0BC321003F2127 /* CadastroTableViewController.swift */; };
 		05F0EFD51B0B587C00784150 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD41B0B587C00784150 /* Audio.swift */; };
 		05F0EFD71B0B589600784150 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD61B0B589600784150 /* Video.swift */; };
@@ -33,7 +35,6 @@
 		5705A7111B0DFDBD009368AD /* ConteudoMOServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */; };
 		5705A7151B0E0461009368AD /* conteudo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A7131B0E0461009368AD /* conteudo.storyboard */; };
 		5705A71A1B0E048E009368AD /* inicio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A7181B0E048E009368AD /* inicio.storyboard */; };
-		5705A71C1B0E049D009368AD /* usuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A71B1B0E049D009368AD /* usuario.storyboard */; };
 		5705A7241B0E1408009368AD /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5705A7231B0E1408009368AD /* MainTabBar.swift */; };
 		572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1B21B0CA639008DB6F2 /* ConteudoMOService.swift */; };
 		572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */; };
@@ -360,7 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25A768E61B0CB2C800D506C0 /* Main.storyboard in Resources */,
-				5705A71C1B0E049D009368AD /* usuario.storyboard in Resources */,
+				05AABCDC1B13670300F26F45 /* usuario.storyboard in Resources */,
 				053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */,
 				053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */,
 				5705A71A1B0E048E009368AD /* inicio.storyboard in Resources */,
@@ -400,6 +401,7 @@
 				5705A7241B0E1408009368AD /* MainTabBar.swift in Sources */,
 				57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */,
 				572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */,
+				05AABCDD1B1368B800F26F45 /* LoginViewController.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
 				05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */,
