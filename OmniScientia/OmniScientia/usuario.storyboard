@@ -5,6 +5,58 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Tnd-XS-lsQ">
+            <objects>
+                <viewController id="5cz-qV-7HZ" customClass="LoginViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2ip-Ca-Yhm"/>
+                        <viewControllerLayoutGuide type="bottom" id="ftN-1r-MYw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J57-BF-0NL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGC-gi-pkI">
+                                <rect key="frame" x="173" y="252" width="254" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vji-I9-aXT">
+                                <rect key="frame" x="173" y="328" width="254" height="30"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="entrar:" destination="5cz-qV-7HZ" eventType="touchUpInside" id="zfu-Zq-ZEQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izl-B8-k0v">
+                                <rect key="frame" x="173" y="485" width="254" height="30"/>
+                                <state key="normal" title="Cadastre-se">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aUK-Qd-dIl" kind="show" id="vG9-iW-6Od"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqj-w5-jux">
+                                <rect key="frame" x="173" y="290" width="254" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="senha" destination="oqj-w5-jux" id="ezi-3p-jIx"/>
+                        <outlet property="usuario" destination="FGC-gi-pkI" id="WSV-hW-zcv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bwo-wA-dx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="464"/>
+        </scene>
         <!--Usuário-->
         <scene sceneID="K9G-th-Nfz">
             <objects>
@@ -223,6 +275,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Login" id="wSO-bQ-rDS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="5cz-qV-7HZ" kind="show" id="wor-Th-9hI"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -346,13 +401,18 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oeh-ge-ORa">
+                                                    <rect key="frame" x="290" y="12" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="757-bd-f9g" firstAttribute="leading" secondItem="Rt8-Mk-fKQ" secondAttribute="leadingMargin" constant="8" id="5Xm-T8-Gdx"/>
                                                 <constraint firstItem="Fiw-Gn-7e3" firstAttribute="leading" secondItem="757-bd-f9g" secondAttribute="trailing" constant="13" id="6xC-qg-3Ta"/>
                                                 <constraint firstAttribute="centerY" secondItem="757-bd-f9g" secondAttribute="centerY" id="F8j-mX-1xg"/>
                                                 <constraint firstAttribute="centerY" secondItem="Fiw-Gn-7e3" secondAttribute="centerY" id="OHl-bh-PU0"/>
+                                                <constraint firstItem="oeh-ge-ORa" firstAttribute="top" secondItem="Rt8-Mk-fKQ" secondAttribute="topMargin" constant="4" id="OeS-0A-sZk"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Fiw-Gn-7e3" secondAttribute="trailing" constant="8" id="bPq-XT-qRy"/>
+                                                <constraint firstItem="Fiw-Gn-7e3" firstAttribute="leading" secondItem="oeh-ge-ORa" secondAttribute="trailing" constant="-239" id="zbl-Yl-AXE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -418,10 +478,6 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="digitandoUsuario:" destination="aUK-Qd-dIl" eventType="editingDidBegin" id="ujB-Po-TsN"/>
-                                                        <action selector="verificaUsuario:" destination="aUK-Qd-dIl" eventType="editingDidEnd" id="X6G-Qs-yfH"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -502,6 +558,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dtNascimento" destination="unz-dz-LjD" id="aZ0-zu-ZqS"/>
+                        <outlet property="loading" destination="oeh-ge-ORa" id="xbU-hV-UNE"/>
+                        <outlet property="table" destination="1cJ-ON-8G8" id="xiv-iG-zKx"/>
                         <outlet property="txtEmail" destination="Fiw-Gn-7e3" id="2xP-UA-nO5"/>
                         <outlet property="txtNome" destination="QgE-eI-CsY" id="9B0-8v-9w3"/>
                         <outlet property="txtSenha" destination="5Uy-b2-Poz" id="liW-cV-yLs"/>
@@ -512,7 +570,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLm-vn-xnh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1082" y="772"/>
+            <point key="canvasLocation" x="1171" y="1328"/>
         </scene>
         <!--Usuário-->
         <scene sceneID="FRP-FG-T8q">
@@ -538,4 +596,7 @@
     <resources>
         <image name="user" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vG9-iW-6Od"/>
+    </inferredMetricsTieBreakers>
 </document>

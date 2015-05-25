@@ -106,8 +106,8 @@ class CloudKitHelper {
         } )
     }
     
-    func fetchUsuarios(nome: String, senha: String) {
-        let predicate = NSPredicate(format: "nome = %@ && senha == %@", nome, nome)
+    func fetchUsuario(usuario: String, senha: String) {
+        let predicate = NSPredicate(format: "usuario = %@ && senha == %@", usuario, senha)
         
         let query = CKQuery(recordType: "Usuario", predicate: predicate)
         

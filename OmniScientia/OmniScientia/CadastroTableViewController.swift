@@ -20,6 +20,8 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     
     var usuarioExistente = false
     
+    @IBOutlet weak var table: UITableView!
+    
     @IBOutlet weak var txtNome: UITextField!
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var txtSenha: UITextField!
@@ -27,6 +29,7 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtSexo: UITextField!
     @IBOutlet weak var dtNascimento: UITextField!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     @IBAction func salvarDados(sender: AnyObject) {
         
@@ -40,7 +43,18 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
             self.presentViewController(alerta, animated: true, completion: nil)
         
         } else {
-            //cloudKitHelper.usuarioExistente(txtUsuario.text)
+            self.loading.startAnimating()
+            let novaQueue = dispatch_queue_create("validarUsuarioQueue", DISPATCH_QUEUE_SERIAL)
+            dispatch_sync(novaQueue) {
+                cloudKitHelper.usuarioExistente(self.txtUsuario.text)
+                self.loading.stopAnimating()
+                
+            }
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                cloudKitHelper.usuarioExistente(self.txtUsuario.text)
+//                self.loading.stopAnimating()
+//                
+//            })
             if (usuarioExistente == true) {
                 let alerta = UIAlertController(title: "Atenção", message: "Nome de usuário já existe!", preferredStyle:
                 UIAlertControllerStyle.Alert)
@@ -139,12 +153,12 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     }
     
     
-    @IBAction func digitandoUsuario(sender: AnyObject) {
-        usuarioExistente = false
-    }
-    @IBAction func verificaUsuario(sender: AnyObject) {
-        cloudKitHelper.usuarioExistente(txtUsuario.text)
-    }
+//    @IBAction func digitandoUsuario(sender: AnyObject) {
+//        usuarioExistente = false
+//    }
+//    @IBAction func verificaUsuario(sender: AnyObject) {
+//        cloudKitHelper.usuarioExistente(txtUsuario.text)
+//    }
     
     
     // MARK: - Table view data source
