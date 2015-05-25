@@ -27,8 +27,11 @@
 		251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */; };
 		251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */; };
 		251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */; };
+		25716DC31B1346B500B4AC1F /* UsuarioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25716DC21B1346B500B4AC1F /* UsuarioTableViewCell.swift */; };
 		2591E9381B0DFCC100DC99B1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591E9371B0DFCC100DC99B1 /* LoginViewController.swift */; };
 		25A768E61B0CB2C800D506C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3501B06132200CCEFA5 /* Main.storyboard */; };
+		25D9C35E1B0F795100883F45 /* ConteudoPadraoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9C35D1B0F795100883F45 /* ConteudoPadraoViewCell.swift */; };
+		25D9C3601B0F796700883F45 /* ConteudoDestaqueViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D9C35F1B0F796700883F45 /* ConteudoDestaqueViewCell.swift */; };
 		5705A7111B0DFDBD009368AD /* ConteudoMOServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */; };
 		5705A7151B0E0461009368AD /* conteudo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A7131B0E0461009368AD /* conteudo.storyboard */; };
 		5705A71A1B0E048E009368AD /* inicio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A7181B0E048E009368AD /* inicio.storyboard */; };
@@ -79,7 +82,10 @@
 		251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTableViewController.swift; sourceTree = "<group>"; };
 		251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
 		251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudosViewController.swift; sourceTree = "<group>"; };
+		25716DC21B1346B500B4AC1F /* UsuarioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioTableViewCell.swift; sourceTree = "<group>"; };
 		2591E9371B0DFCC100DC99B1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		25D9C35D1B0F795100883F45 /* ConteudoPadraoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoPadraoViewCell.swift; sourceTree = "<group>"; };
+		25D9C35F1B0F796700883F45 /* ConteudoDestaqueViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoDestaqueViewCell.swift; sourceTree = "<group>"; };
 		5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoMOServiceTests.swift; sourceTree = "<group>"; };
 		5705A7141B0E0461009368AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/conteudo.storyboard; sourceTree = "<group>"; };
 		5705A7191B0E048E009368AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/inicio.storyboard; sourceTree = "<group>"; };
@@ -98,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055504701B0CA7260051CFAB /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +120,6 @@
 		053CB33B1B06132200CCEFA5 = {
 			isa = PBXGroup;
 			children = (
-				0555046F1B0CA7260051CFAB /* CloudKit.framework */,
 				053CB3461B06132200CCEFA5 /* OmniScientia */,
 				053CB35F1B06132200CCEFA5 /* OmniScientiaTests */,
 				053CB3451B06132200CCEFA5 /* Products */,
@@ -218,6 +222,8 @@
 			children = (
 				5705A7181B0E048E009368AD /* inicio.storyboard */,
 				251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */,
+				25D9C35D1B0F795100883F45 /* ConteudoPadraoViewCell.swift */,
+				25D9C35F1B0F796700883F45 /* ConteudoDestaqueViewCell.swift */,
 			);
 			name = Inicio;
 			sourceTree = "<group>";
@@ -228,6 +234,7 @@
 				5705A71B1B0E049D009368AD /* usuario.storyboard */,
 				05D049961B0BC321003F2127 /* CadastroTableViewController.swift */,
 				2591E9371B0DFCC100DC99B1 /* LoginViewController.swift */,
+				25716DC21B1346B500B4AC1F /* UsuarioTableViewCell.swift */,
 			);
 			name = Usuario;
 			sourceTree = "<group>";
@@ -373,9 +380,11 @@
 				2591E9381B0DFCC100DC99B1 /* LoginViewController.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
 				251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */,
-				05F0EFE71B0B5A2A00784150 /* Users.swift in Sources */,
+				05F0EFE71B0B5A2A00784150 /* Usuario.swift in Sources */,
 				572DE1C41B0CA809008DB6F2 /* UsuarioMOService.swift in Sources */,
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
+				25D9C3601B0F796700883F45 /* ConteudoDestaqueViewCell.swift in Sources */,
+				25716DC31B1346B500B4AC1F /* UsuarioTableViewCell.swift in Sources */,
 				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
 				5705A7241B0E1408009368AD /* MainTabBar.swift in Sources */,
 				572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */,
@@ -387,6 +396,7 @@
 				053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */,
 				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,
 				05F0EFD51B0B587C00784150 /* Audio.swift in Sources */,
+				25D9C35E1B0F795100883F45 /* ConteudoPadraoViewCell.swift in Sources */,
 				05F0EFDF1B0B592B00784150 /* Pergunta.swift in Sources */,
 				572DE1C11B0CA6F9008DB6F2 /* UsuarioMO.swift in Sources */,
 				251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */,

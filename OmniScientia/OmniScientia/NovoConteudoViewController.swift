@@ -8,11 +8,15 @@
 
 import UIKit
 
-class NovoConteudoViewController: UITableViewController {
+class NovoConteudoViewController: UITableViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        txtTitulo.delegate = self
+        txtDescricao.delegate = self
+        
+        efeitosView()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,6 +42,55 @@ class NovoConteudoViewController: UITableViewController {
         // Return the number of rows in the section.
         return 3
     }
+    
+    @IBOutlet weak var txtTitulo: UITextView!
+    @IBOutlet weak var txtDescricao: UITextView!
+    @IBOutlet weak var coresScrollView: UIScrollView!
+    
+    func efeitosView() {
+        coresScrollView.contentSize = CGSize(width: 1000, height: 81)
+        
+        
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        
+        if textView == txtTitulo {
+            if textView.text! == "Título" { textView.text! = ""}
+        }
+        else if textView == txtDescricao {
+            if textView.text! == "Descrição" { textView.text! = ""}
+        }
+        
+        textView.textColor = UIColor.darkTextColor()
+    }
+    
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        
+        if textView.text! == ""{
+            
+            if textView == txtTitulo {
+                textView.text! = "Título"
+            }
+            else if textView == txtDescricao {
+                textView.text! == "Descrição"
+            }
+            textView.textColor = UIColor.lightGrayColor()
+        }
+        
+        self.resignFirstResponder()
+    }
+    
+    @IBAction func botaoCancelar(sender: AnyObject) {
+        
+        self.navigationController!.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.resignFirstResponder()
+    }
+    
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
