@@ -131,7 +131,7 @@
         <scene sceneID="Z8q-rH-YxX">
             <objects>
                 <tableViewController id="JWC-8g-XXp" customClass="NovoConteudoViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PDp-mQ-aqT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PDp-mQ-aqT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -342,6 +342,9 @@
                     <navigationItem key="navigationItem" title="Novo Conteúdo" id="ZEh-Ga-0nQ">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="EnV-45-kEd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="botaoCancelar:" destination="JWC-8g-XXp" id="Wmw-D4-O1O"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Próximo &gt;" id="dSt-7P-37U">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -351,6 +354,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="scrollCores" destination="XxY-ZJ-bo3" id="l2z-UH-TTX"/>
+                        <outlet property="txtDescricao" destination="3fH-P6-e4l" id="sfs-x8-EhW"/>
+                        <outlet property="txtTitulo" destination="dTn-fy-7Md" id="xph-m7-VeO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TX-Qc-14H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

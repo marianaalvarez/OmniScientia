@@ -48,6 +48,9 @@ class LoginViewController: UIViewController {
         println("\(usuario!.email)")
     }
     
+    @IBAction func botaoCancelar(sender: AnyObject) {
+        self.navigationController!.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
