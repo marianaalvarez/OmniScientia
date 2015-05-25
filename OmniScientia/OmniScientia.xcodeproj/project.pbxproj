@@ -46,6 +46,7 @@
 		57B088081B0F51AB005E0FD7 /* LearningObjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */; };
 		57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088091B0F51AB005E0FD7 /* ImageMO.swift */; };
 		57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */; };
+		57BF350B1B13697200685BE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
