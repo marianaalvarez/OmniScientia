@@ -9,16 +9,14 @@
 import UIKit
 
 class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
-
     
+    var usuarioExistente = false
     let opcoesPickerSexo = ["Feminino", "Masculino", "Outros (Ex: Matraca)"]
     var sexoSelecionado: String = "Não selecionado" {
         didSet {
             txtSexo.text! = sexoSelecionado
         }
     }
-    
-    var usuarioExistente = false
     
     @IBOutlet weak var table: UITableView!
     
@@ -76,6 +74,10 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
         
         //cloudKitHelper.salvaUsuario(self.txtNome.text, senha: self.txtSenha.text, nome: self.txtNome.text, email: self.txtEmail.text, sexo: self.txtSexo.text)
         //NSLog("Salvou")
+    }
+    
+    @IBAction func botaoCancelar(sender: AnyObject) {
+        self.navigationController!.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func viewDidLoad() {

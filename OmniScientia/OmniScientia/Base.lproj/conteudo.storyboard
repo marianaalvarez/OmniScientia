@@ -92,7 +92,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Novo Conteúdo" id="g13-BH-Lqi">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="JGI-4u-JSQ" kind="presentation" id="DCI-8D-Euu"/>
+                                <segue destination="JGI-4u-JSQ" kind="presentation" id="vPd-35-jQH"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Login" id="2nc-SG-PS0">
@@ -343,7 +343,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="EnV-45-kEd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="botaoCancelar:" destination="JWC-8g-XXp" id="Gqa-wx-XqY"/>
+                                <action selector="botaoCancelar:" destination="JWC-8g-XXp" id="Wmw-D4-O1O"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Próximo &gt;" id="dSt-7P-37U">
@@ -355,9 +355,9 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="coresScrollView" destination="XxY-ZJ-bo3" id="UVb-Sh-Qvu"/>
-                        <outlet property="txtDescricao" destination="3fH-P6-e4l" id="L4g-xg-l0I"/>
-                        <outlet property="txtTitulo" destination="dTn-fy-7Md" id="Ogl-gl-QB6"/>
+                        <outlet property="scrollCores" destination="XxY-ZJ-bo3" id="l2z-UH-TTX"/>
+                        <outlet property="txtDescricao" destination="3fH-P6-e4l" id="sfs-x8-EhW"/>
+                        <outlet property="txtTitulo" destination="dTn-fy-7Md" id="xph-m7-VeO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TX-Qc-14H" userLabel="First Responder" sceneMemberID="firstResponder"/>

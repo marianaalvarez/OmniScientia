@@ -1,5 +1,5 @@
 //
-//  UsuarioTableViewCell.swift
+//  UsuarioViewController.swift
 //  OmniScientia
 //
 //  Created by Guilherme Ferreira de Souza on 5/25/15.
@@ -8,29 +8,29 @@
 
 import UIKit
 
-class UsuarioTableViewCell: UITableViewController {
-    
-    @IBOutlet weak var celulaImagem: UITableViewCell!
-    
+class UsuarioViewController: UITableViewController {
+
     var usuarioLogado = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alterarBotoesDaNavigation()
+        alterarBotoesNavigation()
     }
     
-    
-    func alterarBotoesDaNavigation() {
-        
+    func alterarBotoesNavigation() {
+      
         if usuarioLogado {
-        
+            
             let botaoDeslogar = UIBarButtonItem(title: "Deslogar", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
             botaoDeslogar.tintColor = UIColor.whiteColor()
-            self.navigationItem.setLeftBarButtonItem(botaoDeslogar, animated: true)
-            self.navigationItem.setRightBarButtonItem(nil, animated: false)
+            self.navigationItem.leftBarButtonItem = botaoDeslogar
+            self.navigationItem.rightBarButtonItem = nil
         }
     }
-    
+
+
+    // MARK: - Table view data source
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if section == 0 {
@@ -40,7 +40,6 @@ class UsuarioTableViewCell: UITableViewController {
             else {
                 return 5
             }
-            
         }
         else if section == 1 {
             return 2
@@ -51,22 +50,19 @@ class UsuarioTableViewCell: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        if !usuarioLogado && section == 0 {
+        if section == 0 && !usuarioLogado {
             return UIView(frame: CGRectZero)
         }
         
         return nil
-        
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if !usuarioLogado && section == 0 {
+        
+        if section == 0 && !usuarioLogado {
             return 1
         }
         
         return 32
     }
-    
-
 }

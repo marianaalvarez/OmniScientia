@@ -21,8 +21,6 @@ class MainTabBar: UITabBarController, UITabBarControllerDelegate {
         var rootInicioVC = inicioStoryboard.instantiateInitialViewController() as! UINavigationController
         
         self.setViewControllers([rootConteudoVC,rootInicioVC,rootUsuarioVC], animated: true)
-        
-        self.selectedIndex = 1
     }
     
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {

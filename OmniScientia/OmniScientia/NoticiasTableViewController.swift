@@ -38,10 +38,6 @@ class NoticiasTableViewController: UITableViewController {
         // Return the number of rows in the section.
         return 0
     }
-    
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        
-//    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
