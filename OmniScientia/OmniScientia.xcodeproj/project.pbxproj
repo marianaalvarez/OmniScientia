@@ -11,7 +11,9 @@
 		053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */; };
 		053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3531B06132200CCEFA5 /* Images.xcassets */; };
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
-		0595B6131B0B83F2009760BF /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0595B6121B0B83F2009760BF /* CloudKitHelper.swift */; };
+		05AABCD61B0E241300F26F45 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD51B0E241300F26F45 /* CloudKitHelper.swift */; };
+		05AABCD81B0E2BA400F26F45 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AABCD71B0E2BA400F26F45 /* CloudKit.framework */; };
+		05AABCDA1B12BF1C00F26F45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */; };
 		05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D049961B0BC321003F2127 /* CadastroTableViewController.swift */; };
 		05F0EFD51B0B587C00784150 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD41B0B587C00784150 /* Audio.swift */; };
 		05F0EFD71B0B589600784150 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD61B0B589600784150 /* Video.swift */; };
@@ -65,7 +67,9 @@
 		053CB3561B06132200CCEFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		053CB35C1B06132200CCEFA5 /* OmniScientiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmniScientiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		053CB3611B06132200CCEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0595B6121B0B83F2009760BF /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
+		05AABCD51B0E241300F26F45 /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
+		05AABCD71B0E2BA400F26F45 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		05D049961B0BC321003F2127 /* CadastroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroTableViewController.swift; sourceTree = "<group>"; };
 		05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OmniScientia.entitlements; sourceTree = "<group>"; };
 		05F0EFD41B0B587C00784150 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Audio.swift; path = ../Audio.swift; sourceTree = "<group>"; };
@@ -191,7 +195,7 @@
 				05F0EFD81B0B58A800784150 /* Imagem.swift */,
 				05F0EFD61B0B589600784150 /* Video.swift */,
 				05F0EFD41B0B587C00784150 /* Audio.swift */,
-				0595B6121B0B83F2009760BF /* CloudKitHelper.swift */,
+				05AABCD51B0E241300F26F45 /* CloudKitHelper.swift */,
 			);
 			name = Modelos;
 			sourceTree = "<group>";
@@ -309,7 +313,7 @@
 				TargetAttributes = {
 					053CB3431B06132200CCEFA5 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = Y8HHM49ZTR;
+						DevelopmentTeam = T6LWGN6HAV;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -321,6 +325,7 @@
 					};
 					053CB35B1B06132200CCEFA5 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = T6LWGN6HAV;
 						TestTargetID = 053CB3431B06132200CCEFA5;
 					};
 				};
@@ -375,9 +380,9 @@
 				05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */,
 				05F0EFE11B0B593A00784150 /* Historico.swift in Sources */,
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
+				05AABCD61B0E241300F26F45 /* CloudKitHelper.swift in Sources */,
 				572DE1BF1B0CA6F9008DB6F2 /* ConteudoMO.swift in Sources */,
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
-				2591E9381B0DFCC100DC99B1 /* LoginViewController.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
 				251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */,
 				05F0EFE71B0B5A2A00784150 /* Usuario.swift in Sources */,
@@ -387,11 +392,11 @@
 				25716DC31B1346B500B4AC1F /* UsuarioTableViewCell.swift in Sources */,
 				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
 				5705A7241B0E1408009368AD /* MainTabBar.swift in Sources */,
+				05AABCDA1B12BF1C00F26F45 /* LoginViewController.swift in Sources */,
 				572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
 				05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */,
-				0595B6131B0B83F2009760BF /* CloudKitHelper.swift in Sources */,
 				053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */,
 				053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */,
 				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,
@@ -551,7 +556,7 @@
 				INFOPLIST_FILE = OmniScientia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "68c09e2e-6ca2-4a12-861f-9fb05fe020b7";
 			};
 			name = Debug;
 		};
@@ -565,7 +570,7 @@
 				INFOPLIST_FILE = OmniScientia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "68c09e2e-6ca2-4a12-861f-9fb05fe020b7";
 			};
 			name = Release;
 		};
@@ -573,6 +578,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -584,6 +591,7 @@
 				INFOPLIST_FILE = OmniScientiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OmniScientia.app/OmniScientia";
 			};
 			name = Debug;
@@ -592,6 +600,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -599,6 +609,7 @@
 				INFOPLIST_FILE = OmniScientiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OmniScientia.app/OmniScientia";
 			};
 			name = Release;

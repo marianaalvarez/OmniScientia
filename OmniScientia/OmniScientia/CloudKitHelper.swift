@@ -106,8 +106,8 @@ class CloudKitHelper {
         } )
     }
     
-    func fetchUusarios(nome: String, senha: String) {
-        let predicate = NSPredicate(format: "nome = %@ && senha == %@", nome, nome)
+    func fetchUsuario(usuario: String, senha: String) {
+        let predicate = NSPredicate(format: "usuario = %@ && senha == %@", usuario, senha)
         
         let query = CKQuery(recordType: "Usuario", predicate: predicate)
         
@@ -125,7 +125,9 @@ class CloudKitHelper {
                         dispatch_async(dispatch_get_main_queue()) {
                             
                             let user = Usuario(record: record as CKRecord, database: self.publicDB)
-                            println("\(user.nome)")
+                            var usuario: NSDictionary = NSDictionary(object: user, forKey: "Usuario")
+                            NSNotificationCenter.defaultCenter().postNotificationName("usuarioLogado", object: self, userInfo: usuario as [NSObject : AnyObject])
+                            println("Achou")
                             
                         }
                     } else {
@@ -137,18 +139,16 @@ class CloudKitHelper {
             }))
     }
     
-    func usuarioExistente(usuario: String) -> Bool {
+    func fetchUsuarios2(usuario: String) {
         let predicate = NSPredicate(format: "usuario = %@", usuario)
         
         let query = CKQuery(recordType: "Usuario", predicate: predicate)
-        
-        var user = false
         
         publicDB.performQuery(query, inZoneWithID: nil,
             completionHandler: ({results, error in
                 if (error != nil) {
                     dispatch_async(dispatch_get_main_queue()) {
-                        NSLog("Erro")
+                        NSLog("Erro \(error)")
                     }
                 } else {
                     if results.count > 0 {
@@ -157,7 +157,10 @@ class CloudKitHelper {
                         
                         dispatch_async(dispatch_get_main_queue()) {
                             
-                             user = true
+                            let user = Usuario(record: record as CKRecord, database: self.publicDB)
+                            var usuario: NSDictionary = NSDictionary(object: user, forKey: "Usuario")
+                            NSNotificationCenter.defaultCenter().postNotificationName("usuarioEncontrado", object: self, userInfo: usuario as [NSObject : AnyObject])
+                            println("Achou")
                             
                         }
                     } else {
@@ -167,7 +170,36 @@ class CloudKitHelper {
                     }
                 }
             }))
-        return user
+    }
+    
+    func usuarioExistente(usuario: String) {
+        let predicate = NSPredicate(format: "usuario == %@", usuario)
+        
+        let query = CKQuery(recordType: "Usuario", predicate: predicate)
+    
+        publicDB.performQuery(query, inZoneWithID: nil,
+            completionHandler: ({results, error in
+                if (error != nil) {
+                    dispatch_sync(dispatch_get_main_queue()) {
+                        NSLog("Erro \(error.description)")
+                    }
+                } else {
+                    if results.count > 0 {
+                        
+                        var record = results[0] as! CKRecord
+                        
+                        dispatch_sync(dispatch_get_main_queue()) {
+                            NSLog("Achou")
+                        NSNotificationCenter.defaultCenter().postNotificationName("usuarioEncontrado", object: self, userInfo: nil)
+                            
+                        }
+                    } else {
+                        dispatch_sync(dispatch_get_main_queue()) {
+                            NSLog("Usuário não encontrado.")
+                        }
+                    }
+                }
+            }))
     }
     
     
