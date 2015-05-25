@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
     
     let opcoesPickerSexo = ["Feminino", "Masculino", "Outros (Ex: Matraca)"]
@@ -18,6 +18,10 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
         }
     }
     
+    var usuarioExistente = false
+    
+    @IBOutlet weak var table: UITableView!
+    
     @IBOutlet weak var txtNome: UITextField!
     @IBOutlet weak var txtUsuario: UITextField!
     @IBOutlet weak var txtSenha: UITextField!
@@ -25,31 +29,59 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtSexo: UITextField!
     @IBOutlet weak var dtNascimento: UITextField!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     @IBAction func salvarDados(sender: AnyObject) {
         
         if (txtNome.text == "" || txtUsuario.text == "" || txtSenha.text == "" || txtEmail.text == "" || txtSenha.text == "" || dtNascimento.text == "" || txtSenhaConfirm.text == "" ) {
+            
             let alerta = UIAlertController(title: "Atenção", message: "Todos os dados devem ser preenchidos!", preferredStyle:
                 UIAlertControllerStyle.Alert)
             let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
             alerta.addAction(acao)
+            
             self.presentViewController(alerta, animated: true, completion: nil)
-        }
         
-        if (cloudKitHelper.usuarioExistente(txtUsuario.text)) {
-            let alerta = UIAlertController(title: "Atenção", message: "Nome de usuário já existe!", preferredStyle:
+        } else {
+            self.loading.startAnimating()
+            
+            let novaQueue = dispatch_queue_create("validarUsuarioQueue", DISPATCH_QUEUE_SERIAL)
+            dispatch_sync(novaQueue) {
+                cloudKitHelper.usuarioExistente(self.txtUsuario.text)
+                self.loading.stopAnimating()
+                
+            
+            if (self.usuarioExistente == true) {
+                let alerta = UIAlertController(title: "Atenção", message: "Nome de usuário já existe!", preferredStyle:
                 UIAlertControllerStyle.Alert)
-            let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
-            alerta.addAction(acao)
-            self.presentViewController(alerta, animated: true, completion: nil)
+                let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
+                alerta.addAction(acao)
+            
+                self.presentViewController(alerta, animated: true, completion: nil)
+        
+            } else if (self.txtSenha.text != self.txtSenhaConfirm.text) {
+                
+                let alerta = UIAlertController(title: "Atenção", message: "Confirmação de senha incorreta!", preferredStyle:
+                UIAlertControllerStyle.Alert)
+                let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
+                alerta.addAction(acao)
+                
+                self.presentViewController(alerta, animated: true, completion: nil)
+                
+            }
+            
+            }
+                
         }
         
         //cloudKitHelper.salvaUsuario(self.txtNome.text, senha: self.txtSenha.text, nome: self.txtNome.text, email: self.txtEmail.text, sexo: self.txtSexo.text)
-        NSLog("Salvou")
+        //NSLog("Salvou")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "usuarioEncontrado:", name: "usuarioEncontrado", object: nil)
+        txtUsuario.delegate = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -110,75 +142,22 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     }
     
     
-    //MARK - Alerta com 2 textfields para digitação e confirmação da senha
-    @IBAction func digitarSenha(sender: AnyObject) {
-        let alertaSenha = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-        alertaSenha.modalInPopover = true
-        
-        alertaSenha.addTextFieldWithConfigurationHandler { (textField) in
-            textField.placeholder = "Digite a senha"
-            textField.secureTextEntry = true
-        }
-        
-        alertaSenha.addTextFieldWithConfigurationHandler { (textField) in
-            textField.placeholder = "Digite novamente a senha"
-            textField.secureTextEntry = true
-            //textField.addTarget(self, action: "", forControlEvents: <#UIControlEvents#>)
-        }
-        
-       // alertaSenha.add
-        
-        // let OKAction = UIAlertAction(title: "Salvar", style: .Default) { (action) in
-        //              let valorTextField = alertController.textFields![0] as! UITextField
-        
-        let toolFrame = CGRectMake(0, 145, 270, 45)
-        var toolView: UIView = UIView(frame: toolFrame)
-        var btnConfirmarFrame: CGRect = CGRectMake(0, 7, 270, 30)
-        var btnConfirmar: UIButton = UIButton(frame: btnConfirmarFrame)
-        btnConfirmar.setTitle("Confirmar", forState: UIControlState.Normal)
-        btnConfirmar.setTitleColor(UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), forState: UIControlState.Normal)
-        toolView.addSubview(btnConfirmar)
-        btnConfirmar.addTarget(self, action: "btnConfirmarSexo:", forControlEvents: UIControlEvents.TouchDown)
-        alertaSenha.view.addSubview(toolView)
-        
-        self.presentViewController(alertaSenha, animated: true, completion: nil)
-        
-    }
-//    func digitarSenha() {
-//        
-//        let alertaSenha = UIAlertController(title: "", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-//        alertaSenha.modalInPopover = true
-//        
-//        alertaSenha.addTextFieldWithConfigurationHandler { (textField) in
-//            textField.placeholder = "Digite a senha"
-//            textField.secureTextEntry = true
-//        }
-//        
-//        alertaSenha.addTextFieldWithConfigurationHandler { (textField) in
-//            textField.placeholder = "Digite novamente a senha"
-//            textField.secureTextEntry = true
-//            //textField.addTarget(self, action: "", forControlEvents: <#UIControlEvents#>)
-//        }
-//
-//        
-//        // let OKAction = UIAlertAction(title: "Salvar", style: .Default) { (action) in
-//          //              let valorTextField = alertController.textFields![0] as! UITextField
-//        
-//        let toolFrame = CGRectMake(0, 145, 270, 45)
-//        var toolView: UIView = UIView(frame: toolFrame)
-//        var btnConfirmarFrame: CGRect = CGRectMake(0, 7, 270, 30)
-//        var btnConfirmar: UIButton = UIButton(frame: btnConfirmarFrame)
-//        btnConfirmar.setTitle("Confirmar", forState: UIControlState.Normal)
-//        btnConfirmar.setTitleColor(UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), forState: UIControlState.Normal)
-//        toolView.addSubview(btnConfirmar)
-//        btnConfirmar.addTarget(self, action: "btnConfirmarSenha:", forControlEvents: UIControlEvents.TouchDown)
-//        alertaSenha.view.addSubview(toolView)
-//    }
-    
+
     func btnConfirmarSenha(sender: UIButton) {
         
     }
     
+    func usuarioEncontrado(notification: NSNotificationCenter) {
+        usuarioExistente = true
+    }
+    
+    
+//    @IBAction func digitandoUsuario(sender: AnyObject) {
+//        usuarioExistente = false
+//    }
+//    @IBAction func verificaUsuario(sender: AnyObject) {
+//        cloudKitHelper.usuarioExistente(txtUsuario.text)
+//    }
     
     
     // MARK: - Table view data source
