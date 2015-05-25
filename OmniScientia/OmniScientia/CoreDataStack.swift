@@ -15,6 +15,7 @@ public class CoreDataStack {
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
         let modelURL = NSBundle.mainBundle().URLForResource(CoreDataStack.applicationName, withExtension: "momd")!
+        println("===========\(modelURL)")
         return NSManagedObjectModel(contentsOfURL: modelURL)!
         }()
     
@@ -23,6 +24,8 @@ public class CoreDataStack {
         // Create the coordinator and store
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent(CoreDataStack.applicationName)
+        println("==================================")
+        println("The database is in the URL: \(url)")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
         if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
@@ -55,7 +58,7 @@ public class CoreDataStack {
     
     // MARK: - Core Data Saving support
     
-    func saveContext () {
+    public func saveContext () {
         if let moc = self.managedObjectContext {
             var error: NSError? = nil
             if moc.hasChanges && !moc.save(&error) {
