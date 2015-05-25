@@ -11,7 +11,7 @@ import CoreData
 public class ConteudoMOService {
     static let entityName:String = "Conteudo"
     public static let sharedInstance = ConteudoMOService()
-    var coreDataStack = CoreDataStack.sharedInstance
+    public var coreDataStack = CoreDataStack.sharedInstance
     
     public func novo() -> ConteudoMO {
         return NSEntityDescription.insertNewObjectForEntityForName(ConteudoMOService.entityName, inManagedObjectContext: coreDataStack.managedObjectContext!) as! ConteudoMO

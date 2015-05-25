@@ -7,14 +7,13 @@
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="learningObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LearningObject" inverseName="conteudo" inverseEntity="LearningObject" syncable="YES"/>
     </entity>
-    <entity name="Image" parentEntity="LearningObject" syncable="YES">
-        <attribute name="extension" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Image" representedClassName="OmniScientia.ImageMO" parentEntity="LearningObject" syncable="YES">
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="LearningObject" isAbstract="YES" syncable="YES">
+    <entity name="LearningObject" representedClassName="OmniScientia.LearningObjectMO" isAbstract="YES" syncable="YES">
         <relationship name="conteudo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Conteudo" inverseName="learningObjects" inverseEntity="Conteudo" syncable="YES"/>
     </entity>
-    <entity name="Quiz" parentEntity="LearningObject" syncable="YES">
+    <entity name="Quiz" representedClassName="OmniScientia.QuizMO" parentEntity="LearningObject" syncable="YES">
         <attribute name="perguntas" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="respostaCorreta" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="respostas" optional="YES" attributeType="Transformable" syncable="YES"/>
@@ -32,10 +31,10 @@
     </entity>
     <elements>
         <element name="Conteudo" positionX="-21755" positionY="-8965" width="128" height="118"/>
-        <element name="Image" positionX="-21879" positionY="-8712" width="128" height="73"/>
+        <element name="Image" positionX="-21879" positionY="-8712" width="128" height="58"/>
         <element name="LearningObject" positionX="-21755" positionY="-8802" width="128" height="58"/>
         <element name="Quiz" positionX="-21629" positionY="-8694" width="128" height="88"/>
-        <element name="Usuario" positionX="-21512" positionY="-8991" width="128" height="133"/>
         <element name="Texto" positionX="-21420" positionY="-8721" width="128" height="58"/>
+        <element name="Usuario" positionX="-21512" positionY="-8991" width="128" height="133"/>
     </elements>
 </model>

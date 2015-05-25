@@ -17,9 +17,9 @@ class UsuarioMOServiceTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        println(1)
+
         usuarioMOService = UsuarioMOService.sharedInstance
-        println(2)
+
     }
     
     override func tearDown() {
@@ -28,17 +28,19 @@ class UsuarioMOServiceTests: XCTestCase {
     }
 
     func testAdicionaUsuario() {
-        println(3)
-        var usuario = usuarioMOService.novo(username:"Victor", email: "Victor.Travassos@iCloud.com", senha: "Vrtsf.140193")
-        println(4)
+
+        var usuario = usuarioMOService.novo(username:"Mariana", email: "Mariana", senha: "Mariana")
+
         XCTAssertNotNil(usuario, "Não pode ser nulo")
-        println(usuario?.description)
-        XCTAssertTrue(usuario!.username == "Victor")
-        println(6)
-        XCTAssertTrue(usuario?.email == "Victor.Travassos@iCloud.com")
-        println(7)
-        XCTAssertTrue(usuario?.senha == "Vrtsf.140193")
-        println(8)
+
+        XCTAssertTrue(usuario!.username == "Mariana")
+
+        XCTAssertTrue(usuario?.email == "Mariana")
+
+        XCTAssertTrue(usuario?.senha == "Mariana")
+        
+        usuarioMOService.coreDataStack.saveContext()
+
     }
 
 }
