@@ -24,6 +24,10 @@ class UsuarioViewController: UITableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "usuarioLogado:", name: "usuarioLogado", object: nil)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        
+    }
+    
     func alterarBotoesNavigation() {
       
         if usuarioLogado {
@@ -71,5 +75,10 @@ class UsuarioViewController: UITableViewController {
         }
         
         return 32
+    }
+    
+    func usuarioLogado(notification: NSNotification) {
+        usuarioLogado = true
+        tableView.reloadData()
     }
 }

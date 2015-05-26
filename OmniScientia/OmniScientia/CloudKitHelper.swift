@@ -31,10 +31,6 @@ class CloudKitHelper {
         privateDB = container.privateCloudDatabase
     }
     
-    class func sharedInstance() -> CloudKitHelper {
-        return cloudKitHelper
-    }
-    
     func salvaUsuario(usuario: String, senha: String, nome: String, email: String, sexo: String) {
         let userRecord = CKRecord(recordType: "Usuario")
         userRecord.setValue(usuario, forKey: "usuario")
@@ -164,6 +160,8 @@ class CloudKitHelper {
                         
                         dispatch_async(dispatch_get_main_queue()) {
                             NSLog("Achou")
+                            let user = Usuario(record: record as CKRecord, database: self.publicDB)
+                            var usuario: NSDictionary = NSDictionary(object: user, forKey: "Usuario")
                             NSNotificationCenter.defaultCenter().postNotificationName("usuarioEncontrado", object: self, userInfo: nil)
                         }
                         

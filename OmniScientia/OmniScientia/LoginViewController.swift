@@ -8,9 +8,9 @@
 
 import UIKit
 
+let userDefaults = NSUserDefaults.standardUserDefaults()
+
 class LoginViewController: UIViewController {
-    
-    let userDefaults = NSUserDefaults.standardUserDefaults()
 
     @IBOutlet weak var usuario: UITextField!
     @IBOutlet weak var senha: UITextField!
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
     func usuarioLogado(notification: NSNotification) {
         let info : Dictionary<String,Usuario!> = notification.userInfo as! Dictionary<String,Usuario!>
         let usuario : Usuario = info["Usuario"]!
-         userDefaults.setObject(info["Usuario"], forKey: "user_name")
+         userDefaults.setObject(usuario.usuario, forKey: "usuario")
         println("\(usuario.email)")
         
     }
@@ -61,10 +61,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func botaoCancelar(sender: AnyObject) {
         self.navigationController!.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func usuarioLogin() -> Usuario {
-        return userDefaults.objectForKey("user") as! Usuario
     }
 
     /*
