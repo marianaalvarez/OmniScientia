@@ -12,9 +12,16 @@ class UsuarioViewController: UITableViewController {
 
     var usuarioLogado = false
     
+    @IBOutlet weak var nome: UILabel!
+    @IBOutlet weak var dataNascimento: UILabel!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var usuario: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         alterarBotoesNavigation()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "usuarioLogado:", name: "usuarioLogado", object: nil)
     }
     
     func alterarBotoesNavigation() {

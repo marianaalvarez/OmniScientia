@@ -28,9 +28,9 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var txtSexo: UITextField!
     @IBOutlet weak var dtNascimento: UITextField!
     @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var btnSalvar: UIButton!
     
     @IBAction func salvarDados(sender: AnyObject) {
-        
         if (txtNome.text == "" || txtUsuario.text == "" || txtSenha.text == "" || txtEmail.text == "" || txtSenha.text == "" || dtNascimento.text == "" || txtSenhaConfirm.text == "" ) {
             
             let alerta = UIAlertController(title: "Atenção", message: "Todos os dados devem ser preenchidos!", preferredStyle:
@@ -41,23 +41,7 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
             self.presentViewController(alerta, animated: true, completion: nil)
         
         } else {
-            self.loading.startAnimating()
-            
-            let novaQueue = dispatch_queue_create("validarUsuarioQueue", DISPATCH_QUEUE_SERIAL)
-            dispatch_sync(novaQueue) {
-                cloudKitHelper.usuarioExistente(self.txtUsuario.text)
-                self.loading.stopAnimating()
-            }
-            
-            if (self.usuarioExistente == true) {
-                let alerta = UIAlertController(title: "Atenção", message: "Nome de usuário já existe!", preferredStyle:
-                UIAlertControllerStyle.Alert)
-                let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
-                alerta.addAction(acao)
-            
-                self.presentViewController(alerta, animated: true, completion: nil)
-        
-            } else if (self.txtSenha.text != self.txtSenhaConfirm.text) {
+            if (self.txtSenha.text != self.txtSenhaConfirm.text) {
                 
                 let alerta = UIAlertController(title: "Atenção", message: "Confirmação de senha incorreta!", preferredStyle:
                 UIAlertControllerStyle.Alert)
@@ -66,12 +50,24 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
                 
                 self.presentViewController(alerta, animated: true, completion: nil)
                 
+            } else {
+                cloudKitHelper.usuarioExistente(self.txtUsuario.text)
             }
                 
         }
         
-        //cloudKitHelper.salvaUsuario(self.txtNome.text, senha: self.txtSenha.text, nome: self.txtNome.text, email: self.txtEmail.text, sexo: self.txtSexo.text)
-        //NSLog("Salvou")
+    }
+    @IBAction func verificaUsuario(sender: AnyObject) {
+        if (txtUsuario.text == "") {
+            let alerta = UIAlertController(title: "Atenção", message: "Usuário deve ser preenchido!", preferredStyle:
+                UIAlertControllerStyle.Alert)
+            let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
+            alerta.addAction(acao)
+            
+            self.presentViewController(alerta, animated: true, completion: nil)
+        } else {
+            cloudKitHelper.usuarioExistente(self.txtUsuario.text)
+        }
     }
     
     @IBAction func botaoCancelar(sender: AnyObject) {
@@ -81,12 +77,11 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "usuarioEncontrado:", name: "usuarioEncontrado", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "usuarioNaoEncontrado:", name: "usuarioNaoEncontrado", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "dadosSalvos:", name: "dadosSalvos", object: nil)
         txtUsuario.delegate = self
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        btnSalvar.enabled = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -142,91 +137,36 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     }
     
     
-
-    func btnConfirmarSenha(sender: UIButton) {
-        
-    }
-    
     func usuarioEncontrado(notification: NSNotificationCenter) {
-        usuarioExistente = true
+        let alerta = UIAlertController(title: "Atenção", message: "Usuário já existe!", preferredStyle:
+            UIAlertControllerStyle.Alert)
+        let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
+        alerta.addAction(acao)
+        
+        self.presentViewController(alerta, animated: true, completion: nil)
+        
+        btnSalvar.enabled = false
+    }
+    
+    func usuarioNaoEncontrado(notification: NSNotificationCenter) {
+        if (btnSalvar.enabled == true) {
+            cloudKitHelper.salvaUsuario(self.txtUsuario.text, senha: self.txtSenha.text, nome: self.txtNome.text, email: self.txtEmail.text, sexo: self.txtSexo.text)
+            NSLog("Salvou")
+        } else {
+            btnSalvar.enabled = true
+        }
+    }
+    
+    func dadosSalvos(notification: NSNotificationCenter) {
+        let alerta = UIAlertController(title: "Atenção", message: "Dados salvos!", preferredStyle:
+            UIAlertControllerStyle.Alert)
+        let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
+        alerta.addAction(acao)
+        
+        self.presentViewController(alerta, animated: true, completion: nil)
     }
     
     
-//    @IBAction func digitandoUsuario(sender: AnyObject) {
-//        usuarioExistente = false
-//    }
-//    @IBAction func verificaUsuario(sender: AnyObject) {
-//        cloudKitHelper.usuarioExistente(txtUsuario.text)
-//    }
-    
-    
-    // MARK: - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Potentially incomplete method implementation.
-//        // Return the number of sections.
-//        return 0
-//    }
-//
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete method implementation.
-//        // Return the number of rows in the section.
-//        return 0
-//    }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

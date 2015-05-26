@@ -46,10 +46,15 @@ class CloudKitHelper {
         
         publicDB.saveRecord(userRecord, completionHandler: { (record, error) -> Void in
             if (error != nil) {
-                println("Deu Ruim + \(error)")
+                dispatch_async(dispatch_get_main_queue()) {
+                    println("Deu Ruim + \(error)")
+                }
             }
             else {
-                println("Salvou")
+                dispatch_async(dispatch_get_main_queue()) {
+                    println("Salvou")
+                    NSNotificationCenter.defaultCenter().postNotificationName("dadosSalvos", object: self, userInfo: nil)
+                }
             }
             
         } )
@@ -133,44 +138,13 @@ class CloudKitHelper {
                     } else {
                         dispatch_async(dispatch_get_main_queue()) {
                             NSLog("Usuário não encontrado.")
+                            NSNotificationCenter.defaultCenter().postNotificationName("usuarioInexistente", object: self, userInfo: nil)
                         }
                     }
                 }
             }))
     }
-    
-    func fetchUsuarios2(usuario: String) {
-        let predicate = NSPredicate(format: "usuario = %@", usuario)
-        
-        let query = CKQuery(recordType: "Usuario", predicate: predicate)
-        
-        publicDB.performQuery(query, inZoneWithID: nil,
-            completionHandler: ({results, error in
-                if (error != nil) {
-                    dispatch_async(dispatch_get_main_queue()) {
-                        NSLog("Erro \(error)")
-                    }
-                } else {
-                    if results.count > 0 {
-                        
-                        var record = results[0] as! CKRecord
-                        
-                        dispatch_async(dispatch_get_main_queue()) {
-                            
-                            let user = Usuario(record: record as CKRecord, database: self.publicDB)
-                            var usuario: NSDictionary = NSDictionary(object: user, forKey: "Usuario")
-                            NSNotificationCenter.defaultCenter().postNotificationName("usuarioEncontrado", object: self, userInfo: usuario as [NSObject : AnyObject])
-                            println("Achou")
-                            
-                        }
-                    } else {
-                        dispatch_async(dispatch_get_main_queue()) {
-                            NSLog("Usuário não encontrado.")
-                        }
-                    }
-                }
-            }))
-    }
+
     
     func usuarioExistente(usuario: String) {
         let predicate = NSPredicate(format: "usuario == %@", usuario)
@@ -180,7 +154,7 @@ class CloudKitHelper {
         publicDB.performQuery(query, inZoneWithID: nil,
             completionHandler: ({results, error in
                 if (error != nil) {
-                    dispatch_sync(dispatch_get_main_queue()) {
+                    dispatch_async(dispatch_get_main_queue()) {
                         NSLog("Erro \(error.description)")
                     }
                 } else {
@@ -188,14 +162,15 @@ class CloudKitHelper {
                         
                         var record = results[0] as! CKRecord
                         
-                        dispatch_sync(dispatch_get_main_queue()) {
+                        dispatch_async(dispatch_get_main_queue()) {
                             NSLog("Achou")
-                        NSNotificationCenter.defaultCenter().postNotificationName("usuarioEncontrado", object: self, userInfo: nil)
-                            
+                            NSNotificationCenter.defaultCenter().postNotificationName("usuarioEncontrado", object: self, userInfo: nil)
                         }
+                        
                     } else {
-                        dispatch_sync(dispatch_get_main_queue()) {
+                        dispatch_async(dispatch_get_main_queue()) {
                             NSLog("Usuário não encontrado.")
+                            NSNotificationCenter.defaultCenter().postNotificationName("usuarioNaoEncontrado", object: self, userInfo: nil)
                         }
                     }
                 }

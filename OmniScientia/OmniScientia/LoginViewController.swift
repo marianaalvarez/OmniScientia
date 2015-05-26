@@ -9,6 +9,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    let userDefaults = NSUserDefaults.standardUserDefaults()
 
     @IBOutlet weak var usuario: UITextField!
     @IBOutlet weak var senha: UITextField!
@@ -23,7 +25,6 @@ class LoginViewController: UIViewController {
             self.presentViewController(alerta, animated: true, completion: nil)
             
         } else {
-            
             cloudKitHelper.fetchUsuario(usuario.text, senha: senha.text)
             
         }
@@ -32,7 +33,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "usuarioLogado:", name: "usuarioLogado", object: nil)
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "usuarioInexistente:", name: "usuarioInexistente", object: nil)
 
         // Do any additional setup after loading the view.
     }
@@ -44,12 +45,26 @@ class LoginViewController: UIViewController {
     
     func usuarioLogado(notification: NSNotification) {
         let info : Dictionary<String,Usuario!> = notification.userInfo as! Dictionary<String,Usuario!>
-        let usuario = info["Usuario"]
-        println("\(usuario!.email)")
+        let usuario : Usuario = info["Usuario"]!
+         userDefaults.setObject(info["Usuario"], forKey: "user_name")
+        println("\(usuario.email)")
+        
+    }
+    func usuarioInexistente(notification: NSNotification) {
+        let alerta = UIAlertController(title: "Atenção", message: "Usuário não encontrado!", preferredStyle:
+            UIAlertControllerStyle.Alert)
+        let acao = UIAlertAction(title: "Ok", style: .Default) { action -> Void in }
+        alerta.addAction(acao)
+        
+        self.presentViewController(alerta, animated: true, completion: nil)
     }
     
     @IBAction func botaoCancelar(sender: AnyObject) {
         self.navigationController!.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func usuarioLogin() -> Usuario {
+        return userDefaults.objectForKey("user") as! Usuario
     }
 
     /*

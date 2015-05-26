@@ -402,7 +402,7 @@
 				5705A7241B0E1408009368AD /* MainTabBar.swift in Sources */,
 				57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */,
 				572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */,
-				05AABCDD1B1368B800F26F45 /* LoginViewController.swift in Sources */,
+				57BF350B1B13697200685BE4 /* LoginViewController.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
 				05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */,
