@@ -30,5 +30,6 @@ class Usuario: NSObject {
         self.sexo = record.objectForKey("sexo") as! String!
         //self.dataNascimento = record.objectForKey("dataNascimento") as! NSDate!
     }
+
    
 }

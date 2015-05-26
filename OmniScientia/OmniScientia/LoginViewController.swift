@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
             self.presentViewController(alerta, animated: true, completion: nil)
             
         } else {
-            cloudKitHelper.fetchUsuario(usuario.text, senha: senha.text)
+            usuarioDAO.fetchUsuario(usuario.text, senha: senha.text)
             
         }
     }

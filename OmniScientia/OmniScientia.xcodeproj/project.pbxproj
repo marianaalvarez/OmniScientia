@@ -11,7 +11,7 @@
 		053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */; };
 		053CB3541B06132200CCEFA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3531B06132200CCEFA5 /* Images.xcassets */; };
 		053CB3571B06132200CCEFA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3551B06132200CCEFA5 /* LaunchScreen.xib */; };
-		05AABCD61B0E241300F26F45 /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD51B0E241300F26F45 /* CloudKitHelper.swift */; };
+		05AABCD61B0E241300F26F45 /* ConteudoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD51B0E241300F26F45 /* ConteudoDAO.swift */; };
 		05AABCD81B0E2BA400F26F45 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AABCD71B0E2BA400F26F45 /* CloudKit.framework */; };
 		05AABCDC1B13670300F26F45 /* usuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A71B1B0E049D009368AD /* usuario.storyboard */; };
 		05AABCDF1B14AE5900F26F45 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 05AABCDE1B14AE5900F26F45 /* Settings.bundle */; };
@@ -31,6 +31,8 @@
 		251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */; };
 		251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */; };
 		2574B1BB1B135B7300939909 /* UsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2574B1BA1B135B7300939909 /* UsuarioViewController.swift */; };
+		2574B1CB1B14B78000939909 /* LearningObjectDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2574B1CA1B14B78000939909 /* LearningObjectDAO.swift */; };
+		2574B1CD1B14B93200939909 /* UsuarioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2574B1CC1B14B93200939909 /* UsuarioDAO.swift */; };
 		25A768E61B0CB2C800D506C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3501B06132200CCEFA5 /* Main.storyboard */; };
 		5705A7111B0DFDBD009368AD /* ConteudoMOServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */; };
 		5705A7151B0E0461009368AD /* conteudo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A7131B0E0461009368AD /* conteudo.storyboard */; };
@@ -69,7 +71,7 @@
 		053CB3561B06132200CCEFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		053CB35C1B06132200CCEFA5 /* OmniScientiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmniScientiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		053CB3611B06132200CCEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05AABCD51B0E241300F26F45 /* CloudKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
+		05AABCD51B0E241300F26F45 /* ConteudoDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoDAO.swift; sourceTree = "<group>"; };
 		05AABCD71B0E2BA400F26F45 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		05AABCDE1B14AE5900F26F45 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -90,6 +92,8 @@
 		251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
 		251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudosViewController.swift; sourceTree = "<group>"; };
 		2574B1BA1B135B7300939909 /* UsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioViewController.swift; sourceTree = "<group>"; };
+		2574B1CA1B14B78000939909 /* LearningObjectDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningObjectDAO.swift; sourceTree = "<group>"; };
+		2574B1CC1B14B93200939909 /* UsuarioDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioDAO.swift; sourceTree = "<group>"; };
 		5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoMOServiceTests.swift; sourceTree = "<group>"; };
 		5705A7141B0E0461009368AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/conteudo.storyboard; sourceTree = "<group>"; };
 		5705A7191B0E048E009368AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/inicio.storyboard; sourceTree = "<group>"; };
@@ -202,7 +206,9 @@
 				05F0EFD81B0B58A800784150 /* Imagem.swift */,
 				05F0EFD61B0B589600784150 /* Video.swift */,
 				05F0EFD41B0B587C00784150 /* Audio.swift */,
-				05AABCD51B0E241300F26F45 /* CloudKitHelper.swift */,
+				05AABCD51B0E241300F26F45 /* ConteudoDAO.swift */,
+				2574B1CA1B14B78000939909 /* LearningObjectDAO.swift */,
+				2574B1CC1B14B93200939909 /* UsuarioDAO.swift */,
 			);
 			name = Modelos;
 			sourceTree = "<group>";
@@ -393,7 +399,8 @@
 				05F0EFE11B0B593A00784150 /* Historico.swift in Sources */,
 				57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */,
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
-				05AABCD61B0E241300F26F45 /* CloudKitHelper.swift in Sources */,
+				05AABCD61B0E241300F26F45 /* ConteudoDAO.swift in Sources */,
+				2574B1CD1B14B93200939909 /* UsuarioDAO.swift in Sources */,
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
 				57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
@@ -416,6 +423,7 @@
 				05F0EFDF1B0B592B00784150 /* Pergunta.swift in Sources */,
 				2574B1BB1B135B7300939909 /* UsuarioViewController.swift in Sources */,
 				572DE1C11B0CA6F9008DB6F2 /* UsuarioMO.swift in Sources */,
+				2574B1CB1B14B78000939909 /* LearningObjectDAO.swift in Sources */,
 				251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

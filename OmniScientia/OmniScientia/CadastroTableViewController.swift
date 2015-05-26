@@ -51,7 +51,7 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
                 self.presentViewController(alerta, animated: true, completion: nil)
                 
             } else {
-                cloudKitHelper.usuarioExistente(self.txtUsuario.text)
+                usuarioDAO.usuarioExistente(self.txtUsuario.text)
             }
                 
         }
@@ -66,7 +66,7 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
             
             self.presentViewController(alerta, animated: true, completion: nil)
         } else {
-            cloudKitHelper.usuarioExistente(self.txtUsuario.text)
+            usuarioDAO.usuarioExistente(self.txtUsuario.text)
         }
     }
     
@@ -150,7 +150,16 @@ class CadastroTableViewController: UITableViewController, UIPickerViewDelegate, 
     
     func usuarioNaoEncontrado(notification: NSNotificationCenter) {
         if (btnSalvar.enabled == true) {
-            cloudKitHelper.salvaUsuario(self.txtUsuario.text, senha: self.txtSenha.text, nome: self.txtNome.text, email: self.txtEmail.text, sexo: self.txtSexo.text)
+            
+            var usuario = NSObject() as! Usuario
+            
+            usuario.nome = self.txtNome.text!
+            usuario.sexo = self.txtSenha.text!
+            usuario.email = self.txtEmail.text!
+            usuario.usuario = self.txtUsuario.text!
+            usuario.senha = self.txtSenha.text!
+            
+            usuarioDAO.salvaUsuario(usuario)
             NSLog("Salvou")
         } else {
             btnSalvar.enabled = true
