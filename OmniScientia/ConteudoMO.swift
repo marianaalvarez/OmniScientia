@@ -2,7 +2,7 @@
 //  ConteudoMO.swift
 //  OmniScientia
 //
-//  Created by Victor Travassos Ferreira on 5/22/15.
+//  Created by Guilherme Ferreira de Souza on 5/27/15.
 //  Copyright (c) 2015 Mariana Alvarez. All rights reserved.
 //
 
@@ -15,8 +15,9 @@ public class ConteudoMO: NSManagedObject {
     @NSManaged var cor: String
     @NSManaged var descricao: String
     @NSManaged var titulo: String
+    @NSManaged var favoritado: NSNumber
     @NSManaged var learningObjects: NSSet
-
+    
     public func addLearningObject(#learningObject:LearningObjectMO){
         var auxLearningObjectsSet = learningObjects.copy() as! NSMutableSet
         
@@ -32,5 +33,6 @@ public class ConteudoMO: NSManagedObject {
         
         return learningObject
     }
+
 
 }

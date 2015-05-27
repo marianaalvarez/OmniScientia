@@ -34,6 +34,7 @@
 		2574B1CB1B14B78000939909 /* LearningObjectDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2574B1CA1B14B78000939909 /* LearningObjectDAO.swift */; };
 		2574B1CD1B14B93200939909 /* UsuarioDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2574B1CC1B14B93200939909 /* UsuarioDAO.swift */; };
 		25A768E61B0CB2C800D506C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053CB3501B06132200CCEFA5 /* Main.storyboard */; };
+		25C25AD01B15EB1300CC93D1 /* ConteudoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C25ACF1B15EB1300CC93D1 /* ConteudoMO.swift */; };
 		5705A7111B0DFDBD009368AD /* ConteudoMOServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */; };
 		5705A7151B0E0461009368AD /* conteudo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A7131B0E0461009368AD /* conteudo.storyboard */; };
 		5705A71A1B0E048E009368AD /* inicio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A7181B0E048E009368AD /* inicio.storyboard */; };
@@ -47,7 +48,6 @@
 		57B088061B0F51AB005E0FD7 /* TextoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088051B0F51AB005E0FD7 /* TextoMO.swift */; };
 		57B088081B0F51AB005E0FD7 /* LearningObjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */; };
 		57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088091B0F51AB005E0FD7 /* ImageMO.swift */; };
-		57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */; };
 		57BF350B1B13697200685BE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +94,7 @@
 		2574B1BA1B135B7300939909 /* UsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioViewController.swift; sourceTree = "<group>"; };
 		2574B1CA1B14B78000939909 /* LearningObjectDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningObjectDAO.swift; sourceTree = "<group>"; };
 		2574B1CC1B14B93200939909 /* UsuarioDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioDAO.swift; sourceTree = "<group>"; };
+		25C25ACF1B15EB1300CC93D1 /* ConteudoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConteudoMO.swift; path = ../ConteudoMO.swift; sourceTree = "<group>"; };
 		5705A7101B0DFDBD009368AD /* ConteudoMOServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoMOServiceTests.swift; sourceTree = "<group>"; };
 		5705A7141B0E0461009368AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/conteudo.storyboard; sourceTree = "<group>"; };
 		5705A7191B0E048E009368AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/inicio.storyboard; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		57B088051B0F51AB005E0FD7 /* TextoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextoMO.swift; sourceTree = "<group>"; };
 		57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningObjectMO.swift; sourceTree = "<group>"; };
 		57B088091B0F51AB005E0FD7 /* ImageMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMO.swift; sourceTree = "<group>"; };
-		57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConteudoMO.swift; path = ../ConteudoMO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,13 +153,14 @@
 		053CB3461B06132200CCEFA5 /* OmniScientia */ = {
 			isa = PBXGroup;
 			children = (
+				2574B1CE1B14C07100939909 /* CloudKit DAO */,
 				5705A7121B0E042A009368AD /* Interfaces de Usuario */,
 				572DE1C21B0CA706008DB6F2 /* CoreData */,
+				251DBC5B1B0B7F79009EC7EB /* Modelos CloudKit */,
 				053CB3491B06132200CCEFA5 /* AppDelegate.swift */,
 				053CB3551B06132200CCEFA5 /* LaunchScreen.xib */,
 				05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */,
 				053CB34B1B06132200CCEFA5 /* OmniScientia.xcdatamodeld */,
-				251DBC5B1B0B7F79009EC7EB /* Modelos */,
 				053CB3531B06132200CCEFA5 /* Images.xcassets */,
 				053CB3471B06132200CCEFA5 /* Supporting Files */,
 			);
@@ -192,7 +193,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		251DBC5B1B0B7F79009EC7EB /* Modelos */ = {
+		251DBC5B1B0B7F79009EC7EB /* Modelos CloudKit */ = {
 			isa = PBXGroup;
 			children = (
 				05F0EFE81B0B5EB100784150 /* Objetos.swift */,
@@ -206,11 +207,18 @@
 				05F0EFD81B0B58A800784150 /* Imagem.swift */,
 				05F0EFD61B0B589600784150 /* Video.swift */,
 				05F0EFD41B0B587C00784150 /* Audio.swift */,
+			);
+			name = "Modelos CloudKit";
+			sourceTree = "<group>";
+		};
+		2574B1CE1B14C07100939909 /* CloudKit DAO */ = {
+			isa = PBXGroup;
+			children = (
 				05AABCD51B0E241300F26F45 /* ConteudoDAO.swift */,
 				2574B1CA1B14B78000939909 /* LearningObjectDAO.swift */,
 				2574B1CC1B14B93200939909 /* UsuarioDAO.swift */,
 			);
-			name = Modelos;
+			name = "CloudKit DAO";
 			sourceTree = "<group>";
 		};
 		5705A7121B0E042A009368AD /* Interfaces de Usuario */ = {
@@ -268,10 +276,10 @@
 			children = (
 				572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */,
 				57B088091B0F51AB005E0FD7 /* ImageMO.swift */,
-				57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */,
 				57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */,
 				57B088051B0F51AB005E0FD7 /* TextoMO.swift */,
 				57B088031B0F51AB005E0FD7 /* QuizMO.swift */,
+				25C25ACF1B15EB1300CC93D1 /* ConteudoMO.swift */,
 				572DE1B21B0CA639008DB6F2 /* ConteudoMOService.swift */,
 				572DE1C01B0CA6F9008DB6F2 /* UsuarioMO.swift */,
 				572DE1C31B0CA809008DB6F2 /* UsuarioMOService.swift */,
@@ -401,6 +409,7 @@
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
 				05AABCD61B0E241300F26F45 /* ConteudoDAO.swift in Sources */,
 				2574B1CD1B14B93200939909 /* UsuarioDAO.swift in Sources */,
+				25C25AD01B15EB1300CC93D1 /* ConteudoMO.swift in Sources */,
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
 				57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
@@ -410,7 +419,6 @@
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
 				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
 				5705A7241B0E1408009368AD /* MainTabBar.swift in Sources */,
-				57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */,
 				572DE1B41B0CA639008DB6F2 /* ConteudoMOService.swift in Sources */,
 				57BF350B1B13697200685BE4 /* LoginViewController.swift in Sources */,
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,

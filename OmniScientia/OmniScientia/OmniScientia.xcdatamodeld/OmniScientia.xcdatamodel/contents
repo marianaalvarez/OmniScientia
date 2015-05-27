@@ -4,6 +4,7 @@
         <attribute name="backgroundImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="cor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descricao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favoritado" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="learningObjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LearningObject" inverseName="conteudo" inverseEntity="LearningObject" syncable="YES"/>
     </entity>
@@ -30,7 +31,7 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Conteudo" positionX="-21755" positionY="-8965" width="128" height="118"/>
+        <element name="Conteudo" positionX="-21755" positionY="-8965" width="128" height="133"/>
         <element name="Image" positionX="-21879" positionY="-8712" width="128" height="58"/>
         <element name="LearningObject" positionX="-21755" positionY="-8802" width="128" height="58"/>
         <element name="Quiz" positionX="-21629" positionY="-8694" width="128" height="88"/>
