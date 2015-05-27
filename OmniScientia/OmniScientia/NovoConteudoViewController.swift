@@ -17,8 +17,7 @@ class NovoConteudoViewController: UITableViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        txtTitulo.delegate = self
-        txtDescricao.delegate = self
+
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: "esconderTeclado")
         self.tableView.addGestureRecognizer(gestureRecognizer)

@@ -12,8 +12,7 @@ class NoticiasTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let usuario = userDefaults.stringForKey("usuario")
-        println("\(usuario!)")
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
