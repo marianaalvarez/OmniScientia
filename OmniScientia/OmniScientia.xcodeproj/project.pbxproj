@@ -40,12 +40,15 @@
 		572DE1C11B0CA6F9008DB6F2 /* UsuarioMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1C01B0CA6F9008DB6F2 /* UsuarioMO.swift */; };
 		572DE1C41B0CA809008DB6F2 /* UsuarioMOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1C31B0CA809008DB6F2 /* UsuarioMOService.swift */; };
 		572DE2141B0D23AC008DB6F2 /* UsuarioMOServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1D21B0CD478008DB6F2 /* UsuarioMOServiceTests.swift */; };
+		5775386B1B14BD9900B10A33 /* AdicionaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5775386A1B14BD9900B10A33 /* AdicionaButton.swift */; };
+		5775386D1B14BFE800B10A33 /* AddPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5775386C1B14BFE800B10A33 /* AddPageViewController.swift */; };
 		57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088031B0F51AB005E0FD7 /* QuizMO.swift */; };
 		57B088061B0F51AB005E0FD7 /* TextoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088051B0F51AB005E0FD7 /* TextoMO.swift */; };
 		57B088081B0F51AB005E0FD7 /* LearningObjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */; };
 		57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088091B0F51AB005E0FD7 /* ImageMO.swift */; };
 		57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */; };
 		57BF350B1B13697200685BE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */; };
+		57D459391B1602150094DC6E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D459381B1602150094DC6E /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,11 +101,14 @@
 		572DE1C01B0CA6F9008DB6F2 /* UsuarioMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsuarioMO.swift; path = ../UsuarioMO.swift; sourceTree = "<group>"; };
 		572DE1C31B0CA809008DB6F2 /* UsuarioMOService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioMOService.swift; sourceTree = "<group>"; };
 		572DE1D21B0CD478008DB6F2 /* UsuarioMOServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioMOServiceTests.swift; sourceTree = "<group>"; };
+		5775386A1B14BD9900B10A33 /* AdicionaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionaButton.swift; sourceTree = "<group>"; };
+		5775386C1B14BFE800B10A33 /* AddPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPageViewController.swift; sourceTree = "<group>"; };
 		57B088031B0F51AB005E0FD7 /* QuizMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizMO.swift; sourceTree = "<group>"; };
 		57B088051B0F51AB005E0FD7 /* TextoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextoMO.swift; sourceTree = "<group>"; };
 		57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningObjectMO.swift; sourceTree = "<group>"; };
 		57B088091B0F51AB005E0FD7 /* ImageMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMO.swift; sourceTree = "<group>"; };
 		57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConteudoMO.swift; path = ../ConteudoMO.swift; sourceTree = "<group>"; };
+		57D459381B1602150094DC6E /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = ../PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,8 +225,11 @@
 			isa = PBXGroup;
 			children = (
 				5705A7131B0E0461009368AD /* conteudo.storyboard */,
+				57D459381B1602150094DC6E /* PageViewController.swift */,
+				5775386C1B14BFE800B10A33 /* AddPageViewController.swift */,
 				251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */,
 				251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */,
+				5775386A1B14BD9900B10A33 /* AdicionaButton.swift */,
 			);
 			name = Conteudo;
 			sourceTree = "<group>";
@@ -405,10 +414,13 @@
 				05F0EFDD1B0B591F00784150 /* Conteudo.swift in Sources */,
 				251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */,
 				05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */,
+				5775386B1B14BD9900B10A33 /* AdicionaButton.swift in Sources */,
 				053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */,
+				57D459391B1602150094DC6E /* PageViewController.swift in Sources */,
 				053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */,
 				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,
 				05F0EFD51B0B587C00784150 /* Audio.swift in Sources */,
+				5775386D1B14BFE800B10A33 /* AddPageViewController.swift in Sources */,
 				05F0EFDF1B0B592B00784150 /* Pergunta.swift in Sources */,
 				2574B1BB1B135B7300939909 /* UsuarioViewController.swift in Sources */,
 				572DE1C11B0CA6F9008DB6F2 /* UsuarioMO.swift in Sources */,

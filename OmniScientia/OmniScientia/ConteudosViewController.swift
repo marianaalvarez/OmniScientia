@@ -18,63 +18,11 @@ class ConteudosViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dummyConteudos()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    func dummyConteudos() {
-        
-        var botao = UIButton(frame: CGRect(x: 16, y: 41, width: 220, height: 132))
-        botao.backgroundColor = UIColor.blueColor()
-        botao.layer.cornerRadius = 8.8
-        botao.clipsToBounds = true
-        scrollFavoritados.addSubview(botao)
-        scrollSeusConteudos.addSubview(botao)
-        scrollHistorico.addSubview(botao)
-        
-        var botao2 = UIButton(frame: CGRect(x: 16 + (botao.frame.width + botao.frame.origin.x), y: 41, width: 220, height: 132))
-        botao2.backgroundColor = UIColor.yellowColor()
-        botao2.layer.cornerRadius = 8.8
-        botao2.clipsToBounds = true
-        scrollFavoritados.addSubview(botao2)
-        scrollSeusConteudos.addSubview(botao2)
-        scrollHistorico.addSubview(botao2)
-        
-        var botao3 = UIButton(frame: CGRect(x: 16 + (botao2.frame.width + botao2.frame.origin.x) , y: 41, width: 220, height: 132))
-        botao3.backgroundColor = UIColor.grayColor()
-        botao3.layer.cornerRadius = 8.8
-        botao3.clipsToBounds = true
-        scrollFavoritados.addSubview(botao3)
-        scrollSeusConteudos.addSubview(botao3)
-        scrollHistorico.addSubview(botao3)
-        
-        var botao4 = UIButton(frame: CGRect(x: 16 + (botao3.frame.width + botao3.frame.origin.x), y: 41, width: 220, height: 132))
-        botao4.backgroundColor = UIColor.redColor()
-        botao4.layer.cornerRadius = 8.8
-        botao4.clipsToBounds = true
-        scrollFavoritados.addSubview(botao4)
-        scrollSeusConteudos.addSubview(botao4)
-        scrollHistorico.addSubview(botao4)
-        
-        var botao5 = UIButton(frame: CGRect(x: 16 + (botao4.frame.width + botao4.frame.origin.x), y: 41, width: 220, height: 132))
-        botao5.backgroundColor = UIColor.greenColor()
-        botao5.layer.cornerRadius = 8.8
-        botao5.clipsToBounds = true
-        scrollFavoritados.addSubview(botao5)
-        scrollSeusConteudos.addSubview(botao5)
-        scrollHistorico.addSubview(botao5)
-        
-        scrollFavoritados.contentSize = CGSize(width: botao.frame.width + botao2.frame.width + botao3.frame.width + botao4.frame.width + botao5.frame.width + (16 * 5) + 20, height: 214)
-        scrollSeusConteudos.contentSize = CGSize(width: botao.frame.width + botao2.frame.width + botao3.frame.width + botao4.frame.width + botao5.frame.width + (16 * 5) + 20, height: 214)
-        scrollHistorico.contentSize = CGSize(width: botao.frame.width + botao2.frame.width + botao3.frame.width + botao4.frame.width + botao5.frame.width + (16 * 5) + 20, height: 214)
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
