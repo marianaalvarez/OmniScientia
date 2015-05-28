@@ -43,7 +43,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Usuario" image="user" selectedImage="home" id="cOW-5t-LlE"/>
+                    <tabBarItem key="tabBarItem" title="Usuario" image="user" id="cOW-5t-LlE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMg-bx-bHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
