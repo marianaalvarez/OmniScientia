@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red:0.247, green:0.662, blue:0.886, alpha:1)], forState:.Selected)
+        UITabBar.appearance().tintColor = UIColor(red:0.247, green:0.662, blue:0.886, alpha:1)
         coreDataStack = CoreDataStack.sharedInstance
         return true
     }

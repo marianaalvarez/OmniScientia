@@ -22,6 +22,8 @@ class UsuarioViewController: UITableViewController {
         super.viewDidLoad()
         alterarBotoesNavigation()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "usuarioLogado:", name: "usuarioLogado", object: nil)
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController!.navigationBar.titleTextAttributes = titleDict as [NSObject : AnyObject]
     }
     
     override func viewWillAppear(animated: Bool) {

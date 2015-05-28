@@ -392,7 +392,7 @@
         <scene sceneID="mjS-G6-JlA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hZe-nE-9V7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conteúdos" image="favorite" id="yj6-Af-cke"/>
+                    <tabBarItem key="tabBarItem" title="Conteúdos" image="conteudos" id="yj6-Af-cke"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="6el-KG-DSL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -415,6 +415,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="favorite" width="25" height="25"/>
+        <image name="conteudos" width="24" height="24"/>
     </resources>
 </document>

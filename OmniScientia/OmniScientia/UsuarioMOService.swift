@@ -44,4 +44,28 @@ public class UsuarioMOService {
         }
             return nil
     }
+    
+    public func buscar(#username:String) -> UsuarioMO? {
+        let predicate = NSPredicate(format: "username == %@", username)
+        
+        let fetchRequest = NSFetchRequest(entityName: UsuarioMOService.entityName)
+        
+        fetchRequest.predicate = predicate
+        
+        var error:NSError?
+        
+        let fetchedResults = coreDataStack.managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
+        
+        if let results = fetchedResults as? [UsuarioMO] {
+            return results.first
+        }
+        else {
+            println("Não foi possivel buscar Usuarios:\(error), \(error!.userInfo)")
+        }
+        return nil
+        
+        
+    }
+    
+    
 }

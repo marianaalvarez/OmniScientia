@@ -15,6 +15,8 @@
 		05AABCD81B0E2BA400F26F45 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AABCD71B0E2BA400F26F45 /* CloudKit.framework */; };
 		05AABCDC1B13670300F26F45 /* usuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5705A71B1B0E049D009368AD /* usuario.storyboard */; };
 		05AABCDF1B14AE5900F26F45 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 05AABCDE1B14AE5900F26F45 /* Settings.bundle */; };
+		05BA94E91B173C86007762A2 /* configuracoes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BA94E81B173C86007762A2 /* configuracoes.storyboard */; };
+		05BA94EB1B173CA3007762A2 /* ConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BA94EA1B173CA3007762A2 /* ConfigTableViewController.swift */; };
 		05D049971B0BC321003F2127 /* CadastroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D049961B0BC321003F2127 /* CadastroTableViewController.swift */; };
 		05F0EFD51B0B587C00784150 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD41B0B587C00784150 /* Audio.swift */; };
 		05F0EFD71B0B589600784150 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFD61B0B589600784150 /* Video.swift */; };
@@ -78,6 +80,8 @@
 		05AABCD71B0E2BA400F26F45 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		05AABCDE1B14AE5900F26F45 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		05BA94E81B173C86007762A2 /* configuracoes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = configuracoes.storyboard; sourceTree = "<group>"; };
+		05BA94EA1B173CA3007762A2 /* ConfigTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigTableViewController.swift; sourceTree = "<group>"; };
 		05D049961B0BC321003F2127 /* CadastroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastroTableViewController.swift; sourceTree = "<group>"; };
 		05F0EFCF1B0A125800784150 /* OmniScientia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = OmniScientia.entitlements; sourceTree = "<group>"; };
 		05F0EFD41B0B587C00784150 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Audio.swift; path = ../Audio.swift; sourceTree = "<group>"; };
@@ -198,6 +202,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		05BA94E71B173C59007762A2 /* Configuracoes */ = {
+			isa = PBXGroup;
+			children = (
+				05BA94E81B173C86007762A2 /* configuracoes.storyboard */,
+				05BA94EA1B173CA3007762A2 /* ConfigTableViewController.swift */,
+			);
+			name = Configuracoes;
+			sourceTree = "<group>";
+		};
 		251DBC5B1B0B7F79009EC7EB /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +239,7 @@
 				5705A7171B0E047F009368AD /* Inicio */,
 				5705A7161B0E0467009368AD /* Conteudo */,
 				5705A71D1B0E04A4009368AD /* Usuario */,
+				05BA94E71B173C59007762A2 /* Configuracoes */,
 			);
 			name = "Interfaces de Usuario";
 			sourceTree = "<group>";
@@ -385,6 +399,7 @@
 				5705A71A1B0E048E009368AD /* inicio.storyboard in Resources */,
 				5705A7151B0E0461009368AD /* conteudo.storyboard in Resources */,
 				05AABCDF1B14AE5900F26F45 /* Settings.bundle in Resources */,
+				05BA94E91B173C86007762A2 /* configuracoes.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +432,7 @@
 				05F0EFE71B0B5A2A00784150 /* Usuario.swift in Sources */,
 				572DE1C41B0CA809008DB6F2 /* UsuarioMOService.swift in Sources */,
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
+				05BA94EB1B173CA3007762A2 /* ConfigTableViewController.swift in Sources */,
 				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
 				5705A7241B0E1408009368AD /* MainTabBar.swift in Sources */,
 				57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */,
