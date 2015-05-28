@@ -84,7 +84,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="za7-py-Mlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="VA8-Bi-LRm" customClass="RAMFumeAnimation" customModule="OmniScientia" customModuleProvider="target"/>
+                <customObject id="VA8-Bi-LRm" customClass="RAMBounceAnimation" customModule="OmniScientia" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="956" y="354"/>
         </scene>

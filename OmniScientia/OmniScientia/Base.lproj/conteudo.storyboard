@@ -426,7 +426,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axw-eg-Mlm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="QZ8-xR-srm" customClass="RAMFumeAnimation" customModule="OmniScientia" customModuleProvider="target"/>
+                <customObject id="QZ8-xR-srm" customClass="RAMBounceAnimation" customModule="OmniScientia" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-464" y="-588"/>
         </scene>
