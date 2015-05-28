@@ -34,7 +34,9 @@
         <!--Configuracoes-->
         <scene sceneID="d5y-zP-LnC">
             <objects>
-                <navigationController id="1Bc-Gd-HgU" userLabel="Configuracoes" sceneMemberID="viewController">
+                <navigationController title="Configurações" automaticallyAdjustsScrollViewInsets="NO" id="1Bc-Gd-HgU" userLabel="Configuracoes" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Configurações" image="config" id="hUW-og-eqc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sF2-fh-vbX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,4 +54,7 @@
             <point key="canvasLocation" x="956" y="354"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="config" width="24" height="24"/>
+    </resources>
 </document>

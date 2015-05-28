@@ -22,7 +22,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="rHT-IX-pfi" kind="relationship" relationship="viewControllers" id="uH6-W5-CX0"/>
-                        <segue destination="K8D-W4-gQT" kind="relationship" relationship="viewControllers" id="ino-A3-Vfx"/>
                         <segue destination="g2O-jM-Oil" kind="relationship" relationship="viewControllers" id="PFn-nQ-Onc"/>
                     </connections>
                 </tabBarController>
@@ -30,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="-1442" y="-114"/>
         </scene>
-        <!--Usuario-->
+        <!--Configuracoes-->
         <scene sceneID="i9I-8f-C4D">
             <objects>
-                <viewController id="g2O-jM-Oil" sceneMemberID="viewController">
+                <viewController id="g2O-jM-Oil" userLabel="Configuracoes" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X88-aa-51d"/>
                         <viewControllerLayoutGuide type="bottom" id="A13-xD-yL3"/>
@@ -43,13 +42,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Usuario" image="user" id="cOW-5t-LlE"/>
+                    <tabBarItem key="tabBarItem" title="Configurações" image="settings-25" id="cOW-5t-LlE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMg-bx-bHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-610" y="-909"/>
+            <point key="canvasLocation" x="-616" y="-505"/>
         </scene>
-        <!--Conteudo-->
+        <!--ConteudMArianao-->
         <scene sceneID="KxF-3D-gns">
             <objects>
                 <viewController id="rHT-IX-pfi" sceneMemberID="viewController">
@@ -62,35 +61,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Conteudo" image="favorite" id="ux6-6t-JrO"/>
+                    <tabBarItem key="tabBarItem" title="ConteudMArianao" image="favorite" id="ux6-6t-JrO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NdF-Yr-glh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-610" y="-223"/>
-        </scene>
-        <!--Inicio-->
-        <scene sceneID="eIn-ol-bA8">
-            <objects>
-                <viewController id="K8D-W4-gQT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MTw-Lg-b2r"/>
-                        <viewControllerLayoutGuide type="bottom" id="3E4-vB-4Dc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0FV-rU-1qw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Inicio" image="home" id="Gr8-ME-4Hx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rV5-dd-1e0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-610" y="467"/>
+            <point key="canvasLocation" x="-621" y="325"/>
         </scene>
     </scenes>
     <resources>
         <image name="favorite" width="25" height="25"/>
-        <image name="home" width="25" height="25"/>
-        <image name="user" width="25" height="25"/>
+        <image name="settings-25" width="50" height="50"/>
     </resources>
 </document>
