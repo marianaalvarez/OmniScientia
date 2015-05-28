@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Main Tab Bar-->
+        <!--Animated Tab Bar Controller-->
         <scene sceneID="ZI7-SU-D2V">
             <objects>
-                <tabBarController id="cKw-AH-DZ1" customClass="MainTabBar" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="cKw-AH-DZ1" customClass="RAMAnimatedTabBarController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="dXu-v7-gCi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -20,56 +20,10 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
-                    <connections>
-                        <segue destination="rHT-IX-pfi" kind="relationship" relationship="viewControllers" id="uH6-W5-CX0"/>
-                        <segue destination="g2O-jM-Oil" kind="relationship" relationship="viewControllers" id="PFn-nQ-Onc"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BzT-O4-d57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1442" y="-114"/>
         </scene>
-        <!--Configuracoes-->
-        <scene sceneID="i9I-8f-C4D">
-            <objects>
-                <viewController id="g2O-jM-Oil" userLabel="Configuracoes" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="X88-aa-51d"/>
-                        <viewControllerLayoutGuide type="bottom" id="A13-xD-yL3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dt8-tz-0UA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Configurações" image="settings-25" id="cOW-5t-LlE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WMg-bx-bHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-616" y="-505"/>
-        </scene>
-        <!--ConteudMArianao-->
-        <scene sceneID="KxF-3D-gns">
-            <objects>
-                <viewController id="rHT-IX-pfi" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hkp-bP-5vo"/>
-                        <viewControllerLayoutGuide type="bottom" id="d0u-te-jg0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WWr-i1-joi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="ConteudMArianao" image="favorite" id="ux6-6t-JrO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NdF-Yr-glh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-621" y="325"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="favorite" width="25" height="25"/>
-        <image name="settings-25" width="50" height="50"/>
-    </resources>
 </document>

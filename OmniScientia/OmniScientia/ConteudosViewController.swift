@@ -10,6 +10,7 @@ import UIKit
 
 class ConteudosViewController: UITableViewController {
     
+    
     @IBOutlet weak var scrollFavoritados: UIScrollView!
     
     @IBOutlet weak var scrollSeusConteudos: UIScrollView!

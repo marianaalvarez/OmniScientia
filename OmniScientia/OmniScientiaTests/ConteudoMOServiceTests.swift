@@ -47,6 +47,7 @@ class ConteudoMOServiceTests: XCTestCase {
         XCTAssertNotNil(conteudoMO, "Conteudo Object not created")
         
         let img = conteudoMO.createLearningObject(entityName: "Image") as? ImageMO
+        
         XCTAssertNotNil(img, "Image Object not created")
         
         img?.url = "/Users/victor/Downloads/img.png"
@@ -71,18 +72,11 @@ class ConteudoMOServiceTests: XCTestCase {
         CoreDataStack.sharedInstance.saveContext()
     }
     
-    func testListarConteudo() {
-        let conteudos: [ConteudoMO] = conteudoService.listarTodos()!
+    func testBuscarConteudo() {
+        let conteudos: [ConteudoMO] = conteudoService.buscar()!
 
         XCTAssertNotNil(conteudos, "Objects not found")
     
-    }
-    
-    func testListarConteudosFavoritos() {
-        
-        let favoritos: [ConteudoMO] = conteudoService.listarFavoritos()!
-        XCTAssertNotNil(favoritos, "Objects not found")
-        
     }
 
 }

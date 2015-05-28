@@ -17,7 +17,7 @@ public class ConteudoMOService {
         return NSEntityDescription.insertNewObjectForEntityForName(ConteudoMOService.entityName, inManagedObjectContext: coreDataStack.managedObjectContext!) as! ConteudoMO
     }
     
-    public func listarTodos() -> [ConteudoMO]? {
+    public func buscar() -> [ConteudoMO]? {
         let fetchRequest = NSFetchRequest(entityName: ConteudoMOService.entityName)
         var error:NSError?
         
@@ -32,26 +32,6 @@ public class ConteudoMOService {
         return nil
         
     }
-    
-    public func listarFavoritos() -> [ConteudoMO]? {
-        
-        let fetchRequest = NSFetchRequest(entityName: ConteudoMOService.entityName)
-        var error:NSError?
-        
-        fetchRequest.predicate = NSPredicate(format: "favoritado == %@", true)
-        
-        let fetchedResults = coreDataStack.managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
-        
-        if let results = fetchedResults as? [ConteudoMO] {
-            return results
-        } else {
-            println("Não foi possivel buscar conteudos: \(error), \(error!.userInfo)")
-        }
-        
-        return nil
-    }
-    
-    
     
     
     

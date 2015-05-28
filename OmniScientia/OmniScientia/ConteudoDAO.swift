@@ -56,40 +56,7 @@ class ConteudoDAO {
         } )
     }
     
-//    func listarConteudosRecentes() {
-//        
-//        let predicate = NSPredicate(value: true)
-//        let ordenacaoMaisRecente = NSSortDescriptor(key: "creationDate", ascending: false)
-//        
-//        let query = CKQuery(recordType: "Conteudo",
-//            predicate:  predicate)
-//        query.sortDescriptors = [ordenacaoMaisRecente]
-//        publicDB.performQuery(query, inZoneWithID: nil) {
-//            resultados, erro in
-//            if erro != nil {
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    self.delegate?.errorUpdating(erro)
-//                    return
-//                }
-//            } else {
-//                var conteudosRecentes = [Conteudo]()
-//                for result in resultados {
-//                    let todo = Todos(record: record as CKRecord, database: self.publicDB)
-//                    self.todos.append(todo)
-//                }
-//                if let tmp = insertedRecord {
-//                    let todo = Todos(record: insertedRecord! as CKRecord, database: self.publicDB)
-//                    /* Work around at the latest entry at index 0 */
-//                    self.todos.insert(todo, atIndex: 0)
-//                }
-//                NSLog("fetch after save : \(self.todos.count)")
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    self.delegate?.modelUpdated()
-//                    return
-//                }
-//            }
-//        }
-//    }
+    
     
     
     

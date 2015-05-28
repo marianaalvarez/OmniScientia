@@ -35,7 +35,16 @@
         <scene sceneID="d5y-zP-LnC">
             <objects>
                 <navigationController title="Configurações" automaticallyAdjustsScrollViewInsets="NO" id="1Bc-Gd-HgU" userLabel="Configuracoes" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Configurações" image="config" id="hUW-og-eqc"/>
+                    <tabBarItem key="tabBarItem" title="Configurações" image="config" id="etF-p1-vDF" customClass="RAMAnimatedTabBarItem" customModule="OmniScientia" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="VA8-Bi-LRm" id="2jb-2L-FrR"/>
+                        </connections>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sF2-fh-vbX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -50,6 +59,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="za7-py-Mlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="VA8-Bi-LRm" customClass="RAMFumeAnimation" customModule="OmniScientia" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="956" y="354"/>
         </scene>

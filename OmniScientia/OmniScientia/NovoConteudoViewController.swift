@@ -13,6 +13,7 @@ class NovoConteudoViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var txtTitulo: UITextView!
     @IBOutlet weak var txtDescricao: UITextView!
     @IBOutlet weak var scrollCores: UIScrollView!
+    var pageViewController: UIPageViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,5 +59,7 @@ class NovoConteudoViewController: UITableViewController, UITextViewDelegate {
         textView.resignFirstResponder()
         
     }
+    
+
 
 }
