@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ACU-rW-zpG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -198,7 +199,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vug-cG-j52" id="aXj-81-Z5N">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXo-01-zPK">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXo-01-zPK">
                                                     <rect key="frame" x="84" y="6" width="444" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="Xdx-cq-UA6"/>
@@ -590,11 +591,11 @@
                                                     <exclude reference="Qm5-sa-lOI"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="2D9-ty-ofP"/>
-                                                    <exclude reference="imv-pD-RVa"/>
                                                     <exclude reference="lQf-LS-mxp"/>
                                                     <exclude reference="v4H-sa-mKb"/>
                                                     <exclude reference="vTi-hp-tZk"/>
+                                                    <exclude reference="2D9-ty-ofP"/>
+                                                    <exclude reference="imv-pD-RVa"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -602,14 +603,14 @@
                                                     <include reference="Qm5-sa-lOI"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <include reference="lQf-LS-mxp"/>
+                                                    <include reference="v4H-sa-mKb"/>
+                                                    <include reference="vTi-hp-tZk"/>
                                                     <include reference="2D9-ty-ofP"/>
                                                     <exclude reference="DaM-2F-wab"/>
                                                     <exclude reference="HKZ-V8-ugE"/>
                                                     <include reference="imv-pD-RVa"/>
                                                     <exclude reference="jiJ-k2-ecu"/>
-                                                    <include reference="lQf-LS-mxp"/>
-                                                    <include reference="v4H-sa-mKb"/>
-                                                    <include reference="vTi-hp-tZk"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hZe-nE-9V7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -50,6 +51,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="qHa-Sc-KdU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,7 +83,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite o titulo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZf-bw-SKY">
-                                                    <rect key="frame" x="8" y="8" width="584" height="41.5"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="42"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -90,7 +92,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Descrição" id="7Vr-WL-orR">
+                            <tableViewSection headerTitle="Descrição" id="7Vr-WL-orR" userLabel="DESCRIÇÃO">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="Nqg-fu-46q">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -243,27 +245,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="9lB-O1-DCQ">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="ZuT-nu-cTK">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZuT-nu-cTK" id="ZNm-f5-bB2">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYx-Br-PHd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="52.5"/>
-                                                    <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
-                                                    <state key="normal" title="Salvar">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="JWC-8g-XXp" id="Sw3-5t-IU0"/>
@@ -272,10 +253,10 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Novo Conteúdo" id="ZEh-Ga-0nQ">
-                        <barButtonItem key="rightBarButtonItem" title="Adicionar" style="plain" id="3Cr-dt-esk">
+                        <barButtonItem key="rightBarButtonItem" title="Próximo" style="plain" id="3Cr-dt-esk">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="93k-Rj-mJh" kind="show" id="HRF-Zh-7mA"/>
+                                <segue destination="GPd-JH-ZGc" kind="show" id="0p0-ms-lTD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -288,87 +269,124 @@
             </objects>
             <point key="canvasLocation" x="1792" y="-588"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="Ngh-nr-n9e">
+        <!--Título-->
+        <scene sceneID="T9v-dM-lyz">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="93k-Rj-mJh" customClass="PageViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Title" id="str-Rn-SCY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LIU-If-I6F">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fZ2-QA-gfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2538" y="-588"/>
-        </scene>
-        <!--Adicionar Página-->
-        <scene sceneID="wrl-Tk-Uzf">
-            <objects>
-                <viewController storyboardIdentifier="ContentPageView" id="iEU-6Y-BVr" customClass="AddPageViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GPd-JH-ZGc" customClass="AdicionaConteudoViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SI2-3S-3Dx"/>
-                        <viewControllerLayoutGuide type="bottom" id="PjM-cq-Rki"/>
+                        <viewControllerLayoutGuide type="top" id="0aX-AD-RtO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jx6-Fh-kC9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lxy-ba-Cnj">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="pO9-62-O9U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lW8-zf-JlW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsP-6z-5OO" customClass="AdicionaButton" customModule="OmniScientia" customModuleProvider="target">
-                                        <rect key="frame" x="275" y="125" width="50" height="50"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="addContent:" destination="iEU-6Y-BVr" eventType="touchUpInside" id="YqO-Zv-vt2"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xce-ce-4QE">
-                                <rect key="frame" x="0.0" y="300" width="600" height="300"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8C9-g8-WNH" customClass="AdicionaButton" customModule="OmniScientia" customModuleProvider="target">
-                                        <rect key="frame" x="275" y="125" width="50" height="50"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                <color key="value" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAddButton" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="addContent:" destination="iEU-6Y-BVr" eventType="touchUpInside" id="be1-wx-KMx"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Adicionar Página" id="tPS-MH-FbF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="e4L-o2-brs">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <navigationItem key="navigationItem" title="Título" id="Z8q-ds-c2v">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="7uM-J2-4oD">
+                            <color key="tintColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lRf-Wx-hnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCM-wr-YHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3187" y="-588"/>
+            <point key="canvasLocation" x="2575" y="-588"/>
+        </scene>
+        <!--Conteudo View Controller-->
+        <scene sceneID="gGR-a9-GNs">
+            <objects>
+                <viewController storyboardIdentifier="ConteudoViewController" id="owI-vF-JXd" customClass="ConteudoViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ntk-Ya-hu3"/>
+                        <viewControllerLayoutGuide type="bottom" id="RLB-Ag-1ex"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JK7-IF-iT0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgD-hA-AHM">
+                                <rect key="frame" x="16" y="28" width="568" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vo-x9-PWV" customClass="AdicionaButton" customModule="OmniScientia" customModuleProvider="target">
+                                        <rect key="frame" x="259" y="113" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6dQ-ib-sIA"/>
+                                            <constraint firstAttribute="width" secondItem="1vo-x9-PWV" secondAttribute="height" multiplier="1:1" id="M8r-lh-eC3"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="adicionaLearningObject:" destination="owI-vF-JXd" eventType="touchUpInside" id="ESc-Kq-FFu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1vo-x9-PWV" firstAttribute="centerY" secondItem="GgD-hA-AHM" secondAttribute="centerY" constant="3" id="Xjh-1j-sUa"/>
+                                    <constraint firstItem="1vo-x9-PWV" firstAttribute="centerX" secondItem="GgD-hA-AHM" secondAttribute="centerX" id="bj4-XQ-QZr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yn5-ri-0zp">
+                                <rect key="frame" x="16" y="298" width="568" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBE-eY-Kze" customClass="AdicionaButton" customModule="OmniScientia" customModuleProvider="target">
+                                        <rect key="frame" x="259" y="113" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5y3-ux-tEb"/>
+                                            <constraint firstAttribute="width" secondItem="CBE-eY-Kze" secondAttribute="height" multiplier="1:1" id="ued-3V-bY2"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="adicionaLearningObject:" destination="owI-vF-JXd" eventType="touchUpInside" id="dZT-2v-xI3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="CBE-eY-Kze" firstAttribute="centerY" secondItem="Yn5-ri-0zp" secondAttribute="centerY" constant="3" id="YTq-7A-Auk"/>
+                                    <constraint firstItem="CBE-eY-Kze" firstAttribute="centerX" secondItem="Yn5-ri-0zp" secondAttribute="centerX" id="tBM-jN-CjH"/>
+                                </constraints>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Cv0-rN-dM0">
+                                <rect key="frame" x="281" y="563" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yn5-ri-0zp" firstAttribute="top" secondItem="JK7-IF-iT0" secondAttribute="top" constant="298" id="2qD-mC-UUB"/>
+                            <constraint firstItem="Cv0-rN-dM0" firstAttribute="centerX" secondItem="Yn5-ri-0zp" secondAttribute="centerX" id="AW3-Xa-Uzh"/>
+                            <constraint firstItem="GgD-hA-AHM" firstAttribute="leading" secondItem="Yn5-ri-0zp" secondAttribute="leading" id="Cyl-vC-wo0"/>
+                            <constraint firstItem="GgD-hA-AHM" firstAttribute="trailing" secondItem="JK7-IF-iT0" secondAttribute="trailingMargin" id="FUL-0v-Qbr"/>
+                            <constraint firstItem="GgD-hA-AHM" firstAttribute="top" secondItem="Ntk-Ya-hu3" secondAttribute="bottom" constant="8" symbolic="YES" id="IIW-8w-3hp"/>
+                            <constraint firstItem="GgD-hA-AHM" firstAttribute="leading" secondItem="JK7-IF-iT0" secondAttribute="leadingMargin" id="Peu-vO-BPI"/>
+                            <constraint firstItem="GgD-hA-AHM" firstAttribute="trailing" secondItem="Yn5-ri-0zp" secondAttribute="trailing" id="UWA-s4-A4f"/>
+                            <constraint firstItem="Yn5-ri-0zp" firstAttribute="top" secondItem="GgD-hA-AHM" secondAttribute="bottom" id="YtW-e6-FGW"/>
+                            <constraint firstItem="Cv0-rN-dM0" firstAttribute="bottom" secondItem="RLB-Ag-1ex" secondAttribute="top" id="fsp-tx-K5p"/>
+                            <constraint firstAttribute="bottom" secondItem="Yn5-ri-0zp" secondAttribute="bottom" constant="32" id="hwU-6m-zqE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="Cv0-rN-dM0" id="NQc-pL-tQS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjj-Ke-gcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3346" y="-588"/>
         </scene>
         <!--Conteúdos-->
         <scene sceneID="mjS-G6-JlA">
