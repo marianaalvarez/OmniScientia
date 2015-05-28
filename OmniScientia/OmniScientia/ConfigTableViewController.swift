@@ -1,20 +1,14 @@
 //
-//  ConteudosViewController.swift
+//  ConfigTableViewController.swift
 //  OmniScientia
 //
-//  Created by Guilherme Ferreira de Souza on 5/19/15.
+//  Created by Mariana Alvarez on 28/05/15.
 //  Copyright (c) 2015 Mariana Alvarez. All rights reserved.
 //
 
 import UIKit
 
-class ConteudosViewController: UITableViewController {
-    
-    @IBOutlet weak var scrollFavoritados: UIScrollView!
-    
-    @IBOutlet weak var scrollSeusConteudos: UIScrollView!
-    
-    @IBOutlet weak var scrollHistorico: UIScrollView!
+class ConfigTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +28,17 @@ class ConteudosViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Potentially incomplete method implementation.
-//        // Return the number of sections.
-//        return 3
-//    }
-//
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete method implementation.
-//        // Return the number of rows in the section.
-//        return 1
-//    }
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
+        return 0
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return 0
+    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -102,4 +96,3 @@ class ConteudosViewController: UITableViewController {
     */
 
 }
-
