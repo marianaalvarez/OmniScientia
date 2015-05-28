@@ -42,5 +42,15 @@ class UsuarioMOServiceTests: XCTestCase {
         usuarioMOService.coreDataStack.saveContext()
 
     }
+    
+    func testBuscarUsuario() {
+        var usuario = usuarioMOService.novo(username:"Mariana", email: "Mariana", senha: "Mariana")
+        
+        XCTAssertNotNil(usuario, "Não pode ser nulo")
+        
+        var usuarioBuscado = usuarioMOService.buscar(username:"Mariana")
+        
+        XCTAssertTrue(usuario?.username == usuarioBuscado?.username, "Usuario não são iguais")
+    }
 
 }
