@@ -253,6 +253,12 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Novo Conteúdo" id="ZEh-Ga-0nQ">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="Fb2-NE-7SS">
+                            <color key="tintColor" red="0.75294117647058822" green="0.22352941176470589" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="botaoCancelar:" destination="JWC-8g-XXp" id="MFt-ev-WP0"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Próximo" style="plain" id="3Cr-dt-esk">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
