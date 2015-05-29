@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class ConfigTableViewController: UITableViewController {
 
@@ -26,5 +27,18 @@ class ConfigTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func compartilhar(sender: AnyObject) {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+            var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            facebookSheet.setInitialText("Compartilhar no Facebook")
+            self.presentViewController(facebookSheet, animated: true, completion: nil)
+
+            
+        } else {
+            var alert = UIAlertController(title: "Atenção", message: "Faça login no facebook para compartilhar.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
 
 }
