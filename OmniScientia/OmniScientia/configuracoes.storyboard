@@ -60,11 +60,6 @@
             <objects>
                 <navigationController title="Configurações" automaticallyAdjustsScrollViewInsets="NO" id="1Bc-Gd-HgU" userLabel="Configuracoes" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Configurações" image="config" id="etF-p1-vDF" customClass="RAMAnimatedTabBarItem" customModule="OmniScientia" customModuleProvider="target">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="animation" destination="VA8-Bi-LRm" id="2jb-2L-FrR"/>
                         </connections>
@@ -74,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.21898394823074341" green="0.65796530246734619" blue="0.89566445350646973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.21642684936523438" green="0.66000187397003174" blue="0.89665573835372925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -92,4 +87,5 @@
     <resources>
         <image name="config" width="24" height="24"/>
     </resources>
+    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
 </document>

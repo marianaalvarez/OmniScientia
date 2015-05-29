@@ -25,7 +25,7 @@ import UIKit
 class RAMAnimatedTabBarItem: UITabBarItem {
 
     @IBOutlet weak var animation: RAMItemAnimation!
-    @IBInspectable var textColor: UIColor = UIColor.blackColor()
+    @IBInspectable var textColor: UIColor = UIColor.lightGrayColor()
 
     func playAnimation(icon: UIImageView, textLabel: UILabel) {
 
@@ -39,6 +39,9 @@ class RAMAnimatedTabBarItem: UITabBarItem {
         if animation != nil {
             animation.deselectAnimation(icon, textLabel: textLabel, defaultTextColor: textColor)
         }
+        
+        icon.tintColor = UIColor.lightGrayColor()
+        textLabel.textColor = UIColor.lightGrayColor()
     }
 
     func selectedState(icon: UIImageView, textLabel: UILabel) {
@@ -105,34 +108,38 @@ class RAMAnimatedTabBarController: UITabBarController {
 
                 var icon = UIImageView(image: item.image)
                 icon.setTranslatesAutoresizingMaskIntoConstraints(false)
-                icon.tintColor = UIColor.clearColor()
+                
 
                 // text
                 var textLabel = UILabel()
                 textLabel.text = item.title
                 textLabel.backgroundColor = UIColor.clearColor()
-                textLabel.textColor = item.textColor
+                textLabel.textColor = UIColor.lightGrayColor()
                 textLabel.font = UIFont.systemFontOfSize(10)
                 textLabel.textAlignment = NSTextAlignment.Center
                 textLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
 
                 container.addSubview(icon)
                 createConstraints(icon, container: container, size: item.image!.size, yOffset: -5)
-
+                
                 container.addSubview(textLabel)
                 let textLabelWidth = tabBar.frame.size.width / CGFloat(tabBar.items!.count) - 5.0
                 createConstraints(textLabel, container: container, size: CGSize(width: textLabelWidth , height: 10), yOffset: 16)
-
+                
                 let iconsAndLabels = (icon:icon, textLabel:textLabel)
                 iconsView.append(iconsAndLabels)
 
                 if 0 == index { // selected first elemet
                     item.selectedState(icon, textLabel: textLabel)
                 }
+                else {
+                   item.deselectAnimation(icon, textLabel: textLabel)
+                }
 
                 item.image = nil
                 item.title = ""
                 index++
+                
             }
         }
     }
@@ -204,7 +211,7 @@ class RAMAnimatedTabBarController: UITabBarController {
 
     func createViewContainer() -> UIView {
         var viewContainer = UIView();
-        viewContainer.backgroundColor = UIColor.clearColor() // for test
+        //viewContainer.backgroundColor = UIColor.clearColor() // for test
         viewContainer.setTranslatesAutoresizingMaskIntoConstraints(false)
         view.addSubview(viewContainer)
 
