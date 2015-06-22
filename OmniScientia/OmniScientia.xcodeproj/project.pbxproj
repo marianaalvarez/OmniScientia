@@ -29,6 +29,7 @@
 		05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE41B0B595A00784150 /* Categoria.swift */; };
 		05F0EFE71B0B5A2A00784150 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE61B0B5A2A00784150 /* Usuario.swift */; };
 		05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F0EFE81B0B5EB100784150 /* Objetos.swift */; };
+		250770141B37F89D008E541B /* LearningObjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250770131B37F89D008E541B /* LearningObjectMO.swift */; };
 		251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */; };
 		251DBC5F1B0B7FD9009EC7EB /* NovoConteudoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */; };
 		251DBC621B0B8278009EC7EB /* ConteudosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */; };
@@ -57,7 +58,6 @@
 		57A1DF6D1B37EAC600C512FA /* AnotationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF6C1B37EAC600C512FA /* AnotationCollectionViewCell.swift */; };
 		57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088031B0F51AB005E0FD7 /* QuizMO.swift */; };
 		57B088061B0F51AB005E0FD7 /* TextoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088051B0F51AB005E0FD7 /* TextoMO.swift */; };
-		57B088081B0F51AB005E0FD7 /* LearningObjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */; };
 		57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088091B0F51AB005E0FD7 /* ImageMO.swift */; };
 		57BF350A1B13636E00685BE4 /* ConteudoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */; };
 		57BF350B1B13697200685BE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AABCD91B12BF1C00F26F45 /* LoginViewController.swift */; };
@@ -104,6 +104,7 @@
 		05F0EFE41B0B595A00784150 /* Categoria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categoria.swift; path = ../Categoria.swift; sourceTree = "<group>"; };
 		05F0EFE61B0B5A2A00784150 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Usuario.swift; path = ../Usuario.swift; sourceTree = "<group>"; };
 		05F0EFE81B0B5EB100784150 /* Objetos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Objetos.swift; path = ../Objetos.swift; sourceTree = "<group>"; };
+		250770131B37F89D008E541B /* LearningObjectMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LearningObjectMO.swift; path = ../LearningObjectMO.swift; sourceTree = "<group>"; };
 		251DBC5C1B0B7FD9009EC7EB /* NoticiasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticiasTableViewController.swift; sourceTree = "<group>"; };
 		251DBC5D1B0B7FD9009EC7EB /* NovoConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovoConteudoViewController.swift; sourceTree = "<group>"; };
 		251DBC611B0B8278009EC7EB /* ConteudosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudosViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +133,6 @@
 		57A1DF6C1B37EAC600C512FA /* AnotationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnotationCollectionViewCell.swift; path = Animations/AnotationCollectionViewCell.swift; sourceTree = "<group>"; };
 		57B088031B0F51AB005E0FD7 /* QuizMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizMO.swift; sourceTree = "<group>"; };
 		57B088051B0F51AB005E0FD7 /* TextoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextoMO.swift; sourceTree = "<group>"; };
-		57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningObjectMO.swift; sourceTree = "<group>"; };
 		57B088091B0F51AB005E0FD7 /* ImageMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMO.swift; sourceTree = "<group>"; };
 		57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConteudoMO.swift; path = ../ConteudoMO.swift; sourceTree = "<group>"; };
 		57C255E21B17467A004388D1 /* ConteudoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoViewController.swift; sourceTree = "<group>"; };
@@ -367,8 +367,8 @@
 				572DE1B31B0CA639008DB6F2 /* CoreDataStack.swift */,
 				57B088091B0F51AB005E0FD7 /* ImageMO.swift */,
 				57B0880B1B0F521E005E0FD7 /* ConteudoMO.swift */,
-				57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */,
 				57B088051B0F51AB005E0FD7 /* TextoMO.swift */,
+				250770131B37F89D008E541B /* LearningObjectMO.swift */,
 				57B088031B0F51AB005E0FD7 /* QuizMO.swift */,
 				572DE1B21B0CA639008DB6F2 /* ConteudoMOService.swift */,
 				572DE1C01B0CA6F9008DB6F2 /* UsuarioMO.swift */,
@@ -493,7 +493,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				257BFE451B17821000F501D7 /* RAMBounceAnimation.swift in Sources */,
-				57B088081B0F51AB005E0FD7 /* LearningObjectMO.swift in Sources */,
 				05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */,
 				57B088061B0F51AB005E0FD7 /* TextoMO.swift in Sources */,
 				05F0EFE11B0B593A00784150 /* Historico.swift in Sources */,
@@ -514,6 +513,7 @@
 				257BFE481B17821000F501D7 /* RAMRotationAnimation.swift in Sources */,
 				572DE1C41B0CA809008DB6F2 /* UsuarioMOService.swift in Sources */,
 				05F0EFE31B0B594700784150 /* GrupoEstudo.swift in Sources */,
+				250770141B37F89D008E541B /* LearningObjectMO.swift in Sources */,
 				05BA94EB1B173CA3007762A2 /* ConfigTableViewController.swift in Sources */,
 				572DE1B51B0CA639008DB6F2 /* CoreDataStack.swift in Sources */,
 				257BFE391B17820300F501D7 /* RAMItemAnimationProtocol.swift in Sources */,
