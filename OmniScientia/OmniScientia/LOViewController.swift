@@ -42,6 +42,12 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
     
     
 
+    
+    @IBAction func addQuiz(sender: AnyObject) {
+        
+    }
+
+
     /*
     // MARK: - Navigation
 

@@ -190,6 +190,9 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="p4X-H3-EGf"/>
                                     <barButtonItem title="Quiz" id="5gk-Re-G5P">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="addQuiz:" destination="G67-WM-CAr" id="uzQ-yN-2rY"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>

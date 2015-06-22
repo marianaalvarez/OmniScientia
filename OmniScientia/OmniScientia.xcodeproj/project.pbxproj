@@ -60,6 +60,7 @@
 		57A1DF6F1B37F7BA00C512FA /* LOCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF6E1B37F7BA00C512FA /* LOCollectionViewCell.swift */; };
 		57A1DF731B37F99300C512FA /* LOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF721B37F99300C512FA /* LOViewController.swift */; };
 		57A1DF751B38036700C512FA /* ConteudoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF741B38036700C512FA /* ConteudoView.swift */; };
+		57A1DF771B382C6100C512FA /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF761B382C6100C512FA /* Quiz.swift */; };
 		57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088031B0F51AB005E0FD7 /* QuizMO.swift */; };
 		57B088061B0F51AB005E0FD7 /* TextoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088051B0F51AB005E0FD7 /* TextoMO.swift */; };
 		57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088091B0F51AB005E0FD7 /* ImageMO.swift */; };
@@ -139,6 +140,7 @@
 		57A1DF6E1B37F7BA00C512FA /* LOCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOCollectionViewCell.swift; sourceTree = "<group>"; };
 		57A1DF721B37F99300C512FA /* LOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOViewController.swift; sourceTree = "<group>"; };
 		57A1DF741B38036700C512FA /* ConteudoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConteudoView.swift; sourceTree = "<group>"; };
+		57A1DF761B382C6100C512FA /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		57B088031B0F51AB005E0FD7 /* QuizMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizMO.swift; sourceTree = "<group>"; };
 		57B088051B0F51AB005E0FD7 /* TextoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextoMO.swift; sourceTree = "<group>"; };
 		57B088091B0F51AB005E0FD7 /* ImageMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMO.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				5705A7231B0E1408009368AD /* MainTabBar.swift */,
 				257BFE361B1781FD00F501D7 /* RAMAnimatedTabBarController.swift */,
 				257BFE381B17820300F501D7 /* RAMItemAnimationProtocol.swift */,
+				57A1DF761B382C6100C512FA /* Quiz.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				053CB34D1B06132200CCEFA5 /* OmniScientia.xcdatamodeld in Sources */,
 				053CB34A1B06132200CCEFA5 /* AppDelegate.swift in Sources */,
 				257BFE491B17821000F501D7 /* RAMTransitionItemAnimation.swift in Sources */,
+				57A1DF771B382C6100C512FA /* Quiz.swift in Sources */,
 				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,
 				05F0EFD51B0B587C00784150 /* Audio.swift in Sources */,
 				05F0EFDF1B0B592B00784150 /* Pergunta.swift in Sources */,
