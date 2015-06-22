@@ -12,12 +12,15 @@ let reuseIdentifier = "Cell"
 
 class MainCollectionViewController: UICollectionViewController {
     
-    var listaConteudos = [LearningObjectMO]()
+    var listaConteudos = [ConteudoMO]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "novoAprendizado:", name: "NovoAprendizado", object: nil)
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,6 +28,17 @@ class MainCollectionViewController: UICollectionViewController {
         self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+    }
+    
+    func novoAprendizado(notification: NSNotification) {
+        
+        
+        let info = notification.userInfo as! Dictionary<String,String!>
+        
+        var conteudo = ConteudoMO()
+        conteudo.titulo = info["titulo"]!
+        self.listaConteudos.append(conteudo)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +51,7 @@ class MainCollectionViewController: UICollectionViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
+        // Get the new view controller using [segue rdestinationViewController].
         // Pass the selected object to the new view controller.
     }
     */
@@ -58,7 +72,7 @@ class MainCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("anotationCell", forIndexPath: indexPath) as! AnotationCollectionViewCell
     
-        cell.titulo.text = listaConteudos[indexPath.row].conteudo.titulo
+        cell.titulo.text = listaConteudos[indexPath.row].titulo
     
         return cell
     }
@@ -87,7 +101,7 @@ class MainCollectionViewController: UICollectionViewController {
         
         if segue.identifier == "conteudoSelecionado" {
             let learningObjects = segue.destinationViewController as! LOViewController
-            learningObjects.conteudo = listaConteudos[collectionView!.indexPathsForSelectedItems().first!.row!].conteudo
+            learningObjects.conteudo = listaConteudos[collectionView!.indexPathsForSelectedItems().first!.row!]
         }
         
     }
