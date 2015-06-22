@@ -29,7 +29,7 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
     }
 
     override func viewDidAppear(animated: Bool) {
-        currentCollectionCell = getLOInView()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,8 +81,6 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
     
     @IBAction func addTextLO(sender: AnyObject) {
         
-        var frame =  currentCollectionCell.superview!.bounds
-        
         var textView = UITextView(frame: frame )
         textView.editable = true
         textView.text = "Digite seu resumo"
@@ -99,8 +97,6 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
     
     
     @IBAction func addImageLO(sender: AnyObject) {
-        
-        var frame = currentCollectionCell.superview!.bounds
         
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
