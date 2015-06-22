@@ -96,7 +96,7 @@
         <!--Title-->
         <scene sceneID="So9-X9-Ph4">
             <objects>
-                <viewController id="G67-WM-CAr" customClass="LOCollectionViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="G67-WM-CAr" customClass="LOViewController" customModule="OmniScientia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xd9-Hh-hb2"/>
                         <viewControllerLayoutGuide type="bottom" id="C6J-fe-YSG"/>
@@ -105,7 +105,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5fy-kX-esv">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5fy-kX-esv">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="90" minimumInteritemSpacing="10" id="c02-FH-NQh">
@@ -115,7 +115,7 @@
                                     <inset key="sectionInset" minX="80" minY="0.0" maxX="58" maxY="50"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LOCollectionViewCell" id="OR6-65-UUt" customClass="LOCollectionViewCell" customModule="OmniScientia" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="learningObject" id="OR6-65-UUt" customClass="LOCollectionViewCell" customModule="OmniScientia" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -146,19 +146,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5fy-kX-esv" firstAttribute="leading" secondItem="8yq-h8-x18" secondAttribute="leading" id="8xO-RT-jB9"/>
-                            <constraint firstAttribute="trailing" secondItem="5fy-kX-esv" secondAttribute="trailing" id="92F-bl-tki"/>
-                            <constraint firstItem="5fy-kX-esv" firstAttribute="bottom" secondItem="C6J-fe-YSG" secondAttribute="top" id="I7l-QA-el6"/>
-                            <constraint firstItem="5fy-kX-esv" firstAttribute="top" secondItem="xd9-Hh-hb2" secondAttribute="bottom" id="WIN-em-Dgt"/>
-                            <constraint firstItem="8yq-h8-x18" firstAttribute="leading" secondItem="rgg-DO-d4H" secondAttribute="leading" id="Wxo-tZ-kD8"/>
-                            <constraint firstItem="8yq-h8-x18" firstAttribute="bottom" secondItem="C6J-fe-YSG" secondAttribute="top" id="fgT-X9-ZiX"/>
-                            <constraint firstItem="5fy-kX-esv" firstAttribute="trailing" secondItem="8yq-h8-x18" secondAttribute="trailing" id="nK2-3x-uTn"/>
+                            <constraint firstItem="8yq-h8-x18" firstAttribute="leading" secondItem="5fy-kX-esv" secondAttribute="leading" id="VHx-Lk-W4M"/>
+                            <constraint firstItem="5fy-kX-esv" firstAttribute="top" secondItem="xd9-Hh-hb2" secondAttribute="bottom" id="YIT-I5-1jX"/>
+                            <constraint firstItem="5fy-kX-esv" firstAttribute="leading" secondItem="rgg-DO-d4H" secondAttribute="leading" id="Yft-U0-l2T"/>
+                            <constraint firstAttribute="trailing" secondItem="8yq-h8-x18" secondAttribute="trailing" id="bq3-Ru-7Zb"/>
+                            <constraint firstItem="5fy-kX-esv" firstAttribute="bottom" secondItem="C6J-fe-YSG" secondAttribute="top" id="d3T-8B-Wqd"/>
+                            <constraint firstItem="8yq-h8-x18" firstAttribute="bottom" secondItem="C6J-fe-YSG" secondAttribute="top" id="flo-MC-FKS"/>
+                            <constraint firstItem="8yq-h8-x18" firstAttribute="trailing" secondItem="5fy-kX-esv" secondAttribute="trailing" id="ja2-Ip-uTw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="4ao-1A-iRt">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hJ8-Zr-MhB"/>
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="WaI-7c-FuY"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="5fy-kX-esv" id="R7Q-k5-yFt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWQ-py-ONM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

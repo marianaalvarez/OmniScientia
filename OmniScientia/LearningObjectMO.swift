@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class LearningObjectMO: NSManagedObject {
+public class LearningObjectMO: NSManagedObject {
 
     @NSManaged var height: NSNumber
     @NSManaged var width: NSNumber
