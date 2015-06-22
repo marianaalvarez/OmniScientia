@@ -53,6 +53,8 @@
 		572DE1C41B0CA809008DB6F2 /* UsuarioMOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1C31B0CA809008DB6F2 /* UsuarioMOService.swift */; };
 		572DE2141B0D23AC008DB6F2 /* UsuarioMOServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572DE1D21B0CD478008DB6F2 /* UsuarioMOServiceTests.swift */; };
 		5775386B1B14BD9900B10A33 /* AdicionaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5775386A1B14BD9900B10A33 /* AdicionaButton.swift */; };
+		57A1DF6B1B37E77400C512FA /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF6A1B37E77400C512FA /* MainCollectionViewController.swift */; };
+		57A1DF6D1B37EAC600C512FA /* AnotationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF6C1B37EAC600C512FA /* AnotationCollectionViewCell.swift */; };
 		57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088031B0F51AB005E0FD7 /* QuizMO.swift */; };
 		57B088061B0F51AB005E0FD7 /* TextoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088051B0F51AB005E0FD7 /* TextoMO.swift */; };
 		57B088081B0F51AB005E0FD7 /* LearningObjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */; };
@@ -126,6 +128,8 @@
 		572DE1C31B0CA809008DB6F2 /* UsuarioMOService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioMOService.swift; sourceTree = "<group>"; };
 		572DE1D21B0CD478008DB6F2 /* UsuarioMOServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioMOServiceTests.swift; sourceTree = "<group>"; };
 		5775386A1B14BD9900B10A33 /* AdicionaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionaButton.swift; sourceTree = "<group>"; };
+		57A1DF6A1B37E77400C512FA /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainCollectionViewController.swift; path = ../MainCollectionViewController.swift; sourceTree = "<group>"; };
+		57A1DF6C1B37EAC600C512FA /* AnotationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnotationCollectionViewCell.swift; path = Animations/AnotationCollectionViewCell.swift; sourceTree = "<group>"; };
 		57B088031B0F51AB005E0FD7 /* QuizMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizMO.swift; sourceTree = "<group>"; };
 		57B088051B0F51AB005E0FD7 /* TextoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextoMO.swift; sourceTree = "<group>"; };
 		57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningObjectMO.swift; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 			children = (
 				257BFE3A1B17821000F501D7 /* Animations */,
 				053CB3501B06132200CCEFA5 /* Main.storyboard */,
+				57A1DF6A1B37E77400C512FA /* MainCollectionViewController.swift */,
+				57A1DF6C1B37EAC600C512FA /* AnotationCollectionViewCell.swift */,
 				5705A7231B0E1408009368AD /* MainTabBar.swift */,
 				257BFE361B1781FD00F501D7 /* RAMAnimatedTabBarController.swift */,
 				257BFE381B17820300F501D7 /* RAMItemAnimationProtocol.swift */,
@@ -420,7 +426,7 @@
 				TargetAttributes = {
 					053CB3431B06132200CCEFA5 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = T6LWGN6HAV;
+						DevelopmentTeam = Y8HHM49ZTR;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -491,6 +497,7 @@
 				05F0EFE91B0B5EB100784150 /* Objetos.swift in Sources */,
 				57B088061B0F51AB005E0FD7 /* TextoMO.swift in Sources */,
 				05F0EFE11B0B593A00784150 /* Historico.swift in Sources */,
+				57A1DF6B1B37E77400C512FA /* MainCollectionViewController.swift in Sources */,
 				57B0880A1B0F51AB005E0FD7 /* ImageMO.swift in Sources */,
 				05F0EFD71B0B589600784150 /* Video.swift in Sources */,
 				257BFE371B1781FD00F501D7 /* RAMAnimatedTabBarController.swift in Sources */,
@@ -500,6 +507,7 @@
 				05F0EFDB1B0B591000784150 /* Texto.swift in Sources */,
 				57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */,
 				05F0EFE51B0B595A00784150 /* Categoria.swift in Sources */,
+				57A1DF6D1B37EAC600C512FA /* AnotationCollectionViewCell.swift in Sources */,
 				257BFE471B17821000F501D7 /* RAMFumeAnimation.swift in Sources */,
 				251DBC5E1B0B7FD9009EC7EB /* NoticiasTableViewController.swift in Sources */,
 				05F0EFE71B0B5A2A00784150 /* Usuario.swift in Sources */,

@@ -17,13 +17,13 @@ class MainTabBar: UITabBarController, UITabBarControllerDelegate {
         var usuarioStoryboard = UIStoryboard(name: "usuario", bundle: nil)
         var rootUsuarioVC = usuarioStoryboard.instantiateInitialViewController() as! UINavigationController
         
-        var configStoryboard = UIStoryboard(name: "configuracoes", bundle: nil)
-        var rootConfigVC = configStoryboard.instantiateInitialViewController() as! UINavigationController
+//        var configStoryboard = UIStoryboard(name: "configuracoes", bundle: nil)
+//        var rootConfigVC = configStoryboard.instantiateInitialViewController() as! UINavigationController
         
 //        var inicioStoryboard = UIStoryboard(name: "inicio", bundle: nil)
 //        var rootInicioVC = inicioStoryboard.instantiateInitialViewController() as! UINavigationController
         
-        self.setViewControllers([rootConteudoVC,rootConfigVC], animated: true)
+        self.setViewControllers([rootConteudoVC], animated: true)
     }
     
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
