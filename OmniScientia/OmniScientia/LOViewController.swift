@@ -18,7 +18,7 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
     
     var imageView:UIImageView!
     
-    var conteudos:[UIView]=[]
+    var conteudos:[UIView]=[UIView()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
     }
 
     override func viewDidAppear(animated: Bool) {
-
+        currentCollectionCell = getLOInView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,6 +90,9 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
         conteudos.append(textView)
         
         collectionView.reloadData()
+
+        
+        textView.frame = currentCollectionCell.superview!.bounds as! CGRect
         
         currentCollectionCell.addSubview(textView)
 
@@ -97,7 +100,8 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
     
     
     @IBAction func addImageLO(sender: AnyObject) {
-        
+
+   
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         
@@ -105,15 +109,13 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
         
         imageView = UIImageView()
         
-        
         conteudos.append(imageView)
         
         collectionView.reloadData()
         
+        imageView.frame = currentCollectionCell.superview!.bounds as! CGRect
+    
         currentCollectionCell.addSubview(imageView)
-        
-
-        
     
     }
     
@@ -127,6 +129,12 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
         
         dismissViewControllerAnimated(true, completion: nil)
     }
+
+    
+    @IBAction func addQuiz(sender: AnyObject) {
+        
+    }
+
 
     /*
     // MARK: - Navigation
