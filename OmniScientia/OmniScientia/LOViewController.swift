@@ -8,27 +8,63 @@
 
 import UIKit
 
-class LOViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class LOViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var currentCollectionCell: UICollectionViewCell!
+    
+    let imagePicker = UIImagePickerController()
+    
+    var imageView:UIImageView!
+    
+    var conteudos:[UIView]=[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.imagePicker.delegate = self
     }
 
+    override func viewDidAppear(animated: Bool) {
+        currentCollectionCell = getLOInView()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        
+        for cell in self.collectionView.visibleCells() {
+            var cell2 = cell as! UICollectionViewCell
+            
+            currentCollectionCell = cell2
+            var indexPath = self.collectionView.indexPathForCell(cell2)
+            println(indexPath)
+        }
+        
+    }
+    
+
+    func getLOInView() -> UICollectionViewCell {
+        
+        var collectionViewCells = self.collectionView.visibleCells() as! [UICollectionViewCell]
+        
+        return collectionViewCells.first!
+    }
+    
+    
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return conteudos.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -37,7 +73,64 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
         return cell
     }
     
+    @IBAction func cancelarButton(sender: AnyObject) {
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
     
+    @IBAction func addTextLO(sender: AnyObject) {
+        
+        var frame =  currentCollectionCell.superview!.bounds
+        
+        var textView = UITextView(frame: frame )
+        textView.editable = true
+        textView.text = "Digite seu resumo"
+        
+        
+        
+        conteudos.append(textView)
+        
+        collectionView.reloadData()
+        
+        currentCollectionCell.addSubview(textView)
+
+    }
+    
+    
+    @IBAction func addImageLO(sender: AnyObject) {
+        
+        var frame = currentCollectionCell.superview!.bounds
+        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+        
+        imageView = UIImageView(frame: frame)
+        
+        
+        conteudos.append(imageView)
+        
+        collectionView.reloadData()
+        
+        currentCollectionCell.addSubview(imageView)
+        
+
+        
+    
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.contentMode = .ScaleAspectFill
+            imageView.image = pickedImage
+            
+            
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
