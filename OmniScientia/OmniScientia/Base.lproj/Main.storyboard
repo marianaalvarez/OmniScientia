@@ -36,7 +36,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdv-ST-7sz">
                                                         <rect key="frame" x="8" y="8" width="250" height="59"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -82,7 +82,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Aprendizados" id="IfI-Sb-fnR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Dve-21-lQz">
-                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="G67-WM-CAr" kind="show" id="ng2-ON-2G7"/>
                             </connections>

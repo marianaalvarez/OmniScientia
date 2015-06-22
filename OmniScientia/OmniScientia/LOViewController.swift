@@ -12,6 +12,8 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var conteudo: ConteudoMO?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +30,7 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return conteudo!.learningObjects.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

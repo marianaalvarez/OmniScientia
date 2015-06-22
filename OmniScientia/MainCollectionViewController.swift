@@ -11,6 +11,9 @@ import UIKit
 let reuseIdentifier = "Cell"
 
 class MainCollectionViewController: UICollectionViewController {
+    
+    var listaConteudos = [LearningObjectMO]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +52,13 @@ class MainCollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return 5
+        return listaConteudos.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("anotationCell", forIndexPath: indexPath) as! AnotationCollectionViewCell
     
-        cell.titulo.text = "Whatever"
+        cell.titulo.text = listaConteudos[indexPath.row].conteudo.titulo
     
         return cell
     }
@@ -69,12 +72,25 @@ class MainCollectionViewController: UICollectionViewController {
     }
     */
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        
+        let conteudo = listaConteudos[indexPath.row]
+        
+        performSegueWithIdentifier("conteudoSelecionado", sender: self)
         return true
     }
-    */
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "conteudoSelecionado" {
+            let learningObjects = segue.destinationViewController as! LOViewController
+            learningObjects.conteudo = listaConteudos[collectionView!.indexPathsForSelectedItems().first!.row!].conteudo
+        }
+        
+    }
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

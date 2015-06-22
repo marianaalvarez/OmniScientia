@@ -32,5 +32,7 @@ public class ConteudoMO: NSManagedObject {
         
         return learningObject
     }
+    
+    
 
 }
