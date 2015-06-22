@@ -81,7 +81,7 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
     
     @IBAction func addTextLO(sender: AnyObject) {
         
-        var textView = UITextView(frame: frame )
+        var textView = UITextView()
         textView.editable = true
         textView.text = "Digite seu resumo"
         
@@ -103,7 +103,7 @@ class LOViewController: UIViewController, UICollectionViewDataSource, UICollecti
         
         presentViewController(imagePicker, animated: true, completion: nil)
         
-        imageView = UIImageView(frame: frame)
+        imageView = UIImageView()
         
         
         conteudos.append(imageView)
