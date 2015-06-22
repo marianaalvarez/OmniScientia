@@ -11,6 +11,10 @@
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="LearningObject" representedClassName="OmniScientia.LearningObjectMO" isAbstract="YES" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="conteudo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Conteudo" inverseName="learningObjects" inverseEntity="Conteudo" syncable="YES"/>
     </entity>
     <entity name="Quiz" representedClassName="OmniScientia.QuizMO" parentEntity="LearningObject" syncable="YES">
@@ -30,9 +34,9 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Conteudo" positionX="-21755" positionY="-8965" width="128" height="118"/>
+        <element name="Conteudo" positionX="-21744" positionY="-9090" width="128" height="118"/>
         <element name="Image" positionX="-21879" positionY="-8712" width="128" height="58"/>
-        <element name="LearningObject" positionX="-21755" positionY="-8802" width="128" height="58"/>
+        <element name="LearningObject" positionX="-21701" positionY="-8892" width="128" height="118"/>
         <element name="Quiz" positionX="-21629" positionY="-8694" width="128" height="88"/>
         <element name="Texto" positionX="-21420" positionY="-8721" width="128" height="58"/>
         <element name="Usuario" positionX="-21512" positionY="-8991" width="128" height="133"/>
