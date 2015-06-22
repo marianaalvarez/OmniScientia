@@ -55,6 +55,7 @@
 		5775386B1B14BD9900B10A33 /* AdicionaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5775386A1B14BD9900B10A33 /* AdicionaButton.swift */; };
 		57A1DF6B1B37E77400C512FA /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF6A1B37E77400C512FA /* MainCollectionViewController.swift */; };
 		57A1DF6D1B37EAC600C512FA /* AnotationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF6C1B37EAC600C512FA /* AnotationCollectionViewCell.swift */; };
+		57A1DF6F1B37F7BA00C512FA /* LOCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A1DF6E1B37F7BA00C512FA /* LOCollectionViewCell.swift */; };
 		57B088041B0F51AB005E0FD7 /* QuizMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088031B0F51AB005E0FD7 /* QuizMO.swift */; };
 		57B088061B0F51AB005E0FD7 /* TextoMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088051B0F51AB005E0FD7 /* TextoMO.swift */; };
 		57B088081B0F51AB005E0FD7 /* LearningObjectMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */; };
@@ -130,6 +131,7 @@
 		5775386A1B14BD9900B10A33 /* AdicionaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionaButton.swift; sourceTree = "<group>"; };
 		57A1DF6A1B37E77400C512FA /* MainCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainCollectionViewController.swift; path = ../MainCollectionViewController.swift; sourceTree = "<group>"; };
 		57A1DF6C1B37EAC600C512FA /* AnotationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnotationCollectionViewCell.swift; path = Animations/AnotationCollectionViewCell.swift; sourceTree = "<group>"; };
+		57A1DF6E1B37F7BA00C512FA /* LOCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOCollectionViewCell.swift; sourceTree = "<group>"; };
 		57B088031B0F51AB005E0FD7 /* QuizMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizMO.swift; sourceTree = "<group>"; };
 		57B088051B0F51AB005E0FD7 /* TextoMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextoMO.swift; sourceTree = "<group>"; };
 		57B088071B0F51AB005E0FD7 /* LearningObjectMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningObjectMO.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				257BFE3A1B17821000F501D7 /* Animations */,
 				053CB3501B06132200CCEFA5 /* Main.storyboard */,
+				57A1DF6E1B37F7BA00C512FA /* LOCollectionViewCell.swift */,
 				57A1DF6A1B37E77400C512FA /* MainCollectionViewController.swift */,
 				57A1DF6C1B37EAC600C512FA /* AnotationCollectionViewCell.swift */,
 				5705A7231B0E1408009368AD /* MainTabBar.swift */,
@@ -531,6 +534,7 @@
 				05F0EFD91B0B58A800784150 /* Imagem.swift in Sources */,
 				05F0EFD51B0B587C00784150 /* Audio.swift in Sources */,
 				05F0EFDF1B0B592B00784150 /* Pergunta.swift in Sources */,
+				57A1DF6F1B37F7BA00C512FA /* LOCollectionViewCell.swift in Sources */,
 				57C255E31B17467A004388D1 /* ConteudoViewController.swift in Sources */,
 				2574B1BB1B135B7300939909 /* UsuarioViewController.swift in Sources */,
 				572DE1C11B0CA6F9008DB6F2 /* UsuarioMO.swift in Sources */,
